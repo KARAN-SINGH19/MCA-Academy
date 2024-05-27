@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
     const linkVariants = {
         hidden: { y: 20, opacity: 0 },
-        show: { y: 0, opacity: 1, transition: { duration: 0.9 } }, 
+        show: { y: 0, opacity: 1, transition: { duration: 0.9 } },
     };
 
     return (
@@ -21,26 +22,19 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse align-middle" id="navbarNav">
                         <ul className="navbar-nav ms-auto nav_ul align-items-center">
                             <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
-                                <Link className="nav-link" to="/about">About</Link>
+                                <RouterLink className="nav-link" to="/">Home</RouterLink>
                             </motion.li>
                             <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
-                                <Link className="nav-link" to="/services">Services</Link>
+                                <RouterLink className="nav-link" to="/about">About</RouterLink>
                             </motion.li>
                             <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
-                                <Link className="nav-link" to="/portfolio">Portfolio</Link>
+                                <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="missions" spy={true} smooth={true} offset={-100} duration={50}>Missions</ScrollLink>
                             </motion.li>
                             <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
-                                <Link className="nav-link" to="/contact">Contact Us</Link>
+                                <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="pillars" spy={true} smooth={true} offset={-100} duration={50}>Pillars</ScrollLink>
                             </motion.li>
-                            <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    More
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a className="dropdown-item" href="/">Action</a></li>
-                                    <li><a className="dropdown-item" href="/">Another action</a></li>
-                                    <li><a className="dropdown-item" href="/">Something else here</a></li>
-                                </ul>
+                            <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
+                                <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="contact" spy={true} smooth={true} offset={-100} duration={50}>Contact Us</ScrollLink>
                             </motion.li>
                             <motion.div variants={linkVariants} initial="hidden" animate="show" className="mx-3">
                                 <button type="button" className="btn1 mx-2">Login</button>

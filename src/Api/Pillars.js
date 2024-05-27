@@ -4,20 +4,23 @@ const pillars = [
         content1: "Leadership and Executive Presence",
         content2: "Emerging Leader Development",
         content3: "Development Centers",
-        image: "/images/team-leader (1).png"
+        image: "/images/team-leader.png",
+        color: "#33317d"
     },
     {
         title: 'Entrepreneurial Excellence -  Skills and mindset',
         content1: "Stratergy and Transformation",
         content2: "Global Leadership and Crisis Management",
         content3: "Leading a Business in a VUCA World",
-        image: "/images/change-mind.png"
+        image: "/images/abilities.png",
+        color: "#4065a1"
     },
     {
         title: 'Empowering Women Leaders For Success',
         content1: "Unloacking 'My' Professional Presence",
         content2: "Harmony-Empowering for balance",
-        image: "/images/woman.png"
+        image: "/images/avatar.png",
+        color: "#60cc35"
     },
     {
         title: 'Fostering Functional Expertise',
@@ -25,7 +28,8 @@ const pillars = [
         content2: "HR Academy",
         content3: "Supply Chain Academy",
         content4: "Project Management Academy",
-        image: "/images/functional.png"
+        image: "/images/professional.png",
+        color: "#d6c20f"
     },
     {
         title: 'Coaching for Professionals',
@@ -34,7 +38,8 @@ const pillars = [
         content3: "Certified Internal Auditor",
         content4: "International Financial Reporting Standards",
         content5: "Executive Coaching",
-        image: "/images/training.png"
+        image: "/images/mentoring.png",
+        color: "#b04428"
     }
 ]
 

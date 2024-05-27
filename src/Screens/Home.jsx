@@ -158,13 +158,19 @@ const Home = () => {
         <Carousal />
       </motion.div>
 
-      <MissionSection />
+      <section id="missions">
+        <MissionSection />
+      </section>
 
       <CounterSection />
 
-      <PillarSection />
+      <section id="pillars">
+        <PillarSection />
+      </section>
 
-      <FooterSection />
+      <section id="contact">
+        <FooterSection />
+      </section>
 
     </div>
   );

@@ -3,8 +3,16 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
 import { faFacebookF, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 
 export default function Footer() {
+    const bounceAnimation = {
+        y: [0, -10, 0], // Define the y-axis movement for the bouncing effect
+        transition: {
+            duration: 1, // Set the duration of each bounce
+            repeat: Infinity // Repeat the animation indefinitely
+        }
+    };
     return (
         <MDBFooter bgColor='light' className='mt-5 text-center text-lg-start text-muted'>
             <section className='p-4 border-bottom'>
@@ -33,10 +41,35 @@ export default function Footer() {
                 <MDBContainer className='text-center text-md-start mt-4'>
                     <MDBRow className='mt-3'>
 
-                        <MDBCol md="3" lg="3" xl="3" className='mb-4'>
+                        <MDBCol md="3" lg="3" xl="4" className='mb-4'>
                             <div>
-                            <img className="logo-default" src="/images/Picture1.png" alt="MCA UAE" style={{ maxWidth: '230px', height: 'auto' }} />
+                                <img className="logo-default" src="/images/Picture1.png" alt="MCA UAE" style={{ maxWidth: '230px', height: 'auto' }} />
                             </div>
+                            <motion.img
+                                className="logo-default"
+                                src="https://www.mcagulf.com/wp-content/uploads/2024/05/MCA-New-Logo-252px.png"
+                                alt="MCA UAE"
+                                srcSet="https://www.mcagulf.com/wp-content/uploads/2024/05/MCA-Retina-New-Logo-420px.png 2x"
+                                style={{ marginTop: "20px", maxWidth: '230px', height: 'auto', cursor: 'pointer' }}
+                                onClick={() => window.open('https://www.mcagulf.com', '_blank')}
+                                whileHover={{ scale: 1.1 }}
+                            />
+                            <div style={{ position: 'relative' }}> {/* Add a wrapper with relative positioning */}
+                                <motion.span
+                                    style={{ position: 'absolute', top: '-10px', right: '210px', fontSize: '24px', cursor: 'pointer' }}
+                                    animate={bounceAnimation}
+                                >
+                                    👆
+                                </motion.span> <br />
+                                <motion.span
+                                    style={{ whiteSpace: 'nowrap', fontSize: '1.1rem', color: '#013252', fontWeight: 600, cursor: 'pointer' }}
+                                    whileHover={{ scale: 1.1 }}
+                                    onClick={() => window.open('https://www.mcagulf.com', '_blank')}
+                                >
+                                    Click to visit our official website
+                                </motion.span>
+                            </div>
+
                         </MDBCol>
 
                         <MDBCol md="4" lg="4" xl="4" className='mb-4'>

@@ -11,7 +11,7 @@ function Cards2({ data }) {
 
                 {data.map((value, index) => (
                     <Col key={index} sm={12} md={6} lg={4} xl={4}>
-                        <div className="group relative cursor-pointer">
+                        {/* <div className="group relative cursor-pointer">
                             <Card className="h-100 shadow-sm border-0">
                                 <div className="h-96 w-full">
                                     <Card.Img 
@@ -34,7 +34,27 @@ function Cards2({ data }) {
                                     <Card.Title className="font-dmserif text-3xl font-bold text-white">{value.title}</Card.Title>
                                 </Card.Body>
                             </Card>
-                        </div>
+                        </div> */}
+
+                        <Card className='card' style={{ width: '20rem', height: "110vh", borderRadius: '35px' }}>
+                            <Card.Img variant="top" src={value.image} />
+                            <Card.Body>
+                                <Card.Title style={{ textAlign: 'center' }}>{value.title}</Card.Title>
+                                <Card.Text>
+                                    <ul style={{ color: '#013252' }} className="card-list">
+                                        {value.content1 && <li>{value.content1}</li>}
+                                        {value.content2 && <li>{value.content2}</li>}
+                                        {value.content3 && <li>{value.content3}</li>}
+                                        {value.content4 && <li>{value.content4}</li>}
+                                        {value.content5 && <li>{value.content5}</li>}
+                                    </ul>
+                                </Card.Text>
+                                <div
+                                    className="card-color-area"
+                                    style={{ backgroundColor: value.color }}
+                                ></div>
+                            </Card.Body>
+                        </Card>
                     </Col>
                 ))}
             </Row>
