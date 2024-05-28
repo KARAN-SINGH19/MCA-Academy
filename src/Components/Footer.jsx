@@ -7,10 +7,10 @@ import { motion } from 'framer-motion';
 
 export default function Footer() {
     const bounceAnimation = {
-        y: [0, -10, 0], // Define the y-axis movement for the bouncing effect
+        y: [0, -10, 0], 
         transition: {
-            duration: 1, // Set the duration of each bounce
-            repeat: Infinity // Repeat the animation indefinitely
+            duration: 1, 
+            repeat: Infinity 
         }
     };
     return (

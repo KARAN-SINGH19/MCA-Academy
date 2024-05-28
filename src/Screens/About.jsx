@@ -30,14 +30,33 @@ const About = () => {
         );
     }
 
+    function FooterSection({ children }) {
+        const { ref, inView } = useInView({
+            triggerOnce: true,
+            threshold: 0,
+        });
+
+        return (
+            <motion.div
+                ref={ref}
+                variants={reveal("left", 0.2)}
+                initial="hidden"
+                animate={inView ? "show" : "hidden"}
+            >
+                <Footer />
+            </motion.div>
+        );
+    }
+
+
 
     return (
         <>
             <Navbar />
-       
+
             <TeamSection />
 
-            <Footer />
+            <FooterSection />
         </>
     )
 }
