@@ -9,6 +9,8 @@ import pillars from '../Api/Pillars';
 import { motion } from 'framer-motion';
 import reveal from '../Animations/Variants';
 import { useInView } from 'react-intersection-observer';
+import Slider from '../Components/Slider';
+import academy from '../Api/Academy';
 
 const Home = () => {
   const counterRefs = useRef([]);
@@ -70,8 +72,7 @@ const Home = () => {
     );
   }
 
-
-  function CounterSection({ children }) {
+  function SliderSection({ children }) {
     const { ref, inView } = useInView({
       triggerOnce: true,
       threshold: 0,
@@ -80,31 +81,52 @@ const Home = () => {
     return (
       <motion.div
         ref={ref}
-        variants={reveal("right", 0.2)}
+        variants={reveal("up", 0.2)}
         initial="hidden"
         animate={inView ? "show" : "hidden"}
+        className="mission-section py-5 text-center bg-light"
       >
-        <div className="counter-wrapper">
-          <div ref={el => counterRefs.current[0] = el} className="counter mission-heading2">
-            <h1 className="count" data-target="2000">0</h1>
-            <p>Project Completed</p>
-          </div>
-          <div ref={el => counterRefs.current[1] = el} className="counter mission-heading2">
-            <h1 className="count" data-target="6000">0</h1>
-            <p>Happy Clients</p>
-          </div>
-          <div ref={el => counterRefs.current[2] = el} className="counter mission-heading2">
-            <h1 className="count" data-target="5000">0</h1>
-            <p>Real Professionals</p>
-          </div>
-          <div ref={el => counterRefs.current[3] = el} className="counter mission-heading2">
-            <h1 className="count" data-target="3000">0</h1>
-            <p>Cup of Coffee</p>
-          </div>
-        </div>
+        <h2 className="mission-heading">Our Academy Categories</h2>
+        <Slider data={academy} />
       </motion.div>
     );
   }
+
+
+  // function CounterSection({ children }) {
+  //   const { ref, inView } = useInView({
+  //     triggerOnce: true,
+  //     threshold: 0,
+  //   });
+
+  //   return (
+  //     <motion.div
+  //       ref={ref}
+  //       variants={reveal("right", 0.2)}
+  //       initial="hidden"
+  //       animate={inView ? "show" : "hidden"}
+  //     >
+  //       <div className="counter-wrapper">
+  //         <div ref={el => counterRefs.current[0] = el} className="counter mission-heading2">
+  //           <h1 className="count" data-target="2000">0</h1>
+  //           <p>Project Completed</p>
+  //         </div>
+  //         <div ref={el => counterRefs.current[1] = el} className="counter mission-heading2">
+  //           <h1 className="count" data-target="6000">0</h1>
+  //           <p>Happy Clients</p>
+  //         </div>
+  //         <div ref={el => counterRefs.current[2] = el} className="counter mission-heading2">
+  //           <h1 className="count" data-target="5000">0</h1>
+  //           <p>Real Professionals</p>
+  //         </div>
+  //         <div ref={el => counterRefs.current[3] = el} className="counter mission-heading2">
+  //           <h1 className="count" data-target="3000">0</h1>
+  //           <p>Cup of Coffee</p>
+  //         </div>
+  //       </div>
+  //     </motion.div>
+  //   );
+  // }
 
   function PillarSection({ children }) {
     const { ref, inView } = useInView({
@@ -162,7 +184,9 @@ const Home = () => {
         <MissionSection />
       </section>
 
-      <CounterSection />
+      {/* <CounterSection /> */}
+
+      <SliderSection data={academy} />
 
       <section id="pillars">
         <PillarSection />

@@ -36,10 +36,10 @@ const Navbar = () => {
                             <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
                                 <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="contact" spy={true} smooth={true} offset={-100} duration={50}>Contact Us</ScrollLink>
                             </motion.li>
-                            <motion.div variants={linkVariants} initial="hidden" animate="show" className="mx-3">
+                            {/* <motion.div variants={linkVariants} initial="hidden" animate="show" className="mx-3">
                                 <button type="button" className="btn1 mx-2">Login</button>
                                 <button type="button" className="btn2 mx-2">Sign Up</button>
-                            </motion.div>
+                            </motion.div> */}
                         </ul>
                     </div>
                 </div>

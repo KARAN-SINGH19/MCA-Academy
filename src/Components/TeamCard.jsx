@@ -12,7 +12,7 @@ const TeamCard = ({ data }) => {
                     {
                         data.map((values, index) => (
                             <Col key={index} sm={12} md={6} lg={4} xl={4} className="mb-4 d-flex">
-                                <Card className="h-100 w-100 team-card" style={{ borderRadius: "10px" }}>
+                                <Card className="h-100 w-100 team-card allCards" style={{ borderRadius: "10px" }}>
                                     <Card.Img variant="top" src={values.image} className="team-card-img" />
                                     <Card.Body className="team-card-body">
                                         <Card.Title style={{ color: "#ff5c4a" }} className="text-center team-card-title">{values.name}</Card.Title>
