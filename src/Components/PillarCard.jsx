@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function Cards2({ data }) {
+function PillarCard({ data }) {
     return (
         <Container className="my-5">
             <Row className="justify-content-center g-5">
@@ -62,4 +62,4 @@ function Cards2({ data }) {
     );
 }
 
-export default Cards2;
+export default PillarCard;

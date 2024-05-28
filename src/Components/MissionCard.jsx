@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Cards = ({ data }) => {
+const MissionCard = ({ data }) => {
   return (
     <Container>
       <Row className="justify-content-center">
@@ -27,4 +27,4 @@ const Cards = ({ data }) => {
   );
 };
 
-export default Cards;
+export default MissionCard;

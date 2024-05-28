@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import Navbar from '../Components/Navbar';
 import Carousal from '../Components/Carousal';
-import Cards from '../Components/Cards';
-import Cards2 from '../Components/Cards2';
+import MissionCard from '../Components/MissionCard';
+import PillarCard from '../Components/PillarCard';
 import Footer from '../Components/Footer';
 import missions from '../Api/Missions';
 import pillars from '../Api/Pillars';
@@ -65,7 +65,7 @@ const Home = () => {
         <p className="mx-auto" style={{ maxWidth: '600px' }}>
           We aim to provide innovative and effective solutions that empower teams and businesses through skill enhancement, knowledge transfer, and re-skilling interventions.
         </p>
-        <Cards data={missions} />
+        <MissionCard data={missions} />
       </motion.div>
     );
   }
@@ -121,7 +121,7 @@ const Home = () => {
         className="mission-section py-5 text-center bg-light"
       >
         <h2 className="mission-heading">Pillars of MCA Academy</h2>
-        <Cards2 data={pillars} />
+        <PillarCard data={pillars} />
       </motion.div>
     );
   }
