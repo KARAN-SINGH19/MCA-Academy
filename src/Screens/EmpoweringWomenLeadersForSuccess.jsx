@@ -47,31 +47,46 @@ const EmpoweringWomenLeadersForSuccess = () => {
                     </Col>
                 </Row>
                 <Row className="team-row mt-4">
-                    <Col md={9} className="mission-col">
-                        <motion.div initial="hidden" animate="show" variants={reveal("left", 0)}>
-                            <div className="mission-section py-5 text-center bg-light">
-                                <h2 className="mission-heading">Empowering Women Leaders for Success</h2>
-                                <p style={{ textAlign: "left" }}>
-                                    Empowers women leaders with skills, support, and strategies to overcome barriers, unlock their potential, and thrive in leadership roles.
-                                </p>
-                                <ul style={{ color: '#013252' }} className="card-list">
-                                    <li><strong>Unlocking My Professional Presence: </strong> Focuses on personal branding, self-awareness, and professional development to enhance one's presence and impact in the workplace.</li>
-                                    <li>Fortifying Corporate resilience for uncertain times</li>
-                                    <li><strong>Harmony</strong>- Empowering for balance -  professional and personal life balance</li>
-                                </ul>
-                            </div>
-                        </motion.div>
+                    <Col md={6} className="mission-col">
+                        <InView triggerOnce>
+                            {({ inView, ref }) => (
+                                <motion.div
+                                    ref={ref}
+                                    initial="hidden"
+                                    animate={inView ? "show" : "hidden"}
+                                    variants={reveal("up", 0)}
+                                >
+                                    <div className="mission-section py-5 text-center bg-light">
+                                        <h2 className="mission-heading">Empowering Women Leaders for Success</h2>
+                                        <p style={{ textAlign: "left" }}>
+                                            Empowers women leaders with skills, support, and strategies to overcome barriers, unlock their potential, and thrive in leadership roles.
+                                        </p>
+                                        <ul style={{ color: '#013252' }} className="card-list">
+                                            <li><strong>Unlocking My Professional Presence: </strong> Focuses on personal branding, self-awareness, and professional development to enhance one's presence and impact in the workplace.</li>
+                                            <li>Fortifying Corporate resilience for uncertain times</li>
+                                            <li><strong>Harmony</strong>- Empowering for balance -  professional and personal life balance</li>
+                                        </ul>
+                                    </div>
+                                </motion.div>
+                            )}
+                        </InView>
                     </Col>
-                    <Col md={3} className="banner-col">
-                        <motion.div initial="hidden" animate="show" variants={reveal("right", 0.3)}>
-                            <Image
-                                src="/images/avatar.png"
-                                alt="Leadership Banner"
-                                fluid
-                                className="banner-image"
-                                style={{ height: "45vh", width: "auto", marginTop: "50px" }}
-                            />
-                        </motion.div>
+                    <Col md={6} className="banner-col d-flex align-items-center justify-content-center">
+                        <InView triggerOnce>
+                            {({ inView, ref }) => (
+                                <motion.div
+                                    ref={ref}
+                                    initial="hidden"
+                                    animate={inView ? "show" : "hidden"}
+                                    variants={reveal("up", 0.3)}
+                                >
+                                    <div className="image-container">
+                                        <img src="/images/people-1979261_1280.jpg" alt="" className="img-fluid" />
+                                        <div className="overlay"></div>
+                                    </div>
+                                </motion.div>
+                            )}
+                        </InView>
                     </Col>
                 </Row>
             </Container>

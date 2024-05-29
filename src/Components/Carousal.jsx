@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { motion } from 'framer-motion';
 
 const Carousal = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
+    useEffect(() => {
+        console.log("Active Index Changed:", activeIndex);
+    }, [activeIndex]);
+
     const handleSelect = (selectedIndex, e) => {
+        console.log("Selected Index:", selectedIndex);
         setActiveIndex(selectedIndex);
     };
 

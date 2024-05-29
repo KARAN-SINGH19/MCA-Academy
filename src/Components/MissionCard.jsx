@@ -16,7 +16,7 @@ const MissionCard = ({ data }) => {
                 <Card.Img variant="top" src={values.image} style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }} />
                 <div className="overlay"></div> {/* Overlay div */}
               </div>
-              <Card.Body style={{ backgroundColor: '#f8f9fa' }}>
+              <Card.Body style={{ backgroundColor: 'white' }}>
                 <Card.Title style={{ color: "#ff5c4a", fontWeight: "700" }} className="text-center">{values.title}</Card.Title>
                 <Card.Text style={{ color: "#013252", fontWeight: "645" }} className="text-center">
                   {values.content}

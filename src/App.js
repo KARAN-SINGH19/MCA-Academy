@@ -9,6 +9,7 @@ import CoachingandMentoring from './Screens/CoachingandMentoring';
 import Leadership from './Screens/UnlockingAuthenticLeadership';
 import Empowerment from './Screens/EmpoweringWomenLeadersForSuccess';
 import Skills from './Screens/Skills';
+import Finance from './Screens/Finance';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route exact path='/about' element={<About />} />
         <Route exact path='/HRAcademy' element={<HRAcademy />} />
-        {/* <Route exact path='/FinanceAcademy' element={<FinanceAcademy />} /> */}
+        <Route exact path='/FinanceAcademy' element={<Finance />} />
         {/* <Route exact path='/ProjectManagementAcademy' element={<ProjectManagementAcademy />} /> */}
         <Route exact path='/SupplyChainAcademy' element={<SupplyChainAcademy />} />
         <Route exact path='/CoachingandMentoring' element={<CoachingandMentoring />} />

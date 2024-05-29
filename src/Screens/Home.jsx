@@ -61,7 +61,7 @@ const Home = () => {
         variants={reveal("left", 0.2)}
         initial="hidden"
         animate={inView ? "show" : "hidden"}
-        className="mission-section py-5 text-center bg-light"
+        className="mission-section py-5 text-center"
       >
         <h2 className="mission-heading">Our Mission</h2>
         <p className="mx-auto" style={{ maxWidth: '600px' }}>
@@ -129,22 +129,11 @@ const Home = () => {
   // }
 
   function PillarSection({ children }) {
-    const { ref, inView } = useInView({
-      triggerOnce: true,
-      threshold: 0,
-    });
-
     return (
-      <motion.div
-        ref={ref}
-        variants={reveal("up", 0.2)}
-        initial="hidden"
-        animate={inView ? "show" : "hidden"}
-        className="mission-section py-5 text-center bg-light"
-      >
+      <div className="mission-section py-5 text-center bg-light">
         <h2 className="mission-heading">Pillars of MCA Academy</h2>
         <PillarCard data={pillars} />
-      </motion.div>
+      </div>
     );
   }
 
@@ -186,11 +175,11 @@ const Home = () => {
 
       {/* <CounterSection /> */}
 
-      <SliderSection data={academy} />
-
       <section id="pillars">
         <PillarSection />
       </section>
+
+      <SliderSection data={academy} />
 
       <section id="contact">
         <FooterSection />

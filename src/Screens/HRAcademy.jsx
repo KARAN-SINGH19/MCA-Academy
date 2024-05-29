@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import Container from 'react-bootstrap/Container';
@@ -13,8 +13,7 @@ import { InView } from 'react-intersection-observer';
 import { useInView } from 'react-intersection-observer';
 
 const HRAcademy = () => {
-
-    function FooterSection({ children }) {
+    const FooterSection = () => {
         const { ref, inView } = useInView({
             triggerOnce: true,
             threshold: 0,
@@ -30,7 +29,7 @@ const HRAcademy = () => {
                 <Footer />
             </motion.div>
         );
-    }
+    };
 
     return (
         <div>
@@ -59,21 +58,10 @@ const HRAcademy = () => {
 
                 <Row className="mt-5 bg-light py-4 rounded">
                     <Col xs={12} className="text-center">
-                        <InView triggerOnce>
-                            {({ inView, ref }) => (
-                                <motion.div
-                                    initial="hidden"
-                                    animate={inView ? "show" : "hidden"}
-                                    variants={reveal("up", 0)}
-                                    ref={ref}
-                                >
-                                    <h3 className='mission-heading' style={{ color: "#ff5c4a", fontWeight: 700 }}>Our HR Academy Programs</h3>
-                                </motion.div>
-                            )}
-                        </InView>
+                        <h3 className='mission-heading' style={{ color: "#ff5c4a", fontWeight: 700 }}>Our HR Academy Programs</h3>
                     </Col>
                     {HR.map((program, index) => (
-                        <Col key={index} xs={12} md={4} className="mb-4 mt-3 d-flex align-items-center">
+                        <Col key={index} xs={12} md={4} className="mb-4 mt-3 d-flex align-items-center scroll-animation">
                             <InView triggerOnce>
                                 {({ inView, ref }) => (
                                     <motion.div
@@ -81,6 +69,7 @@ const HRAcademy = () => {
                                         animate={inView ? "show" : "hidden"}
                                         variants={reveal("up", index * 0.3)}
                                         ref={ref}
+                                        style={{ display: 'flex', flexGrow: 1, margin: '10px' }}
                                     >
                                         <Card className="allCards h-100 shadow">
                                             <Card.Body className="d-flex flex-column align-items-center">

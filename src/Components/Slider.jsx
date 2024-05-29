@@ -23,6 +23,13 @@ const Slider = ({ deviceType, data }) => {
         }
     };
 
+    const handleLinkClick = (event) => {
+        event.preventDefault();
+        const href = event.currentTarget.getAttribute('href');
+        window.location.href = href;
+        window.scrollTo(0, 0);
+    };
+
     return (
         <div className="slider-container">
             <Carousel
@@ -51,7 +58,7 @@ const Slider = ({ deviceType, data }) => {
                                 <Card.Text style={{ textAlign: "center", color: '#013252' }} className="card-text">
                                     Learn more about {academyItem.name} and enhance your skills with our specialized programs.
                                 </Card.Text>
-                                <Link to={`/${academyItem.name.replace(/\s+/g, '')}`}>
+                                <Link to={`/${academyItem.name.replace(/\s+/g, '')}`} onClick={handleLinkClick}>
                                     <button type="button" className="learnMore mx-2">Learn More</button>
                                 </Link>
                             </Card.Body>

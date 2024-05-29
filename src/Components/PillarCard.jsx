@@ -1,52 +1,67 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-function PillarCard({ data }) {
-    const removeSpaces = (str) => {
-        return str.replace(/\s+/g, '');
+const PillarCardItem = ({ pillar, index, handleLinkClick }) => {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
+    return (
+        <Col md={4} className="mb-4 mt-4">
+            <motion.div
+                ref={ref}
+                className="box"
+                initial={{ opacity: 0, translateX: -50, translateY: -50 }}
+                animate={inView ? { opacity: 1, translateX: 0, translateY: 0 } : {}}
+                transition={{ duration: 0.3, delay: index * 0.3 }}
+            >
+                <img alt="" src={pillar.image} className="img-fluid" />
+                <div className="overlay">
+                    <h3>{pillar.title}</h3>
+                    <ul className='card-list2'>
+                        <li>{pillar.content1}</li>
+                        {pillar.content2 && <li>{pillar.content2}</li>}
+                        {pillar.content3 && <li>{pillar.content3}</li>}
+                        {pillar.content4 && <li>{pillar.content4}</li>}
+                        {pillar.content5 && <li>{pillar.content5}</li>}
+                    </ul>
+                    <Link to={`/${pillar.title.replace(/\s+/g, '')}`} onClick={handleLinkClick}>
+                        <button className="learnMore2 mx-2">Learn More</button>
+                    </Link>
+                </div>
+            </motion.div>
+        </Col>
+    );
+};
+
+const PillarCard = ({ data }) => {
+    const handleLinkClick = (event) => {
+        event.preventDefault();
+        const href = event.currentTarget.getAttribute('href');
+        window.location.href = href;
+        window.scrollTo(0, 0);
     };
 
     return (
-        <Container className="my-5">
-            <Row className="justify-content-center g-5">
-                {data.map((value, index) => (
-                    <Col key={index} sm={12} md={6} lg={4} xl={4}>
-                        <Link to={`/${removeSpaces(value.title)}`} className="pillar-link" style={{ textDecoration: 'none' }}>
-                            <Card className='card allCards' style={{ textDecoration: "none", width: '20rem', height: "100vh", borderRadius: '35px' }}>
-                                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '15rem' }}>
-                                    <Card.Img
-                                        style={{ height: "auto", width: "auto", maxHeight: '100%', maxWidth: '100%' }}
-                                        variant="top"
-                                        src={value.image}
-                                    />
-                                </div>
-                                <Card.Body>
-                                    <Card.Title style={{ textAlign: 'center', color: "#ff5c4a" }}>{value.title}</Card.Title>
-                                    <Card.Text>
-                                        <ul style={{ color: '#013252' }} className="card-list">
-                                            {value.content1 && <li>{value.content1}</li>}
-                                            {value.content2 && <li>{value.content2}</li>}
-                                            {value.content3 && <li>{value.content3}</li>}
-                                            {value.content4 && <li>{value.content4}</li>}
-                                            {value.content5 && <li>{value.content5}</li>}
-                                        </ul>
-                                    </Card.Text>
-                                    <div
-                                        className="card-color-area"
-                                        style={{ backgroundColor: value.color }}
-                                    ></div>
-                                </Card.Body>
-                            </Card>
-                        </Link>
-                    </Col>
-                ))}
-            </Row>
-        </Container>
+        <div id="card-area">
+            <Container>
+                <Row className="justify-content-center">
+                    {data.map((pillar, index) => (
+                        <PillarCardItem 
+                            key={index}
+                            pillar={pillar}
+                            index={index}
+                            handleLinkClick={handleLinkClick}
+                        />
+                    ))}
+                </Row>
+            </Container>
+        </div>
     );
-}
+};
 
 export default PillarCard;

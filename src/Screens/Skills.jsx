@@ -28,6 +28,7 @@ const Skills = () => {
             </motion.div>
         );
     }
+
     return (
         <>
             <Navbar />
@@ -47,32 +48,46 @@ const Skills = () => {
                     </Col>
                 </Row>
                 <Row className="team-row mt-4">
-                    <Col md={9} className="mission-col">
-                        <motion.div initial="hidden" animate="show" variants={reveal("left", 0)}>
-                            <div className="mission-section py-5 text-center bg-light">
-                                <h2 className="mission-heading">Building and Nurturing Entrepreneurial Skills</h2>
-                                <p style={{ textAlign: "left" }}>
-                                    Provides aspiring entrepreneurs with the tools, knowledge, and mindset necessary to successfully launch and grow their ventures.
-                                </p>
-                                <ul style={{ color: '#013252' }} className="card-list">
-                                    <li><strong>Strategy & Transformation: </strong> Offers insights and frameworks for strategic planning and organizational transformation to adapt and thrive in dynamic business environments.</li>
-                                    <li><strong>Global Leadership and Crisis Management: </strong>Prepares leaders to navigate complex global challenges and effectively manage crises with resilience and agility.</li>
-                                    <li><strong>Leading a Business in a VUCA World: </strong>Equips leaders with strategies and tactics to lead in volatile, uncertain, complex, and ambiguous (VUCA) environments, fostering adaptability and innovation.</li>
-                                </ul>
-
-                            </div>
-                        </motion.div>
+                    <Col md={6} className="mission-col">
+                        <InView triggerOnce>
+                            {({ inView, ref }) => (
+                                <motion.div
+                                    initial="hidden"
+                                    animate={inView ? "show" : "hidden"}
+                                    variants={reveal("up", 0)}
+                                    ref={ref}
+                                >
+                                    <div className="mission-section py-5 text-center bg-light">
+                                        <h2 className="mission-heading">Building and Nurturing Entrepreneurial Skills</h2>
+                                        <p style={{ textAlign: "left" }}>
+                                            Provides aspiring entrepreneurs with the tools, knowledge, and mindset necessary to successfully launch and grow their ventures.
+                                        </p>
+                                        <ul style={{ color: '#013252' }} className="card-list">
+                                            <li><strong>Strategy & Transformation: </strong> Offers insights and frameworks for strategic planning and organizational transformation to adapt and thrive in dynamic business environments.</li>
+                                            <li><strong>Global Leadership and Crisis Management: </strong>Prepares leaders to navigate complex global challenges and effectively manage crises with resilience and agility.</li>
+                                            <li><strong>Leading a Business in a VUCA World: </strong>Equips leaders with strategies and tactics to lead in volatile, uncertain, complex, and ambiguous (VUCA) environments, fostering adaptability and innovation.</li>
+                                        </ul>
+                                    </div>
+                                </motion.div>
+                            )}
+                        </InView>
                     </Col>
-                    <Col md={3} className="banner-col">
-                        <motion.div initial="hidden" animate="show" variants={reveal("right", 0.3)}>
-                            <Image
-                                src="/images/abilities.png"
-                                alt="Leadership Banner"
-                                fluid
-                                className="banner-image"
-                                style={{ height: "45vh", width: "auto", marginTop: "50px" }}
-                            />
-                        </motion.div>
+                    <Col md={6} className="banner-col d-flex align-items-center justify-content-center">
+                        <InView triggerOnce>
+                            {({ inView, ref }) => (
+                                <motion.div
+                                    ref={ref}
+                                    initial="hidden"
+                                    animate={inView ? "show" : "hidden"}
+                                    variants={reveal("up", 0.3)}
+                                >
+                                    <div className="image-container">
+                                        <img src="/images/mindset-3455748_1280.jpg" alt="" className="img-fluid" />
+                                        <div className="overlay"></div>
+                                    </div>
+                                </motion.div>
+                            )}
+                        </InView>
                     </Col>
                 </Row>
             </Container>
