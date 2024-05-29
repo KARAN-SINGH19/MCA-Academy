@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import finance from '../Api/Finance';
 import { motion } from 'framer-motion';
 import reveal from '../Animations/Variants';
@@ -12,6 +13,15 @@ import { InView } from 'react-intersection-observer';
 import { useInView } from 'react-intersection-observer';
 
 const Finance = () => {
+    const generateURL = (text) => {
+        return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    };
+    const handleLinkClick = (event) => {
+        event.preventDefault();
+        const href = event.currentTarget.getAttribute('href');
+        window.location.href = href;
+        window.scrollTo(0, 0);
+    };
     const FooterSection = () => {
         const { ref, inView } = useInView({
             triggerOnce: true,
@@ -63,8 +73,16 @@ const Finance = () => {
                                     {({ inView, ref }) => (
                                         <ul className="text-left card-list" ref={ref} style={{ listStyleType: 'none', padding: 0 }}>
                                             {finance.map((point, index) => (
-                                                <motion.li key={index} initial="hidden" animate={inView ? "show" : "hidden"} variants={reveal("left", 0.3 + 0.2 * index)}>
-                                                    {point}
+                                                <motion.li
+                                                    key={index}
+                                                    initial="hidden"
+                                                    animate={inView ? "show" : "hidden"}
+                                                    variants={reveal("left", 0.1 + 0.1 * index)}
+                                                    style={{ cursor: 'pointer' }}
+                                                >
+                                                    <Link to={`/${generateURL(point)}`} style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleLinkClick}>
+                                                        {point}
+                                                    </Link>
                                                 </motion.li>
                                             ))}
                                         </ul>

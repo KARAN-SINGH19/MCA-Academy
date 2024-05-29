@@ -17,7 +17,7 @@ const PillarCardItem = ({ pillar, index, handleLinkClick }) => {
                 className="box"
                 initial={{ opacity: 0, translateX: -50, translateY: -50 }}
                 animate={inView ? { opacity: 1, translateX: 0, translateY: 0 } : {}}
-                transition={{ duration: 0.3, delay: index * 0.3 }}
+                transition={{ duration: 0.2, delay: index * 0.2 }}
             >
                 <img alt="" src={pillar.image} className="img-fluid" />
                 <div className="overlay">
@@ -51,7 +51,7 @@ const PillarCard = ({ data }) => {
             <Container>
                 <Row className="justify-content-center">
                     {data.map((pillar, index) => (
-                        <PillarCardItem 
+                        <PillarCardItem
                             key={index}
                             pillar={pillar}
                             index={index}

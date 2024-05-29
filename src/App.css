@@ -113,6 +113,12 @@
 
 .mission-heading2 {
   position: relative;
+  display: inline-block;
+  color: #ff5c4a;
+}
+
+.mission-heading2 {
+  position: relative;
   margin: 20px;
 }
 
