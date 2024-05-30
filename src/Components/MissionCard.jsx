@@ -12,9 +12,8 @@ const MissionCard = ({ data }) => {
         {data.map((values, index) => (
           <Col key={index} sm={12} md={6} lg={4} xl={4}>
             <Card className="h-100 allCards" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', border: 'none', borderRadius: '10px' }}>
-              <div className="image-container">
+              <div className="card-image">
                 <Card.Img variant="top" src={values.image} style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }} />
-                <div className="overlay"></div> {/* Overlay div */}
               </div>
               <Card.Body style={{ backgroundColor: 'white' }}>
                 <Card.Title style={{ color: "#ff5c4a", fontWeight: "700" }} className="text-center">{values.title}</Card.Title>
