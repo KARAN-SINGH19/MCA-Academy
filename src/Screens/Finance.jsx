@@ -13,15 +13,39 @@ import { InView } from 'react-intersection-observer';
 import { useInView } from 'react-intersection-observer';
 
 const Finance = () => {
+
     const generateURL = (text) => {
         return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
     };
+
     const handleLinkClick = (event) => {
         event.preventDefault();
         const href = event.currentTarget.getAttribute('href');
         window.location.href = href;
         window.scrollTo(0, 0);
     };
+
+    const AnimatedColumn = ({ children, delay, direction }) => {
+        const [ref, inView] = useInView({
+            triggerOnce: true,
+            rootMargin: '-100px 0px',
+        });
+
+        return (
+            <motion.div
+                ref={ref}
+                initial="hidden"
+                animate={inView ? "show" : "hidden"}
+                variants={reveal(direction, delay)}
+                transition={{ delay }}
+            >
+                {children}
+            </motion.div>
+        );
+    };
+
+
+
     const FooterSection = () => {
         const { ref, inView } = useInView({
             triggerOnce: true,
@@ -39,6 +63,14 @@ const Finance = () => {
             </motion.div>
         );
     };
+
+    const circles = [...Array(7)].map((_, i) => {
+        const angle = (i / 7) * 2 * Math.PI;
+        const radius = 120;
+        const x = 50 + (radius * Math.cos(angle)) / 70 * 50;
+        const y = 50 + (radius * Math.sin(angle)) / 70 * 50;
+        return { x, y };
+    });
 
     return (
         <div>
@@ -64,50 +96,54 @@ const Finance = () => {
                         </motion.div>
                     </Col>
                 </Row>
+            </Container>
+
+            <Container>
                 <Row className="mt-5 bg-light py-4 rounded">
-                    <Col xs={12} md={6}>
-                        <motion.div initial="hidden" animate="show" variants={reveal("left", 0)}>
-                            <div className="py-5">
-                                <h3 className='mission-heading' style={{ color: "#ff5c4a", fontWeight: 700 }}>Our Finance Academy Programs</h3>
-                                <InView threshold={0.2} triggerOnce={true}>
-                                    {({ inView, ref }) => (
-                                        <ul className="text-left card-list" ref={ref} style={{ listStyleType: 'none', padding: 0 }}>
-                                            {finance.map((point, index) => (
-                                                <motion.li
-                                                    key={index}
-                                                    initial="hidden"
-                                                    animate={inView ? "show" : "hidden"}
-                                                    variants={reveal("left", 0.1 + 0.1 * index)}
-                                                    style={{ cursor: 'pointer' }}
-                                                >
-                                                    <Link to={`/${generateURL(point)}`} style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleLinkClick}>
-                                                        {point}
-                                                    </Link>
-                                                </motion.li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </InView>
+                    <Col xs={12} md={6} className="mb-4 mb-md-0 pr-md-4">
+                        <AnimatedColumn delay={0.3} direction="right">
+                            <div className="py-5 text-center position-relative circle-container">
+                                <div className="central-circle">Finance Academy <br /> Programs</div>
+                                <div className="surrounding-circles">
+                                    {circles.map((circle, i) => (
+                                        <Link
+                                            key={i}
+                                            onClick={handleLinkClick}
+                                            to={`/${generateURL(finance[i])}`}
+                                            className='surrounding-circle'
+                                            style={{
+                                                top: `${circle.y}%`,
+                                                left: `${circle.x}%`,
+                                                transform: 'translate(-50%, -50%)',
+                                                textAlign: 'center',
+                                                padding: '5px',
+                                                fontSize: '0.85rem',
+                                                textDecoration: 'none',
+                                                transition: 'transform 0.3s ease',
+                                            }}
+                                        >
+                                            {finance[i]}
+                                        </Link>
+                                    ))}
+                                </div>
                             </div>
-                        </motion.div>
+                        </AnimatedColumn>
                     </Col>
-                    <Col xs={12} md={6}>
-                        <InView threshold={0.2} triggerOnce={true}>
-                            {({ inView, ref }) => (
-                                <motion.div ref={ref} initial="hidden" animate={inView ? "show" : "hidden"} variants={reveal("up", 0.1)}>
-                                    <div className="image-container">
-                                        <img src="/images/blur-1853262_1280.jpg" alt="" className="img-fluid" />
-                                        <div className="overlay"></div>
-                                    </div>
-                                </motion.div>
-                            )}
-                        </InView>
+                    <Col xs={12} md={6} className="d-flex align-items-center justify-content-center pl-md-4">
+                        <AnimatedColumn delay={0} direction="left">
+                            <div className="image-container">
+                                <img style={{ maxWidth: "85%", maxHeight: "calc(88vh - 40px)", marginLeft: "50px" }} src="/images/blur-1853262_1280.jpg" alt="" className="img-fluid" />
+                                <div className="overlay"></div>
+                            </div>
+                        </AnimatedColumn>
                     </Col>
                 </Row>
-
             </Container>
+
+
+            <br /> <br />
             <FooterSection />
-        </div>
+        </div >
     );
 };
 

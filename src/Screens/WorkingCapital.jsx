@@ -43,7 +43,7 @@ const WorkingCapital = () => {
                 <Row>
                     <Col style={{ position: "relative" }}>
                         <motion.img
-                            src="/images/capital.jpeg"
+                            src="/images/finance-4858797_1280.jpg"
                             alt="Leadership Banner"
                             className="banner-image"
                             style={{ width: "100%", height: "50vh", objectFit: "cover" }}

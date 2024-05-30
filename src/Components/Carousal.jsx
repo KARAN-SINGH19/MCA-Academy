@@ -20,7 +20,7 @@ const Carousal = () => {
             <Carousel.Item style={{ height: '550px' }} interval={2000}>
                 <img
                     className="d-block w-100"
-                    src="/images/job-5382501_1280.jpg"
+                    src="/images/bulb.jpg"
                     alt="Placeholder slide"
                     style={{ objectFit: 'cover', height: '100%' }}
                 />
@@ -32,7 +32,7 @@ const Carousal = () => {
             <Carousel.Item style={{ height: '550px' }} interval={2000}>
                 <img
                     className="d-block w-100"
-                    src="/images/laptops-593296_1280.jpg"
+                    src="/images/bulb2.jpg"
                     alt="Placeholder slide"
                     style={{ objectFit: 'cover', height: '100%' }}
                 />
@@ -44,7 +44,7 @@ const Carousal = () => {
             <Carousel.Item style={{ height: '550px' }} interval={2000}>
                 <img
                     className="d-block w-100"
-                    src="/images/man-597178_1280.jpg"
+                    src="/images/bulb3.jpg"
                     alt="Placeholder slide"
                     style={{ objectFit: 'cover', height: '100%' }}
                 />

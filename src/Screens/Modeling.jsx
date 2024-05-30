@@ -43,7 +43,7 @@ const Modeling = () => {
                 <Row>
                     <Col style={{ position: "relative" }}>
                         <motion.img
-                            src="/images/concept-1868728_1280.jpg"
+                            src="/images/man-5710164_1280.jpg"
                             alt="Leadership Banner"
                             className="banner-image"
                             style={{ width: "100%", height: "50vh", objectFit: "cover" }}

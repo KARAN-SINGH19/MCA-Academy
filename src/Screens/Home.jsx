@@ -86,7 +86,7 @@ const Home = () => {
         animate={inView ? "show" : "hidden"}
         className="mission-section py-5 text-center bg-light"
       >
-        <h2 className="mission-heading">Our Academy Categories</h2>
+        <h2 className="mission-heading">Functional Academy</h2>
         <Slider data={academy} />
       </motion.div>
     );
@@ -131,7 +131,7 @@ const Home = () => {
   function PillarSection({ children }) {
     return (
       <div className="mission-section py-5 text-center bg-light">
-        <h2 className="mission-heading">Pillars of MCA Academy</h2>
+        <h2 className="mission-heading">Academy Verticals</h2>
         <PillarCard data={pillars} />
       </div>
     );
