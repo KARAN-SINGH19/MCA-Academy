@@ -7,10 +7,10 @@ import { motion } from 'framer-motion';
 
 export default function Footer() {
     const bounceAnimation = {
-        y: [0, -10, 0], 
+        y: [0, -10, 0],
         transition: {
-            duration: 1, 
-            repeat: Infinity 
+            duration: 1,
+            repeat: Infinity
         }
     };
     return (
@@ -42,9 +42,6 @@ export default function Footer() {
                     <MDBRow className='mt-3'>
 
                         <MDBCol md="3" lg="3" xl="4" className='mb-4'>
-                            <div>
-                                <img className="logo-default" src="/images/Picture1.png" alt="MCA UAE" style={{ maxWidth: '230px', height: 'auto' }} />
-                            </div>
                             <motion.img
                                 className="logo-default"
                                 src="https://www.mcagulf.com/wp-content/uploads/2024/05/MCA-New-Logo-252px.png"
@@ -59,7 +56,6 @@ export default function Footer() {
                                     style={{ position: 'absolute', top: '-10px', right: '210px', fontSize: '24px', cursor: 'pointer' }}
                                     animate={bounceAnimation}
                                 >
-                                    👆
                                 </motion.span> <br />
                                 <motion.span
                                     style={{ whiteSpace: 'nowrap', fontSize: '1.1rem', color: '#013252', fontWeight: 600, cursor: 'pointer' }}

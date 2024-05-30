@@ -19,6 +19,12 @@ const Carousal = () => {
         show: { y: 0, opacity: 1, transition: { duration: 0.9 } },
     };
 
+    const captionStyle = {
+        marginBottom: '200px',
+        color: 'white',
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)', // Greyish shadow for better visibility
+    };
+
     return (
         <Carousel fade controls={false} indicators={false} activeIndex={activeIndex} onSelect={handleSelect}>
             <Carousel.Item style={{ height: '550px' }} interval={2000}>
@@ -28,7 +34,7 @@ const Carousal = () => {
                     alt="Placeholder slide"
                     style={{ objectFit: 'cover', height: '100%' }}
                 />
-                <Carousel.Caption style={{ marginBottom: '200px', color: 'white' }}>
+                <Carousel.Caption style={{ captionStyle }}>
                     <motion.h1 style={{ color: 'white', textAlign: "left" }} variants={linkVariants} initial="hidden" animate={activeIndex === 0 ? "show" : "hidden"} >MCA's Academy ME</motion.h1>
                     <motion.h4 style={{ color: "white", textAlign: "left" }} variants={linkVariants} initial="hidden" animate={activeIndex === 0 ? "show" : "hidden"} >We create custom solutions to empower teams through <br />  skill enhancement, critical knowledge transfer <br />  and re-skilling interventions.</motion.h4>
                 </Carousel.Caption>
@@ -40,7 +46,7 @@ const Carousal = () => {
                     alt="Placeholder slide"
                     style={{ objectFit: 'cover', height: '100%' }}
                 />
-                <Carousel.Caption style={{ marginBottom: '200px', color: 'white' }}>
+                <Carousel.Caption style={{captionStyle}}>
                     <motion.h1 style={{ color: 'white', textAlign: "left" }} variants={linkVariants} initial="hidden" animate={activeIndex === 1 ? "show" : "hidden"} >Unlock People Potential.</motion.h1>
                     <motion.h4 style={{ color: "white", textAlign: "left" }} variants={linkVariants} initial="hidden" animate={activeIndex === 1 ? "show" : "hidden"} >We create custom solutions to empower teams through <br />  skill enhancement, critical knowledge transfer <br />  and re-skilling interventions.</motion.h4>
                 </Carousel.Caption>
@@ -52,7 +58,7 @@ const Carousal = () => {
                     alt="Placeholder slide"
                     style={{ objectFit: 'cover', height: '100%' }}
                 />
-                <Carousel.Caption style={{ marginBottom: '200px', color: 'white' }}>
+                <Carousel.Caption style={{captionStyle}}>
                     <motion.h1 style={{ color: 'white', textAlign: "left" }} variants={linkVariants} initial="hidden" animate={activeIndex === 2 ? "show" : "hidden"} >Take Your Business To The Next Level.</motion.h1>
                     <motion.h4 style={{ color: "white", textAlign: "left" }} variants={linkVariants} initial="hidden" animate={activeIndex === 2 ? "show" : "hidden"} >We create custom solutions to empower teams through <br />  skill enhancement, critical knowledge transfer <br />  and re-skilling interventions.</motion.h4>
                 </Carousel.Caption>

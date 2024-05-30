@@ -35,7 +35,7 @@ const Navbar = () => {
                                 location.pathname == '/' && (
                                     <>
                                         <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
-                                            <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="missions" spy={true} smooth={true} offset={-100} duration={50}>Missions</ScrollLink>
+                                            <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="missions" spy={true} smooth={true} offset={-100} duration={50}>Mission</ScrollLink>
                                         </motion.li>
                                         <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
                                             <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="pillars" spy={true} smooth={true} offset={-100} duration={50}>Pillars</ScrollLink>
