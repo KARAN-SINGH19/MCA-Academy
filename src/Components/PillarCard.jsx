@@ -19,9 +19,11 @@ const PillarCardItem = ({ pillar, index, handleLinkClick }) => {
                 animate={inView ? { opacity: 1, translateX: 0, translateY: 0 } : {}}
                 transition={{ duration: 0.2, delay: index * 0.2 }}
             >
-                <img alt="" src={pillar.image} className="img-fluid" />
+                <div className="image-container">
+                    <img alt="" src={pillar.image} className="img-fluid" />
+                    <h4 className="image-title">{pillar.title}</h4>
+                </div>
                 <div className="overlay">
-                    <h3>{pillar.title}</h3>
                     <ul className='card-list2'>
                         <li>{pillar.content1}</li>
                         {pillar.content2 && <li>{pillar.content2}</li>}
@@ -35,6 +37,7 @@ const PillarCardItem = ({ pillar, index, handleLinkClick }) => {
                 </div>
             </motion.div>
         </Col>
+
     );
 };
 
