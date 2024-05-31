@@ -110,7 +110,7 @@ const Finance = () => {
                                             key={i}
                                             onClick={handleLinkClick}
                                             to={`/${generateURL(finance[i])}`}
-                                            className='surrounding-circle'
+                                            className={`surrounding-circle circle${(i % 7) + 1}`}
                                             style={{
                                                 top: `${circle.y}%`,
                                                 left: `${circle.x}%`,
