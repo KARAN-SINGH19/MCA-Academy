@@ -4,12 +4,12 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const PillarCardItem = ({ pillar, index, handleLinkClick }) => {
+const PillarCardItem = ({ pillar, index, handleLinkClick, handleLinkClick2 }) => {
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.1,
     });
-
+    
     return (
         <Col md={4} className="mb-4 mt-4">
             <motion.div
@@ -20,16 +20,17 @@ const PillarCardItem = ({ pillar, index, handleLinkClick }) => {
                 transition={{ duration: 0.2, delay: index * 0.2 }}
             >
                 <div className="image-container">
-                    <img alt="" src={pillar.image} className="img-fluid" />
-                    <h4 className="image-title">{pillar.title}</h4>
+                    <img alt={pillar.title} src={pillar.image} className="img-fluid" />
+                    <h3 className="image-title">
+                        {pillar.title}</h3>
                 </div>
                 <div className="overlay">
                     <ul className='card-list2'>
-                        <li>{pillar.content1}</li>
-                        {pillar.content2 && <li>{pillar.content2}</li>}
-                        {pillar.content3 && <li>{pillar.content3}</li>}
-                        {pillar.content4 && <li>{pillar.content4}</li>}
-                        {pillar.content5 && <li>{pillar.content5}</li>}
+                        <li onClick={handleLinkClick2}>{pillar.content1}</li>
+                        {pillar.content2 && <li onClick={handleLinkClick2}>{pillar.content2}</li>}
+                        {pillar.content3 && <li onClick={handleLinkClick2}>{pillar.content3}</li>}
+                        {pillar.content4 && <li onClick={handleLinkClick2}>{pillar.content4}</li>}
+                        {pillar.content5 && <li onClick={handleLinkClick2}>{pillar.content5}</li>}
                     </ul>
                     <Link to={`/${pillar.title.replace(/\s+/g, '')}`} onClick={handleLinkClick}>
                         <button className="learnMore2 mx-2">Learn More</button>
@@ -37,7 +38,6 @@ const PillarCardItem = ({ pillar, index, handleLinkClick }) => {
                 </div>
             </motion.div>
         </Col>
-
     );
 };
 
@@ -46,6 +46,14 @@ const PillarCard = ({ data }) => {
         event.preventDefault();
         const href = event.currentTarget.getAttribute('href');
         window.location.href = href;
+        window.scrollTo(0, 0);
+    };
+
+    const handleLinkClick2 = (event) => {
+        event.preventDefault();
+        const content = event.target.innerText;
+        const url = `/${content.replace(/\s+/g, '').replace(/[^\w\s]/gi, '')}`;
+        window.location.href = url;
         window.scrollTo(0, 0);
     };
 
@@ -59,6 +67,7 @@ const PillarCard = ({ data }) => {
                             pillar={pillar}
                             index={index}
                             handleLinkClick={handleLinkClick}
+                            handleLinkClick2={handleLinkClick2}
                         />
                     ))}
                 </Row>

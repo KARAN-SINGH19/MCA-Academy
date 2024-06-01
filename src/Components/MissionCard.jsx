@@ -11,9 +11,9 @@ const MissionCard = ({ data }) => {
       <Row className="justify-content-center">
         {data.map((values, index) => (
           <Col key={index} sm={12} md={6} lg={4} xl={4}>
-            <Card className="h-100 allCards" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', border: 'none', borderRadius: '10px' }}>
+            <Card className="h-100 allCards" style={{ cursor:"default", boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', border: 'none', borderRadius: '10px' }}>
               <div className="card-image">
-                <Card.Img variant="top" src={values.image} style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }} />
+                <Card.Img variant="top" src={values.image} style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px', height: "40vh" }} />
               </div>
               <Card.Body style={{ backgroundColor: 'white' }}>
                 <Card.Title style={{ color: "#ff5c4a", fontWeight: "700" }} className="text-center">{values.title}</Card.Title>

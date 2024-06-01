@@ -10,9 +10,8 @@ import reveal from '../Animations/Variants';
 import { InView } from 'react-intersection-observer';
 import { useInView } from 'react-intersection-observer';
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
 
-const EmpoweringWomenLeadersForSuccess = () => {
+const Coaching = () => {
     function FooterSection({ children }) {
         const { ref, inView } = useInView({
             triggerOnce: true,
@@ -38,7 +37,7 @@ const EmpoweringWomenLeadersForSuccess = () => {
                 <Row>
                     <Col>
                         <motion.img
-                            src="/images/3.jpg"
+                            src="/images/5.jpg"
                             alt="Leadership Banner"
                             className="banner-image"
                             style={{ width: "100%", height: "80vh", objectFit: "cover" }}
@@ -59,20 +58,14 @@ const EmpoweringWomenLeadersForSuccess = () => {
                                     variants={reveal("up", 0)}
                                 >
                                     <div>
-                                        <h2 className="mission-heading">Empowering Women Leaders for Success</h2>
+                                        <h2 className="mission-heading">Coaching for Professionals</h2>
                                         <p className='mt-4' style={{ textAlign: "left" }}>
                                             Empowers women leaders with skills, support, and strategies to overcome barriers, unlock their potential, and thrive in leadership roles.
                                         </p>
                                         <ul style={{ color: '#013252' }} className="card-list">
-
-                                            <Link style={{ textDecoration: "none", color: "#013252" }} to={'/UnloackingMyProfessionalPresence'}>
-                                                <li style={{ marginLeft: "15px", textIndent: '-25px' }}><strong>Unlocking 'My' Professional Presence: </strong> Focuses on personal branding, self-awareness, and professional development to enhance one's presence and impact in the workplace.</li>
-                                            </Link>
-
-                                            <Link style={{ textDecoration: "none", color: "#013252" }} to={'/HarmonyEmpoweringforbalance'}>
-                                                <li style={{ marginLeft: "15px", textIndent: '-25px' }}><strong>Harmony</strong>- Empowering for balance -  professional and personal life balance</li>
-                                            </Link>
-
+                                            <li style={{ marginLeft: "15px", textIndent: '-25px' }}><strong>Unlocking My Professional Presence: </strong> Focuses on personal branding, self-awareness, and professional development to enhance one's presence and impact in the workplace.</li>
+                                            <li style={{ marginLeft: "15px", textIndent: '-25px' }}>Fortifying Corporate resilience for uncertain times</li>
+                                            <li style={{ marginLeft: "15px", textIndent: '-25px' }}><strong>Harmony</strong>- Empowering for balance -  professional and personal life balance</li>
                                         </ul>
                                     </div>
                                 </motion.div>
@@ -92,19 +85,21 @@ const EmpoweringWomenLeadersForSuccess = () => {
                                         <Card.Img
                                             variant="top"
                                             style={{ width: "30%", height: "20%", margin: "auto", padding: "20px 0" }}
-                                            src="/images/icon3.png"
+                                            src="/images/icon5.png"
                                             className="custom-card-img"
                                         />
                                         <Card.Body>
-                                            <Card.Title style={{ textAlign: "center" }}>Empowering Women Leaders For Success</Card.Title>
+                                            <Card.Title style={{ textAlign: "center" }}>Coaching for Professionals</Card.Title>
                                             <Card.Text>
                                                 <ul className='card-list'>
-                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }}>Unloacking 'My' Professional Presence</li>
-                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }}>Harmony-Empowering for balance</li>
+                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }}>Charted Financial Analyst</li>
+                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }}>Certified Management Accountant</li>
+                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }}>Certified Internal Auditor</li>
+                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }}>International Financial Reporting Standards</li>
                                                 </ul>
                                             </Card.Text>
                                         </Card.Body>
-                                        <Card.Footer style={{ backgroundColor: '#74b72e', color: '#fff', textAlign: 'center', height: '10vh' }}>
+                                        <Card.Footer style={{ backgroundColor: '#C21807', color: '#fff', textAlign: 'center', height: '10vh' }}>
                                         </Card.Footer>
                                     </Card>
                                 </motion.div>
@@ -119,4 +114,4 @@ const EmpoweringWomenLeadersForSuccess = () => {
     );
 };
 
-export default EmpoweringWomenLeadersForSuccess;
+export default Coaching;

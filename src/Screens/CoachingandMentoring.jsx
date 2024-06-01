@@ -58,7 +58,7 @@ const CoachingandMentoring = () => {
                         <motion.div initial="hidden" animate="show" variants={reveal("left", 0)}>
                             <div className="image-container">
                                 <motion.img
-                                    src="/images/business-3275307_1280.jpg"
+                                    src="/images/mentor.jpg"
                                     alt=""
                                     className="img-fluid"
                                     whileHover={{ scale: 1.1, rotateY: 10, transition: { duration: 0.5 } }}

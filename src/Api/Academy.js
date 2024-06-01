@@ -1,3 +1,4 @@
+
 const academy = [
     {
         name: "Finance Academy",
@@ -5,19 +6,19 @@ const academy = [
     },
     {
         name: "HR Academy",
-        image:"/images/customer-8659308_1280.png"
+        image:"/images/HR3.jpg"
     },
-    {
-        name: "Project Management Academy",
-        image:"/images/man-5916329_1280.jpg"
-    },
+    // {
+    //     name: "Project Management Academy",
+    //     image:"/images/pexels-shvets-production-7203724.jpg"
+    // },
     {
         name: "Supply Chain Academy",
-        image:"/images/ai-generated-8779693_1280.jpg"
+        image:"/images/chain.jpg"
     },
     {
         name: "Coaching and Mentoring",
-        image:"/images/ai-generated-8587114_1280.jpg"
+        image:"/images/coach.jpg"
     },
 
 ]

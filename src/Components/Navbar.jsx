@@ -29,7 +29,7 @@ const Navbar = () => {
                                 <RouterLink className="nav-link" to="/">Home</RouterLink>
                             </motion.li>
                             <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
-                                <RouterLink className="nav-link" to="/about">About</RouterLink>
+                                <RouterLink className="nav-link" to="/about">Team</RouterLink>
                             </motion.li>
                             {
                                 location.pathname == '/' && (
@@ -38,7 +38,7 @@ const Navbar = () => {
                                             <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="missions" spy={true} smooth={true} offset={-100} duration={50}>Mission</ScrollLink>
                                         </motion.li>
                                         <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
-                                            <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="pillars" spy={true} smooth={true} offset={-100} duration={50}>Pillars</ScrollLink>
+                                            <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="pillars" spy={true} smooth={true} offset={-100} duration={50}>Verticals</ScrollLink>
                                         </motion.li>
                                         <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
                                             <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="contact" spy={true} smooth={true} offset={-100} duration={50}>Contact Us</ScrollLink>
