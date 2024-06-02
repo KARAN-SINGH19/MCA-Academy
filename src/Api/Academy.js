@@ -2,7 +2,7 @@
 const academy = [
     {
         name: "Finance Academy",
-        image:"/images/trading-8774164_1280.jpg"
+        image:"/images/blur-1853262_1280.jpg"
     },
     {
         name: "HR Academy",
@@ -12,10 +12,10 @@ const academy = [
     //     name: "Project Management Academy",
     //     image:"/images/pexels-shvets-production-7203724.jpg"
     // },
-    {
-        name: "Supply Chain Academy",
-        image:"/images/chain.jpg"
-    },
+     {
+         name: "Supply Chain Academy",
+         image:"/images/office-1574717_1280.jpg"
+     },
     {
         name: "Coaching and Mentoring",
         image:"/images/coach.jpg"

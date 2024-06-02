@@ -18,19 +18,14 @@ export default function Footer() {
             <section className='p-4 border-bottom'>
                 <div className='d-flex justify-content-between align-items-center'>
                     <div className='me-lg-4 mb-3 mb-lg-0'>
-                        <span style={{ color: '#013252', fontWeight: 600, fontSize: '1.2rem' }}>Get connected with us on social networks:</span>
+                        <span style={{ color: '#013252', fontWeight: 600, fontSize: '1.2rem' }}></span>
                     </div>
                     <div className='d-flex'>
-                        <a href='https://www.facebook.com/' className='me-4 text-reset' style={{ fontSize: "20px" }}>
-                            <FontAwesomeIcon icon={faFacebookF} />
-                        </a>
-                        <a href='https://twitter.com/' className='me-4 text-reset' style={{ fontSize: "20px" }}>
-                            <FontAwesomeIcon icon={faTwitter} />
-                        </a>
-                        <a href='https://www.linkedin.com/' className='me-4 text-reset' style={{ fontSize: "20px" }}>
+                        
+                        <a href='https://www.linkedin.com/company/mcagulf/?originalSubdomain=ae' className='me-4 text-reset' style={{ fontSize: "30px" }}>
                             <FontAwesomeIcon icon={faLinkedin} />
                         </a>
-                        <a href='https://www.instagram.com/' className='me-4 text-reset' style={{ fontSize: "20px" }}>
+                        <a href='https://www.instagram.com/' className='me-4 text-reset' style={{ fontSize: "30px" }}>
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>
                     </div>

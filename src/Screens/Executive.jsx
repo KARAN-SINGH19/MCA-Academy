@@ -71,7 +71,7 @@ const Executive = () => {
                                 >
                                     <h4 className='mission-heading2'>Objectives</h4>
                                     <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
-                                    This program aims to provide personalized guidance and support to senior leaders in enhancing their leadership effectiveness, achieving professional goals, and driving organizational success. Through one-on-one coaching sessions, participants will receive tailored guidance, actionable insights, and accountability to unlock their full potential as strategic leaders.
+                                        This program aims to provide personalized guidance and support to senior leaders in enhancing their leadership effectiveness, achieving professional goals, and driving organizational success. Through one-on-one coaching sessions, participants will receive tailored guidance, actionable insights, and accountability to unlock their full potential as strategic leaders.
 
                                     </p>
                                 </motion.div>
@@ -96,7 +96,7 @@ const Executive = () => {
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <Col xs={12} md={6} style={{ display: 'flex', alignItems: 'center' }}>
+                            <Col xs={12} md={6} className='mt-3'>
                                 <motion.div
                                     ref={ref}
                                     initial="hidden"
@@ -114,6 +114,26 @@ const Executive = () => {
                                         <li>Foster a culture of continuous improvement and learning</li>
                                     </ul>
                                 </motion.div>
+                                <InView threshold={0.2} triggerOnce>
+                                    {({ inView, ref }) => (
+                                        <Col xs={12} md={6} style={{ width: "100%" }} className='mt-3'>
+                                            <motion.div
+                                                ref={ref}
+                                                initial="hidden"
+                                                animate={inView ? "show" : "hidden"}
+                                                variants={slideInFromRight}
+                                                style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                            >
+                                                <h4 className='mission-heading2'>Duration</h4>
+                                                <ul className='card-list'>
+                                                    <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                                        2-day program
+                                                    </p>
+                                                </ul>
+                                            </motion.div>
+                                        </Col>
+                                    )}
+                                </InView>
                             </Col>
                         )}
                     </InView>

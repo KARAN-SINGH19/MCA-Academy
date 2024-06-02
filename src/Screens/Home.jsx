@@ -65,7 +65,7 @@ const Home = () => {
       >
         <h2 className="mission-heading">Our Mission</h2>
         <p className="mx-auto" style={{ maxWidth: '600px' }}>
-          We aim to provide innovative and effective solutions that empower teams and businesses through skill enhancement, knowledge transfer, and re-skilling interventions.
+          We develop leadership and functional skills across the GCC, empowering individuals and organizations with high-quality training to drive regional growth.
         </p>
         <MissionCard data={missions} />
       </motion.div>
