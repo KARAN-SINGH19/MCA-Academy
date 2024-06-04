@@ -54,15 +54,22 @@ const EmpoweringWomenLeadersForSuccess = () => {
             <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
                 <Row>
                     <Col>
-                        <motion.img
-                            src="/images/3.jpg"
-                            alt="Leadership Banner"
-                            className="banner-image"
-                            style={{ width: "100%", height: "40vh", objectFit: "cover" }}
-                            initial={{ x: -1000 }}
-                            animate={{ x: 0 }}
-                            transition={{ duration: 1 }}
-                        />
+                        <div className="image-container">
+                            <motion.img
+                                src="/images/3.jpg"
+                                alt="Leadership Banner"
+                                className="banner-image"
+                                style={{ width: "100%", height: "40vh", objectFit: "cover" }}
+                                initial={{ x: -1000 }}
+                                animate={{ x: 0 }}
+                                transition={{ duration: 1 }}
+                            />
+                            <div className="overlay"><h1 style={{
+                                color: "white", display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>Empowering Women Leaders for Success</h1></div>
+                        </div>
                     </Col>
                 </Row>
                 <Row className="team-row mt-4 mission-section py-5 text-center bg-light">
@@ -75,19 +82,19 @@ const EmpoweringWomenLeadersForSuccess = () => {
                                     animate={inView ? "show" : "hidden"}
                                     variants={reveal("up", 0.3)}
                                 >
-                                    <Card className='pillarCard' style={{ width: '18rem', borderRadius: '15px', overflow: 'hidden' }}>
+                                    <Card className='pillarCard' style={{ width: '18rem', borderRadius: '15px', overflow: 'hidden', height: "70vh" }}>
                                         <Card.Img
                                             variant="top"
-                                            style={{ width: "30%", height: "20%", margin: "auto", padding: "20px 0" }}
+                                            style={{ width: "30%", height: "25%", margin: "auto", padding: "20px 0" }}
                                             src="/images/icon3.png"
                                             className="custom-card-img"
                                         />
                                         <Card.Body>
-                                            <Card.Title style={{ textAlign: "center" }}>Empowering Women Leaders For Success</Card.Title>
+                                            <Card.Title style={{ textAlign: "center", marginTop: "10px" }}>Empowering Women Leaders For Success</Card.Title>
                                             <Card.Text>
                                                 <ul className='card-list'>
-                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={()=>{scrollToSection("UnlockingMyProfessionalPresence")}}>Unloacking 'My' Professional Presence</li>
-                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={()=>{scrollToSection("HarmonyEmpoweringforbalance")}}>Harmony-Empowering for balance</li>
+                                                    <li style={{ cursor: "pointer", marginLeft: "15px", padding: "10px", marginTop: "30px", textIndent: '-25px' }} onClick={() => { scrollToSection("UnlockingMyProfessionalPresence") }}>Unloacking 'My' Professional Presence</li>
+                                                    <li style={{ cursor: "pointer", marginLeft: "15px", padding: "10px", marginTop: "10px", textIndent: '-25px' }} onClick={() => { scrollToSection("HarmonyEmpoweringforbalance") }}>Harmony-Empowering for balance</li>
                                                 </ul>
                                             </Card.Text>
                                         </Card.Body>

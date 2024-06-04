@@ -70,7 +70,7 @@ const HRAnalytics = () => {
                                     style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                 >
                                     <h4 className='mission-heading2'>Objectives</h4>
-                                    <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                    <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                         This program aims to equip HR professionals with the skills and knowledge to leverage data analytics for informed decision-making. Through this program, participants will learn how to analyze HR data, interpret key metrics, and apply insights to optimize HR strategies and drive organizational success.
 
                                     </p>
@@ -125,7 +125,7 @@ const HRAnalytics = () => {
                                             >
                                                 <h4 className='mission-heading2'>Duration</h4>
                                                 <ul className='card-list'>
-                                                    <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                                    <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                         2-day program
                                                     </p>
                                                 </ul>

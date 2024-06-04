@@ -70,7 +70,7 @@ const GrowthProgram = () => {
                                     style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                 >
                                     <h4 className='mission-heading2'>Objectives</h4>
-                                    <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                    <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                         This is a unique and specialized 3-day program designed to elevate accounting personnel to a more value creating position in an organization by strengthening their ability to manage the accounting function and interaction with auditors with greater understanding, efficiency and confidence.
                                     </p>
                                 </motion.div>
@@ -84,7 +84,7 @@ const GrowthProgram = () => {
                                 >
                                     <ul className='card-list'>
                                         <h4 className='mission-heading2'> Who Should Attend?</h4> <br />
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                             Accountants who wish to move up to the position of preparing financial statements, interacting with statutory auditors at the time of annual audits and be capable of critically evaluating and reporting on the performance of the company / associates / competitors
                                         </p>
                                     </ul>
@@ -123,7 +123,7 @@ const GrowthProgram = () => {
                                             >
                                                 <h4 className='mission-heading2'>Duration</h4>
                                                 <ul className='card-list'>
-                                                    <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                                    <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                         3-day program
                                                     </p>
                                                 </ul>

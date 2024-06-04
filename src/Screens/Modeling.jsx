@@ -70,7 +70,7 @@ const Modeling = () => {
                                     style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                 >
                                     <h4 className='mission-heading2'>Objectives</h4>
-                                    <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                    <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                         The focus of this 2-day course is to enable participants to strengthen their modelling structuring skills and build a highly flexible, full range financial model with advanced excel functions and Macros. This aids in making informed decisions related to capital structure and investment analysis.
                                     </p>
                                 </motion.div>
@@ -126,7 +126,7 @@ const Modeling = () => {
                                             >
                                                 <h4 className='mission-heading2'>Duration</h4>
                                                 <ul className='card-list'>
-                                                    <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                                    <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                         2-day program
                                                     </p>
                                                 </ul>

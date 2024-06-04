@@ -42,15 +42,22 @@ const Harmony = () => {
             <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
                 <Row>
                     <Col style={{ position: "relative" }}>
-                        <motion.img
-                            src="/images/w1.jpg"
-                            alt="Leadership Banner"
-                            className="banner-image"
-                            style={{ width: "100%", height: "60vh", objectFit: "cover" }}
-                            initial={{ x: -1000 }}
-                            animate={{ x: 0 }}
-                            transition={{ duration: 1 }}
-                        />
+                        <div className="image-container">
+                            <motion.img
+                                src="/images/w1.jpg"
+                                alt="Leadership Banner"
+                                className="banner-image"
+                                style={{ width: "100%", height: "40vh", objectFit: "cover" }}
+                                initial={{ x: -1000 }}
+                                animate={{ x: 0 }}
+                                transition={{ duration: 1 }}
+                            />
+                            <div className="overlay"><h1 style={{
+                                color: "white", display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>Harmony - Empowering for balance</h1></div>
+                        </div>
                     </Col>
                 </Row>
 
@@ -61,78 +68,80 @@ const Harmony = () => {
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <Col xs={12} md={6} className='mt-3'>
-                                <motion.div
-                                    ref={ref}
-                                    initial="hidden"
-                                    animate={inView ? "show" : "hidden"}
-                                    variants={slideInFromLeft}
-                                    style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
-                                >
-                                    <h4 className='mission-heading2'>Objectives</h4>
-                                    <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
-                                        This program aims to empower women leaders to achieve balance and fulfillment across personal and professional domains. Through a holistic approach, participants will explore strategies for managing priorities, nurturing well-being, and fostering harmony in their lives, enabling them to thrive both personally and professionally.
-                                    </p>
-                                </motion.div>
-                                <motion.div
-                                    ref={ref}
-                                    initial="hidden"
-                                    animate={inView ? "show" : "hidden"}
-                                    variants={slideInFromLeft}
-                                    className='mt-4'
-                                    style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
-                                >
-                                    <ul className='card-list'>
-                                        <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
-                                        <li>Women Leaders</li>
-                                        <li>Working Mothers</li>
-                                        <li>Professionals seeking well-being strategies</li>
-                                    </ul>
-                                </motion.div>
-                            </Col>
+                            <>
+                                <Col xs={12} md={6} className='mt-3'>
+                                    <motion.div
+                                        ref={ref}
+                                        initial="hidden"
+                                        animate={inView ? "show" : "hidden"}
+                                        variants={slideInFromLeft}
+                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                    >
+                                        <h4 className='mission-heading2'>Objectives</h4>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            This program aims to empower women leaders to achieve balance and fulfillment across personal and professional domains. Through a holistic approach, participants will explore strategies for managing priorities, nurturing well-being, and fostering harmony in their lives, enabling them to thrive both personally and professionally.
+                                        </p>
+                                    </motion.div>
+                                </Col>
+                                <Col>
+                                    <motion.div
+                                        ref={ref}
+                                        initial="hidden"
+                                        animate={inView ? "show" : "hidden"}
+                                        variants={slideInFromLeft}
+                                        className='mt-4'
+                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                    >
+                                        <ul className='card-list'>
+                                            <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
+                                            <li>Women Leaders</li>
+                                            <li>Working Mothers</li>
+                                            <li>Professionals seeking well-being strategies</li>
+                                        </ul>
+                                    </motion.div>
+                                </Col>
+                            </>
                         )}
                     </InView>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <Col xs={12} md={6} className='mt-3'>
-                                <motion.div
-                                    ref={ref}
-                                    initial="hidden"
-                                    animate={inView ? "show" : "hidden"}
-                                    variants={slideInFromRight}
-                                    style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
-                                >
-                                    <h4 className='mission-heading2'>Learning Outcome</h4>
-                                    <ul className='card-list'>
-                                        <li style={{ marginLeft: "15px", textIndent: '-25px' }}>Develop strategies for work-life balance and integrating priorities</li>
-                                        <li style={{ marginLeft: "15px", textIndent: '-25px' }}>Cultivate practices for enhancing well-being</li>
-                                        <li style={{ marginLeft: "15px", textIndent: '-25px' }}>Gain insights into time management techniques for productivity and stress reduction</li>
-                                        <li style={{ marginLeft: "15px", textIndent: '-25px' }}>Foster resilience to navigate challenges with grace</li>
-                                        <li style={{ marginLeft: "15px", textIndent: '-25px' }}>Establish boundaries and assertive communication for advocating needs.</li>
-                                    </ul>
-                                </motion.div>
-                                <InView threshold={0.2} triggerOnce>
-                                    {({ inView, ref }) => (
-                                        <Col xs={12} md={6} style={{ width: "100%" }} className='mt-3'>
-                                            <motion.div
-                                                ref={ref}
-                                                initial="hidden"
-                                                animate={inView ? "show" : "hidden"}
-                                                variants={slideInFromRight}
-                                                style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
-                                            >
-                                                <h4 className='mission-heading2'>Duration</h4>
-                                                <ul className='card-list'>
-                                                    <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
-                                                        2-day program
-                                                    </p>
-                                                </ul>
-                                            </motion.div>
-                                        </Col>
-                                    )}
-                                </InView>
-                            </Col>
+                            <>
+                                <Col xs={12} md={6} className='mt-3'>
+                                    <motion.div
+                                        ref={ref}
+                                        initial="hidden"
+                                        animate={inView ? "show" : "hidden"}
+                                        variants={slideInFromRight}
+                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                    >
+                                        <h4 className='mission-heading2'>Learning Outcome</h4>
+                                        <ul className='card-list'>
+                                            <li style={{ marginLeft: "15px", textIndent: '-25px' }}>Develop strategies for work-life balance and integrating priorities</li>
+                                            <li style={{ marginLeft: "15px", textIndent: '-25px' }}>Cultivate practices for enhancing well-being</li>
+                                            <li style={{ marginLeft: "15px", textIndent: '-25px' }}>Gain insights into time management techniques for productivity and stress reduction</li>
+                                            <li style={{ marginLeft: "15px", textIndent: '-25px' }}>Foster resilience to navigate challenges with grace</li>
+                                            <li style={{ marginLeft: "15px", textIndent: '-25px' }}>Establish boundaries and assertive communication for advocating needs.</li>
+                                        </ul>
+                                    </motion.div>
+                                </Col>
+                                <Col xs={12} md={6} className='mt-3'>
+                                    <motion.div
+                                        ref={ref}
+                                        initial="hidden"
+                                        animate={inView ? "show" : "hidden"}
+                                        variants={slideInFromRight}
+                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                    >
+                                        <h4 className='mission-heading2'>Duration</h4>
+                                        <ul className='card-list'>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                                2-day program
+                                            </p>
+                                        </ul>
+                                    </motion.div>
+                                </Col>
+                            </>
                         )}
                     </InView>
                 </Row>

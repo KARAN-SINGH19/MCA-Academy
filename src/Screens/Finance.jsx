@@ -159,7 +159,7 @@ const Finance = () => {
                                         style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                             This 3-day program will enable the participants to better understand the conceptual framework and be able to prepare both stand alone and consolidated financial statements by effectively using the rules of recognition, measurement, presentation, and disclosure for determining the Impact of important business events on the financial statements.
                                         </p>
                                     </motion.div>
@@ -216,7 +216,7 @@ const Finance = () => {
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                 3-day program
                                             </p>
                                         </ul>
@@ -244,7 +244,7 @@ const Finance = () => {
                                         style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                             This is a unique and specialized 3-day program designed to elevate accounting personnel to a more value creating position in an organization by strengthening their ability to manage the accounting function and interaction with auditors with greater understanding, efficiency and confidence.
                                         </p>
                                     </motion.div>
@@ -260,7 +260,7 @@ const Finance = () => {
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'> Who Should Attend?</h4> <br />
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                 Accountants who wish to move up to the position of preparing financial statements, interacting with statutory auditors at the time of annual audits and be capable of critically evaluating and reporting on the performance of the company / associates / competitors
                                             </p>
                                         </ul>
@@ -301,7 +301,7 @@ const Finance = () => {
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                 3-day program
                                             </p>
                                         </ul>
@@ -329,7 +329,7 @@ const Finance = () => {
                                         style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                             This 2-day program seeks to demonstrate as to how:
                                             <ul className='card-list'>
                                                 <li>The required alignment and inspiration can be achieved by putting in place certain enabling processes and linking them to both of operational and capital budgeting exercises and</li>
@@ -392,7 +392,7 @@ const Finance = () => {
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>
@@ -420,7 +420,7 @@ const Finance = () => {
                                         style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                             The focus of this 2-day course is to enable participants to strengthen their modelling structuring skills and build a highly flexible, full range financial model with advanced excel functions and Macros. This aids in making informed decisions related to capital structure and investment analysis.
                                         </p>
                                     </motion.div>
@@ -479,7 +479,7 @@ const Finance = () => {
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>
@@ -507,7 +507,7 @@ const Finance = () => {
                                         style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                             This 2-day program aims to help finance and non-finance professionals understand the connection between profit and cash flows, and factors affecting working capital. It equips participants to make informed short-term investment and financing decisions, ensuring adequate cash flow for operations and optimal resource utilization – the essence of WCM goals.
                                         </p>
                                     </motion.div>
@@ -566,7 +566,7 @@ const Finance = () => {
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>
@@ -594,7 +594,7 @@ const Finance = () => {
                                         style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                             This 2-day program seeks to enable participants in the Finance and Accounting departments to use financial numbers with greater understanding, efficiency and confidence by exposing them to the essentials in working capital management, particularly understanding how receivables can make or mar the performance of an organization and affect liquidity.
                                         </p>
                                     </motion.div>
@@ -650,7 +650,7 @@ const Finance = () => {
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>
@@ -678,7 +678,7 @@ const Finance = () => {
                                         style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                             This 2-day program seeks to enable non-finance professionals to use financial numbers with greater understanding, efficiency and confidence by exposing them to essentials in understanding and interpreting financial statements, managing costs, evaluating short and long term investment decisions and budgeting.
                                         </p>
                                     </motion.div>
@@ -734,7 +734,7 @@ const Finance = () => {
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>

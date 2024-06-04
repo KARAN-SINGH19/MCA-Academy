@@ -55,15 +55,20 @@ const UnlockingAuthenticLeadership = () => {
             <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
                 <Row>
                     <Col>
-                        <motion.img
-                            src="/images/1.jpg"
-                            alt="Leadership Banner"
-                            className="banner-image"
-                            style={{ width: "100%", height: "40vh", objectFit: "cover" }}
-                            initial={{ x: -1000 }}
-                            animate={{ x: 0 }}
-                            transition={{ duration: 1 }}
-                        />
+                        <div className="image-container">
+                            <motion.img
+                                src="/images/1.jpg"
+                                alt="Leadership Banner"
+                                className="banner-image"
+                                style={{ width: "100%", height: "40vh", objectFit: "cover" }}
+                                initial={{ x: -1000 }}
+                                animate={{ x: 0 }}
+                                transition={{ duration: 1 }}
+                            />
+                            <div className="overlay"><h1 style={{ color: "white",display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center" }}>Unlocking Authentic Leadership</h1></div>
+                        </div>
                     </Col>
                 </Row>
                 <Row className="team-row mt-4 mission-section py-5 text-center bg-light">
@@ -166,9 +171,9 @@ const UnlockingAuthenticLeadership = () => {
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
-                                            <li>Mid to senior-level managers</li>
-                                            <li>Team leaders </li>
-                                            <li>Business professionals seeking career advancement</li>
+                                            <li>Senior leadership</li>
+                                            <li>Business heads</li>
+                                            <li>Leaders transitioning as entrepreneurs</li>
                                         </ul>
                                     </motion.div>
                                 </Col>
@@ -260,7 +265,7 @@ const UnlockingAuthenticLeadership = () => {
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
-                                            <li>Mid-level managers</li>
+                                            <li>First time managers</li>
                                             <li>Individuals transitioning to leadership roles</li>
                                             <li>High-potential employees</li>
                                         </ul>
@@ -353,9 +358,9 @@ const UnlockingAuthenticLeadership = () => {
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
-                                            <li>Individuals seeking leadership enhancement</li>
-                                            <li>Mid to senior-level managers</li>
-                                            <li>HR professionals involved in talent development</li>
+                                            <li>High potential talents</li>
+                                            <li>Individuals seeking leadership opportunities</li>
+                                            <li>Junior to mid-level managers</li>
                                         </ul>
                                     </motion.div>
                                 </Col>

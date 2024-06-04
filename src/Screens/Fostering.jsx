@@ -37,15 +37,22 @@ const Fostering = () => {
             <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
                 <Row>
                     <Col>
-                        <motion.img
-                            src="/images/4.jpg"
-                            alt="Leadership Banner"
-                            className="banner-image"
-                            style={{ width: "100%", height: "40vh", objectFit: "cover" }}
-                            initial={{ x: -1000 }}
-                            animate={{ x: 0 }}
-                            transition={{ duration: 1 }}
-                        />
+                        <div className="image-container">
+                            <motion.img
+                                src="/images/4.jpg"
+                                alt="Leadership Banner"
+                                className="banner-image"
+                                style={{ width: "100%", height: "40vh", objectFit: "cover" }}
+                                initial={{ x: -1000 }}
+                                animate={{ x: 0 }}
+                                transition={{ duration: 1 }}
+                            />
+                            <div className="overlay"><h1 style={{
+                                color: "white", display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>Fostering Functional Expertise</h1></div>
+                        </div>
                     </Col>
                 </Row>
                 <Row className="team-row mt-4 mission-section py-5 text-center bg-light">
@@ -58,10 +65,10 @@ const Fostering = () => {
                                     animate={inView ? "show" : "hidden"}
                                     variants={reveal("up", 0.3)}
                                 >
-                                    <Card className='pillarCard' style={{ width: '18rem', borderRadius: '15px', overflow: 'hidden' }}>
+                                    <Card className='pillarCard' style={{ width: '18rem', borderRadius: '15px', overflow: 'hidden', height: "70vh" }}>
                                         <Card.Img
                                             variant="top"
-                                            style={{ width: "30%", height: "20%", margin: "auto", padding: "20px 0" }}
+                                            style={{ width: "30%", height: "25%", margin: "auto", padding: "20px 0" }}
                                             src="/images/icon4.png"
                                             className="custom-card-img"
                                         />
@@ -70,16 +77,16 @@ const Fostering = () => {
                                             <Card.Text>
                                                 <ul className='card-list'>
 
-                                                    <Link style={{ textDecoration: "none", color: "#013252" }} to={'/FinanceAcademy'}>
-                                                        <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }}>Finance Academy</li>
+                                                    <Link style={{ textDecoration: "none", color: "#666666" }} to={'/FinanceAcademy'}>
+                                                        <li style={{ cursor: "pointer", marginLeft: "15px", padding: "10px", marginTop: "10px", textIndent: '-25px' }}>Finance Academy</li>
                                                     </Link>
 
-                                                    <Link style={{ textDecoration: "none", color: "#013252" }} to={'/HRAcademy'}>
-                                                        <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }}>HR Academy</li>
+                                                    <Link style={{ textDecoration: "none", color: "#666666" }} to={'/HRAcademy'}>
+                                                        <li style={{ cursor: "pointer", marginLeft: "15px", padding: "10px", marginTop: "10px", textIndent: '-25px' }}>HR Academy</li>
                                                     </Link>
 
-                                                    <Link style={{ textDecoration: "none", color: "#013252" }} to={'/SupplyChainAcademy'}>
-                                                        <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }}>Supply Chain Academy</li>
+                                                    <Link style={{ textDecoration: "none", color: "#666666" }} to={'/SupplyChainAcademy'}>
+                                                        <li style={{ cursor: "pointer", marginLeft: "15px", padding: "10px", marginTop: "10px", textIndent: '-25px' }}>Supply Chain Academy</li>
                                                     </Link>
 
                                                 </ul>

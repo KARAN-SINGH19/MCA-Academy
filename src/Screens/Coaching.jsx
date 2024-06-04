@@ -62,7 +62,7 @@ const Coaching = () => {
                                         <p className='mt-4' style={{ textAlign: "left" }}>
                                             Empowers women leaders with skills, support, and strategies to overcome barriers, unlock their potential, and thrive in leadership roles.
                                         </p>
-                                        <ul style={{ color: '#013252' }} className="card-list">
+                                        <ul style={{ color: '#666666' }} className="card-list">
                                             <li style={{ marginLeft: "15px", textIndent: '-25px' }}><strong>Unlocking My Professional Presence: </strong> Focuses on personal branding, self-awareness, and professional development to enhance one's presence and impact in the workplace.</li>
                                             <li style={{ marginLeft: "15px", textIndent: '-25px' }}>Fortifying Corporate resilience for uncertain times</li>
                                             <li style={{ marginLeft: "15px", textIndent: '-25px' }}><strong>Harmony</strong>- Empowering for balance -  professional and personal life balance</li>

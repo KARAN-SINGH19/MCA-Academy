@@ -56,15 +56,22 @@ const Skills = () => {
             <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
                 <Row>
                     <Col>
-                        <motion.img
-                            src="/images/2.jpg"
-                            alt="Leadership Banner"
-                            className="banner-image"
-                            style={{ width: "100%", height: "40vh", objectFit: "cover" }}
-                            initial={{ x: -1000 }}
-                            animate={{ x: 0 }}
-                            transition={{ duration: 1 }}
-                        />
+                        <div className="image-container">
+                            <motion.img
+                                src="/images/2.jpg"
+                                alt="Leadership Banner"
+                                className="banner-image"
+                                style={{ width: "100%", height: "40vh", objectFit: "cover" }}
+                                initial={{ x: -1000 }}
+                                animate={{ x: 0 }}
+                                transition={{ duration: 1 }}
+                            />
+                            <div className="overlay"><h1 style={{
+                                color: "white", display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>Entrepreneurial Excellence - Skills and mindset</h1></div>
+                        </div>
                     </Col>
                 </Row>
                 <Row className="team-row mt-4 mission-section py-5 text-center bg-light">
@@ -88,12 +95,12 @@ const Skills = () => {
                                             <Card.Title style={{ textAlign: "center" }}>Entrepreneurial Excellence - Skills and mindset</Card.Title>
                                             <Card.Text>
                                                 <ul className='card-list'>
-                                                    
-                                                        <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={()=>{scrollToSection("StrategyandTransformation")}}>Strategy and Transformation</li>
-                                                   
-                                                        <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={()=>{scrollToSection("GlobalLeadershipandCrisisManagement")}}>Global Leadership and Crisis Management</li>
-                                                    
-                                                        <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={()=>{scrollToSection("LeadingaBusinessinaVUCAWorld")}}>Leading a Business in a VUCA World</li>
+
+                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={() => { scrollToSection("StrategyandTransformation") }}>Strategy and Transformation</li>
+
+                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={() => { scrollToSection("GlobalLeadershipandCrisisManagement") }}>Global Leadership and Crisis Management</li>
+
+                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={() => { scrollToSection("LeadingaBusinessinaVUCAWorld") }}>Leading a Business in a VUCA World</li>
 
                                                 </ul>
                                             </Card.Text>
@@ -146,8 +153,8 @@ const Skills = () => {
                                         style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
-                                        This program is designed to equip participants with advanced strategic thinking skills and transformational leadership capabilities. Through this program, attendees will gain expertise in strategic planning aligned with organizational objectives, while also learning effective change management techniques to foster adaptability and drive organizational growth.
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 700 }}>
+                                            This program is designed to equip participants with advanced strategic thinking skills and transformational leadership capabilities. Through this program, attendees will gain expertise in strategic planning aligned with organizational objectives, while also learning effective change management techniques to foster adaptability and drive organizational growth.
                                         </p>
                                     </motion.div>
                                 </Col>
@@ -206,7 +213,7 @@ const Skills = () => {
                                                 >
                                                     <h4 className='mission-heading2'>Duration</h4>
                                                     <ul className='card-list'>
-                                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                             2-day program
                                                         </p>
                                                     </ul>
@@ -240,8 +247,8 @@ const Skills = () => {
                                         style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
-                                        The program brings necessary frameworks and practical skills to effectively lead and manage in a global business environment. It focuses on understanding global and local dynamics, enhancing cross-cultural collaboration, developing inclusive leadership, aligning missions and values, and building strong networks. The program also equips participants with tools and strategies for effective crisis management.
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            The program brings necessary frameworks and practical skills to effectively lead and manage in a global business environment. It focuses on understanding global and local dynamics, enhancing cross-cultural collaboration, developing inclusive leadership, aligning missions and values, and building strong networks. The program also equips participants with tools and strategies for effective crisis management.
                                         </p>
                                     </motion.div>
                                 </Col>
@@ -300,7 +307,7 @@ const Skills = () => {
                                                 >
                                                     <h4 className='mission-heading2'>Duration</h4>
                                                     <ul className='card-list'>
-                                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                             2-day program
                                                         </p>
                                                     </ul>
@@ -334,8 +341,8 @@ const Skills = () => {
                                         style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
-                                        This program builds knowledge and skills required to navigate and excel in volatile, uncertain, complex, and ambiguous (VUCA) business environment. Through this program, attendees will develop adaptive leadership strategies, gain insights into emerging trends and market dynamics, and foster a culture of innovation and resilience within their organizations to thrive amidst rapid change and uncertainty.
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            This program builds knowledge and skills required to navigate and excel in volatile, uncertain, complex, and ambiguous (VUCA) business environment. Through this program, attendees will develop adaptive leadership strategies, gain insights into emerging trends and market dynamics, and foster a culture of innovation and resilience within their organizations to thrive amidst rapid change and uncertainty.
                                         </p>
                                     </motion.div>
                                 </Col>
@@ -394,7 +401,7 @@ const Skills = () => {
                                                 >
                                                     <h4 className='mission-heading2'>Duration</h4>
                                                     <ul className='card-list'>
-                                                        <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                             2-day program
                                                         </p>
                                                     </ul>

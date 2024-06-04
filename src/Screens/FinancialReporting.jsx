@@ -71,7 +71,7 @@ const FinancialReporting = () => {
                                     style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                 >
                                     <h4 className='mission-heading2'>Objectives</h4>
-                                    <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                    <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                         This 3-day program will enable the participants to better understand the conceptual framework and be able to prepare both stand alone and consolidated financial statements by effectively using the rules of recognition, measurement, presentation, and disclosure for determining the Impact of important business events on the financial statements.
                                     </p>
                                 </motion.div>
@@ -125,7 +125,7 @@ const FinancialReporting = () => {
                                             >
                                                 <h4 className='mission-heading2'>Duration</h4>
                                                 <ul className='card-list'>
-                                                    <p style={{ textAlign: "justify", padding: "10px", color: "#013252", fontWeight: 600 }}>
+                                                    <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
                                                         3-day program
                                                     </p>
                                                 </ul>
