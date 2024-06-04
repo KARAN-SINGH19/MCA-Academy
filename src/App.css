@@ -7,6 +7,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.blurImage {
+  filter: blur(15px); 
+}
+
 
 .nav_ul li {
   padding: 0 0.6rem;
