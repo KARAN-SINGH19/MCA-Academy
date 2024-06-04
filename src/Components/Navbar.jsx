@@ -18,7 +18,14 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container py-2">
                     <span className="navbar-brand-inner">
-                        <img className="logo-default" src="/images/Picture1.png" alt="MCA UAE" style={{ maxWidth: '230px', maxHeight: '100px' }} />
+                        <RouterLink to="/">
+                            <img
+                                className="logo-default"
+                                src="/images/Picture1.png"
+                                alt="MCA UAE"
+                                style={{ maxWidth: '230px', maxHeight: '100px' }}
+                            />
+                        </RouterLink>
                     </span>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -29,7 +36,7 @@ const Navbar = () => {
                                 <RouterLink className="nav-link" to="/">Home</RouterLink>
                             </motion.li>
                             <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
-                                <RouterLink className="nav-link" to="/about">Team</RouterLink>
+                                <RouterLink className="nav-link" to="/about">Faculty</RouterLink>
                             </motion.li>
                             {
                                 location.pathname == '/' && (
