@@ -64,7 +64,7 @@ const Home = () => {
         className="mission-section py-5 text-center"
       >
         <h2 className="mission-heading">Our Mission</h2>
-        <p className="mx-auto" style={{ maxWidth: '600px',fontSize:"23PX" }}>
+        <p className="mx-auto" style={{ maxWidth: '600px', fontSize: "23PX" }}>
           We develop leadership and functional skills across the GCC, empowering individuals and organizations with high-quality training to drive regional growth.
         </p>
         <MissionCard data={missions} />
@@ -93,46 +93,17 @@ const Home = () => {
   }
 
 
-  // function CounterSection({ children }) {
-  //   const { ref, inView } = useInView({
-  //     triggerOnce: true,
-  //     threshold: 0,
-  //   });
 
-  //   return (
-  //     <motion.div
-  //       ref={ref}
-  //       variants={reveal("right", 0.2)}
-  //       initial="hidden"
-  //       animate={inView ? "show" : "hidden"}
-  //     >
-  //       <div className="counter-wrapper">
-  //         <div ref={el => counterRefs.current[0] = el} className="counter mission-heading2">
-  //           <h1 className="count" data-target="2000">0</h1>
-  //           <p>Project Completed</p>
-  //         </div>
-  //         <div ref={el => counterRefs.current[1] = el} className="counter mission-heading2">
-  //           <h1 className="count" data-target="6000">0</h1>
-  //           <p>Happy Clients</p>
-  //         </div>
-  //         <div ref={el => counterRefs.current[2] = el} className="counter mission-heading2">
-  //           <h1 className="count" data-target="5000">0</h1>
-  //           <p>Real Professionals</p>
-  //         </div>
-  //         <div ref={el => counterRefs.current[3] = el} className="counter mission-heading2">
-  //           <h1 className="count" data-target="3000">0</h1>
-  //           <p>Cup of Coffee</p>
-  //         </div>
-  //       </div>
-  //     </motion.div>
-  //   );
-  // }
+  function PillarSection() {
+    const { ref, inView } = useInView({
+      triggerOnce: true,
+      threshold: 0,
+    });
 
-  function PillarSection({ children }) {
     return (
-      <div className="mission-section py-5 text-center bg-light">
+      <div className="mission-section py-5 text-center bg-light" ref={ref}>
         <h2 className="mission-heading">Academy Verticals</h2>
-        <PillarCard data={pillars} />
+        {inView && <PillarCard data={pillars} />}
       </div>
     );
   }
