@@ -64,7 +64,7 @@ const Home = () => {
         className="mission-section py-5 text-center"
       >
         <h2 className="mission-heading">Our Mission</h2>
-        <p className="mx-auto" style={{ maxWidth: '600px',fontSize:"20PX" }}>
+        <p className="mx-auto" style={{ maxWidth: '600px',fontSize:"23PX" }}>
           We develop leadership and functional skills across the GCC, empowering individuals and organizations with high-quality training to drive regional growth.
         </p>
         <MissionCard data={missions} />

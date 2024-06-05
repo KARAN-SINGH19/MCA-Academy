@@ -24,7 +24,7 @@ const About = () => {
                 animate={inView ? "show" : "hidden"}
                 className="mission-section py-5 text-center bg-light"
             >
-                <h2 className="mission-heading">Meet Our Faculty</h2>
+                <h2 className="mission-heading">Our Esteemed Faculty</h2>
                 <TeamCard data={team} />
             </motion.div>
         );

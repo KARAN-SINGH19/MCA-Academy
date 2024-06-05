@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
 
+h2{
+  font-size: 40px !important;
+  font-weight: 700 !important;
+}
+
+h1{
+  font-size: 40px !important;
+  font-weight: 700 !important;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +38,7 @@
   border: 0;
   padding: 0.5rem 1.8rem;
   color: white;
-  background-color: #F33A6A;
+  background-color: #CE0932 ;
   cursor: pointer;
 }
 
@@ -36,7 +47,7 @@
   border: 0;
   padding: 0.5rem 1.8rem;
   color: white;
-  background-color: #F33A6A;
+  background-color: #CE0932 ;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -50,7 +61,7 @@
   border: 0;
   padding: 0.5rem 1.8rem;
   color: white;
-  background-color: #F33A6A;
+  background-color: #CE0932 ;
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-bottom: 10%;
@@ -64,13 +75,13 @@
   border: 0;
   padding: 0.5rem 1.2rem;
   color: white;
-  background-color: #F33A6A;
+  background-color: #CE0932 ;
   cursor: pointer;
 }
 
 .btn3 {
   color: white;
-  background-color: #F33A6A;
+  background-color: #CE0932 ;
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -92,8 +103,8 @@
 }
 
 .mission-section p {
-  font-size: 1.1rem;
-  color: #666666;
+  font-size: 1.2rem;
+  color: #212529;
   font-weight: 500;
 }
 
@@ -173,7 +184,7 @@
 }
 
 .counter-wrapper::before {
-  background-color: #F33A6A;
+  background-color: #CE0932 ;
   position: absolute;
   content: '';
   content: 0;
@@ -234,7 +245,7 @@
 }
 
 .card-list {
-  color: #666666;
+  color: #212529;
   font-weight: 600;
   text-align: left !important;
   padding-left: 5px;
@@ -244,8 +255,8 @@
 
 .card-list li:before {
   content: '->';
-  margin-right: 12px;
-  color: #666666;
+  margin-right: 8px;
+  color: #212529;
 }
 
 .card-list li {
@@ -254,7 +265,7 @@
 
 
 .card-list3 {
-  color: #666666;
+  color: #212529;
   font-weight: 600;
   text-align: left !important;
   padding-left: 5px;
@@ -265,7 +276,7 @@
 .card-list3 li:before {
   content: '->';
   margin-right: 12px;
-  color: #666666;
+  color: #212529;
 }
 
 .card-list3 li {
@@ -393,7 +404,7 @@
 }
 
 .card-list {
-  color: #666666;
+  color: #212529;
 }
 
 .slider-container {
@@ -607,7 +618,7 @@
 .central-circle {
   width: 200px;
   height: 170px;
-  background-color: #0f4c81;
+  background-color: #d40303;
   color: white;
   border-radius: 50%;
   font-weight: 500;
@@ -647,31 +658,39 @@
 }
 
 .surrounding-circle:nth-child(1) {
-  background-color: #99A5B1;
+  background-color: #ffa500
+
+  ;
 }
 
 .surrounding-circle:nth-child(2) {
-  background-color: #818C98;
+  background-color: #FF8C00
+
+  ;
 }
 
 .surrounding-circle:nth-child(3) {
-  background-color: #6B7787;
+  background-color: #E26310
+  ;
 }
 
 .surrounding-circle:nth-child(4) {
-  background-color: #57636F;
+  background-color: #F5761A
+  ;
 }
 
 .surrounding-circle:nth-child(5) {
-  background-color: #37404A;
+  background-color: #FFA836
+  ;
 }
 
 .surrounding-circle:nth-child(6) {
-  background-color: #0C1222;
+  background-color:  #FF4500  ;
 }
 
 .surrounding-circle:nth-child(7) {
-  background-color: #0C1222;
+  background-color: #FF7400
+  ;
 }
 
 /* BannerImage.css */

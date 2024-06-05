@@ -17,7 +17,7 @@ const MissionCard = ({ data }) => {
               </div>
               <Card.Body style={{ backgroundColor: 'white' }}>
                 <Card.Title style={{ color: "#CE0932", fontWeight: "700" }} className="text-center">{values.title}</Card.Title>
-                <Card.Text style={{ color: "#666666", fontWeight: "645" }} className="text-center">
+                <Card.Text style={{ color: "#212529", fontWeight: "645" }} className="text-center">
                   {values.content}
                 </Card.Text>
               </Card.Body>

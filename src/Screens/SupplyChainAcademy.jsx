@@ -70,7 +70,7 @@ const SupplyChainAcademy = () => {
                     <Col xs={12} md={6} className="py-5">
                         <motion.div initial="hidden" animate="show" variants={reveal("right", 0.3)}>
                             <h2 className="text-left mb-4 mission-heading" style={{ color: "#ff5c4a", fontWeight: 700 }}>Supply Chain Academy</h2>
-                            <p style={{ color: "#666666", fontWeight: 600, textAlign: "justify" }} className="text-justify">
+                            <p style={{ color: "#212529", fontWeight: 600, textAlign: "justify" }} className="text-justify">
                                 Supply Chain Academy provides tailored programs for logistics professionals, emphasizing warehouse management, transportation, and stakeholder communication. Courses cover risk mitigation, technology integration, and leadership development aligned with organizational goals.
                             </p>
                         </motion.div>
@@ -107,7 +107,7 @@ const SupplyChainAcademy = () => {
                                             <Card.Body className="d-flex flex-column align-items-center" style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                                 {getIcon(index)}
                                                 <Card.Title style={{ color: "#ff5c4a", fontWeight: 600, textAlign: "center" }}>{program[`heading${index + 1}`]}</Card.Title>
-                                                <Card.Text style={{ color: "#666666", fontWeight: 600, textAlign: "justify" }}>{program[`point${index + 1}`]}</Card.Text>
+                                                <Card.Text style={{ color: "#212529", fontWeight: 600, textAlign: "justify" }}>{program[`point${index + 1}`]}</Card.Text>
                                             </Card.Body>
                                         </Card>
                                     </motion.div>

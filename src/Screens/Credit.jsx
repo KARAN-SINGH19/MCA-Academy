@@ -70,7 +70,7 @@ const Credit = () => {
                                     style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
                                 >
                                     <h4 className='mission-heading2'>Objectives</h4>
-                                    <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                    <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                         This 2-day program seeks to enable participants in the Finance and Accounting departments to use financial numbers with greater understanding, efficiency and confidence by exposing them to the essentials in working capital management, particularly understanding how receivables can make or mar the performance of an organization and affect liquidity.
                                     </p>
                                 </motion.div>
@@ -123,7 +123,7 @@ const Credit = () => {
                                             >
                                                 <h4 className='mission-heading2'>Duration</h4>
                                                 <ul className='card-list'>
-                                                    <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                                    <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                         2-day program
                                                     </p>
                                                 </ul>

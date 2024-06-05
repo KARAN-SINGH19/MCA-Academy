@@ -77,15 +77,15 @@ const Fostering = () => {
                                             <Card.Text>
                                                 <ul className='card-list'>
 
-                                                    <Link style={{ textDecoration: "none", color: "#666666" }} to={'/FinanceAcademy'}>
+                                                    <Link style={{ textDecoration: "none", color: "#212529" }} to={'/FinanceAcademy'}>
                                                         <li style={{ cursor: "pointer", marginLeft: "15px", padding: "10px", marginTop: "10px", textIndent: '-25px' }}>Finance Academy</li>
                                                     </Link>
 
-                                                    <Link style={{ textDecoration: "none", color: "#666666" }} to={'/HRAcademy'}>
+                                                    <Link style={{ textDecoration: "none", color: "#212529" }} to={'/HRAcademy'}>
                                                         <li style={{ cursor: "pointer", marginLeft: "15px", padding: "10px", marginTop: "10px", textIndent: '-25px' }}>HR Academy</li>
                                                     </Link>
 
-                                                    <Link style={{ textDecoration: "none", color: "#666666" }} to={'/SupplyChainAcademy'}>
+                                                    <Link style={{ textDecoration: "none", color: "#212529" }} to={'/SupplyChainAcademy'}>
                                                         <li style={{ cursor: "pointer", marginLeft: "15px", padding: "10px", marginTop: "10px", textIndent: '-25px' }}>Supply Chain Academy</li>
                                                     </Link>
 
@@ -109,12 +109,12 @@ const Fostering = () => {
                                     variants={reveal("up", 0)}
                                 >
                                     <div>
-                                        <h2 className="mission-heading">Fostering Functional Expertise</h2>
-                                        <p className='mt-4' style={{ textAlign: "left" }}>
+                                        
+                                        <p className='mt-0.9' style={{ textAlign: "left" }}>
                                             Under this pillar we have specific functional academies focusing on building in-depth knowledge, skills, and application
                                         </p>
 
-                                        <p className='mt-4' style={{ textAlign: "left" }}>
+                                        <p className='mt-0.9' style={{ textAlign: "left" }}>
                                             The mission of our Functional Academies is to empower professionals with specialized knowledge, skills, and expertise in their respective fields. Through comprehensive training and development programs, we aim to enhance competency, efficiency, and effectiveness, enabling participants to excel in their roles and contribute to organizational success.
                                         </p>
 

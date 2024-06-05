@@ -131,7 +131,7 @@ const Finance = () => {
                         <motion.div initial="hidden" animate="show" variants={reveal("right", 0.3)}>
                             <div className="py-5">
                                 <h2 className="text-left mb-4 mission-heading" style={{ color: "#CE0932", fontWeight: 700 }}>Finance Academy</h2>
-                                <p style={{ color: "#666666", fontWeight: 600, textAlign: "justify" }} className="text-justify">
+                                <p style={{ color: "#212529", fontWeight: 600, textAlign: "justify" }} className="text-justify">
                                     Finance Academy offers a variety of programs tailored to elevate financial professionals' expertise and foster organizational prosperity. Our curriculum centers on cultivating strategic financial partnerships, leveraging data for informed decision-making, and nurturing the next generation of financial professionals.
                                 </p>
                             </div>
@@ -141,6 +141,9 @@ const Finance = () => {
             </Container>
 
             <Container>
+                <br />
+                <br />
+
 
                 <Row id='international-financial-reporting-standards'>
                     <div className="mission-section py-5 text-center mt-3">
@@ -149,29 +152,28 @@ const Finance = () => {
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
-                                            This 3-day program will enable the participants to better understand the conceptual framework and be able to prepare both stand alone and consolidated financial statements by effectively using the rules of recognition, measurement, presentation, and disclosure for determining the Impact of important business events on the financial statements.
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
+                                            This program will enable the participants to better understand the conceptual framework and be able to prepare both stand alone and consolidated financial statements by effectively using the rules of recognition, measurement, presentation, and disclosure for determining the Impact of important business events on the financial statements.
                                         </p>
                                     </motion.div>
                                 </Col>
-                                <Col xs={12} md={6}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'> Who Should Attend?</h4> <br />
@@ -181,20 +183,20 @@ const Finance = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
                                         <ul className='card-list'>
@@ -206,26 +208,27 @@ const Finance = () => {
                                     </motion.div>
                                 </Col>
 
-                                <Col xs={12} md={6} className='mt-3'>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                 3-day program
                                             </p>
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
                 </Row>
+
 
                 <Row id='growth-program-for-accountants'>
                     <div className="mission-section py-5 text-center mt-3">
@@ -234,52 +237,55 @@ const Finance = () => {
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
-                                            This is a unique and specialized 3-day program designed to elevate accounting personnel to a more value creating position in an organization by strengthening their ability to manage the accounting function and interaction with auditors with greater understanding, efficiency and confidence.
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
+                                            This is a unique and specialized program designed to elevate accounting personnel to a more value creating position in an organization by strengthening their ability to manage the accounting function and interaction with auditors with greater understanding, efficiency and confidence.
                                         </p>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <ul className='card-list'>
-                                            <h4 className='mission-heading2'> Who Should Attend?</h4> <br />
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
-                                                Accountants who wish to move up to the position of preparing financial statements, interacting with statutory auditors at the time of annual audits and be capable of critically evaluating and reporting on the performance of the company / associates / competitors
-                                            </p>
+                                            <ul className='card-list'>
+                                                <h4 className='mission-heading2'> Who Should Attend?</h4> <br />
+                                                <li>Enhance collaboration by integrating global and local strengths</li>
+                                                <li>Develop a diverse leadership team reflective of global customers</li>
+                                                <li>Align teams around the company’s mission and values</li>
+                                                <li>Navigate and manage cross-cultural sensitivities</li>
+                                                <li>Develop effective crisis management strategies</li>
+                                            </ul>
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
                                         <ul className='card-list'>
@@ -291,26 +297,27 @@ const Finance = () => {
                                     </motion.div>
                                 </Col>
 
-                                <Col xs={12} md={6} className='mt-3'>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                 3-day program
                                             </p>
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
                 </Row>
+
 
                 <Row id='budgeting-variance-analysis-modelling'>
                     <div className="mission-section py-5 text-center mt-3">
@@ -319,18 +326,18 @@ const Finance = () => {
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }} // Set flex and margin
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
-                                            This 2-day program seeks to demonstrate as to how:
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
+                                            This program seeks to demonstrate as to how:
                                             <ul className='card-list'>
                                                 <li>The required alignment and inspiration can be achieved by putting in place certain enabling processes and linking them to both of operational and capital budgeting exercises and</li>
                                                 <li>The actual performance can be periodically evaluated by using very effective 'variance analysis' tools.</li>
@@ -338,14 +345,13 @@ const Finance = () => {
                                         </p>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }} // Set flex and margin
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
@@ -355,20 +361,20 @@ const Finance = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }} // Set flex and margin
                                     >
 
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
@@ -382,26 +388,27 @@ const Finance = () => {
                                     </motion.div>
                                 </Col>
 
-                                <Col xs={12} md={6} className='mt-3'>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }} // Set flex and margin
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
                 </Row>
+
 
                 <Row id='financial-modelling-advanced'>
                     <div className="mission-section py-5 text-center mt-3">
@@ -410,29 +417,28 @@ const Finance = () => {
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }} // Set flex and margin
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
-                                            The focus of this 2-day course is to enable participants to strengthen their modelling structuring skills and build a highly flexible, full range financial model with advanced excel functions and Macros. This aids in making informed decisions related to capital structure and investment analysis.
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
+                                            The focus of this course is to enable participants to strengthen their modelling structuring skills and build a highly flexible, full range financial model with advanced excel functions and Macros. This aids in making informed decisions related to capital structure and investment analysis.
                                         </p>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }} // Set flex and margin
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'> Who Should Attend?</h4> <br />
@@ -444,20 +450,20 @@ const Finance = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }} // Set flex and margin
                                     >
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
                                         <ul className='card-list'>
@@ -469,26 +475,27 @@ const Finance = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                                <Col xs={12} md={6} className='mt-3'>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
                 </Row>
+
 
                 <Row id='working-capital-management'>
                     <div className="mission-section py-5 text-center mt-3">
@@ -497,29 +504,29 @@ const Finance = () => {
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
-                                            This 2-day program aims to help finance and non-finance professionals understand the connection between profit and cash flows, and factors affecting working capital. It equips participants to make informed short-term investment and financing decisions, ensuring adequate cash flow for operations and optimal resource utilization – the essence of WCM goals.
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
+                                            This program aims to help finance and non-finance professionals understand the connection between profit and cash flows, and factors affecting working capital. It equips participants to make informed short-term investment and financing decisions, ensuring adequate cash flow for operations and optimal resource utilization – the essence of WCM goals.
                                         </p>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        className='mt-3'
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }}
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'> Who Should Attend?</h4> <br />
@@ -530,20 +537,20 @@ const Finance = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
                                         <ul className='card-list'>
@@ -556,23 +563,23 @@ const Finance = () => {
                                     </motion.div>
                                 </Col>
 
-                                <Col xs={12} md={6} className='mt-3'>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
                 </Row>
@@ -584,29 +591,29 @@ const Finance = () => {
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
-                                            This 2-day program seeks to enable participants in the Finance and Accounting departments to use financial numbers with greater understanding, efficiency and confidence by exposing them to the essentials in working capital management, particularly understanding how receivables can make or mar the performance of an organization and affect liquidity.
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
+                                            This program seeks to enable participants in the Finance and Accounting departments to use financial numbers with greater understanding, efficiency and confidence by exposing them to the essentials in working capital management, particularly understanding how receivables can make or mar the performance of an organization and affect liquidity.
                                         </p>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        className='mt-3'
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }}
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
@@ -618,20 +625,20 @@ const Finance = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
                                         <ul className='card-list'>
@@ -640,23 +647,23 @@ const Finance = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                                <Col xs={12} md={6} className='mt-3'>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
                 </Row>
@@ -668,29 +675,29 @@ const Finance = () => {
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
-                                            This 2-day program seeks to enable non-finance professionals to use financial numbers with greater understanding, efficiency and confidence by exposing them to essentials in understanding and interpreting financial statements, managing costs, evaluating short and long term investment decisions and budgeting.
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
+                                            This program seeks to enable non-finance professionals to use financial numbers with greater understanding, efficiency and confidence by exposing them to essentials in understanding and interpreting financial statements, managing costs, evaluating short and long term investment decisions and budgeting.
                                         </p>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        className='mt-3'
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }}
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
@@ -700,20 +707,20 @@ const Finance = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
                                         <ul className='card-list'>
@@ -724,23 +731,23 @@ const Finance = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                                <Col xs={12} md={6} className='mt-3'>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', width: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
                 </Row>

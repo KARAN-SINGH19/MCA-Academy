@@ -74,98 +74,92 @@ const Skills = () => {
                         </div>
                     </Col>
                 </Row>
+            </Container>
+
+            <Container>
                 <Row className="team-row mt-4 mission-section py-5 text-center bg-light">
                     <Col md={5} className="banner-col d-flex align-items-center justify-content-center">
-                        <InView triggerOnce>
-                            {({ inView, ref }) => (
-                                <motion.div
-                                    ref={ref}
-                                    initial="hidden"
-                                    animate={inView ? "show" : "hidden"}
-                                    variants={reveal("up", 0.3)}
-                                >
-                                    <Card className='pillarCard' style={{ width: '18rem', borderRadius: '15px', overflow: 'hidden' }}>
-                                        <Card.Img
-                                            variant="top"
-                                            style={{ width: "30%", height: "20%", margin: "auto", padding: "20px 0" }}
-                                            src="/images/icon2.png"
-                                            className="custom-card-img"
-                                        />
-                                        <Card.Body>
-                                            <Card.Title style={{ textAlign: "center" }}>Entrepreneurial Excellence - Skills and mindset</Card.Title>
-                                            <Card.Text>
-                                                <ul className='card-list'>
 
-                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={() => { scrollToSection("StrategyandTransformation") }}>Strategy and Transformation</li>
+                        <motion.div
+                            initial="hidden"
+                            animate="show"
+                            variants={reveal("up", 0.3)}
+                        >
+                            <Card className='pillarCard' style={{ width: '18rem', borderRadius: '15px', overflow: 'hidden' }}>
+                                <Card.Img
+                                    variant="top"
+                                    style={{ width: "30%", height: "20%", margin: "auto", padding: "20px 0" }}
+                                    src="/images/icon2.png"
+                                    className="custom-card-img"
+                                />
+                                <Card.Body>
+                                    <Card.Title style={{ textAlign: "center" }}>Entrepreneurial Excellence - Skills and mindset</Card.Title>
+                                    <Card.Text>
+                                        <ul className='card-list'>
 
-                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={() => { scrollToSection("GlobalLeadershipandCrisisManagement") }}>Global Leadership and Crisis Management</li>
+                                            <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={() => { scrollToSection("StrategyandTransformation") }}>Strategy and Transformation</li>
 
-                                                    <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={() => { scrollToSection("LeadingaBusinessinaVUCAWorld") }}>Leading a Business in a VUCA World</li>
+                                            <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={() => { scrollToSection("GlobalLeadershipandCrisisManagement") }}>Global Leadership and Crisis Management</li>
 
-                                                </ul>
-                                            </Card.Text>
-                                        </Card.Body>
-                                        <Card.Footer style={{ backgroundColor: '#395f60 ', color: '#fff', textAlign: 'center', height: '10vh' }}>
-                                        </Card.Footer>
-                                    </Card>
-                                </motion.div>
-                            )}
-                        </InView>
+                                            <li style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-25px' }} onClick={() => { scrollToSection("LeadingaBusinessinaVUCAWorld") }}>Leading a Business in a VUCA World</li>
+
+                                        </ul>
+                                    </Card.Text>
+                                </Card.Body>
+                                <Card.Footer style={{ backgroundColor: '#395f60 ', color: '#fff', textAlign: 'center', height: '10vh' }}>
+                                </Card.Footer>
+                            </Card>
+                        </motion.div>
                     </Col>
                     <Col md={5} className="mission-col  d-flex align-items-center justify-content-center">
-                        <InView triggerOnce>
-                            {({ inView, ref }) => (
-                                <motion.div
-                                    initial="hidden"
-                                    animate={inView ? "show" : "hidden"}
-                                    variants={reveal("up", 0)}
-                                    ref={ref}
-                                >
-                                    <div>
-                                        <h2 className="mission-heading">Entrepreneurial Excellence -  Skills and mindset</h2>
-                                        <p className='mt-4' style={{ fontSize: "20px", textAlign: "justify" }}>
-                                            This pillar focuses on skills, mindset, and knowledge to excel in entrepreneurship by fostering creativity, innovation, problem-solving, resilience, and strategic thinking.
-                                        </p>
-                                        <p className='mt-4' style={{ fontSize: "20px", textAlign: "justify" }}>
-                                            These courses also focus on developing qualities like risk-taking, adaptability, perseverance, and seizing opportunities, while addressing strategies for navigating transformation, leading in a VUCA world, and crisis management.
-                                        </p>
-                                    </div>
-                                </motion.div>
-                            )}
-                        </InView>
+
+                        <motion.div
+                            initial="hidden"
+                            animate="show"
+                            variants={reveal("up", 0)}
+                        >
+                            <div>
+                                <p className='mt-0.9' style={{ fontSize: "20px", textAlign: "justify" }}>
+                                    This pillar focuses on skills, mindset, and knowledge to excel in entrepreneurship by fostering creativity, innovation, problem-solving, resilience, and strategic thinking.
+                                </p>
+                                <p className='mt-0.9' style={{ fontSize: "20px", textAlign: "justify" }}>
+                                    These courses also focus on developing qualities like risk-taking, adaptability, perseverance, and seizing opportunities, while addressing strategies for navigating transformation, leading in a VUCA world, and crisis management.
+                                </p>
+                            </div>
+                        </motion.div>
                     </Col>
                 </Row>
 
                 <Row id="StrategyandTransformation">
-                    <div className="mission-section py-5 text-center mt-3">
+                    <div className="mission-section py-5 text-center mt-4">
                         <h1 className='mission-heading'>Strategy & Transformation</h1>
                     </div>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-4' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', height: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 700 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 700 }}>
                                             This program is designed to equip participants with advanced strategic thinking skills and transformational leadership capabilities. Through this program, attendees will gain expertise in strategic planning aligned with organizational objectives, while also learning effective change management techniques to foster adaptability and drive organizational growth.
                                         </p>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        className='mt-3'
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', height: '100%' }}
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
@@ -175,20 +169,20 @@ const Skills = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-4' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', height: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
                                         <ul className='card-list'>
@@ -200,7 +194,7 @@ const Skills = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <InView threshold={0.2} triggerOnce>
                                         {({ inView, ref }) => (
                                             <Col xs={12} md={6} style={{ width: "100%" }} className='mt-3'>
@@ -209,11 +203,11 @@ const Skills = () => {
                                                     initial="hidden"
                                                     animate={inView ? "show" : "hidden"}
                                                     variants={slideInFromRight}
-                                                    style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                                    style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', height: '100%' }}
                                                 >
                                                     <h4 className='mission-heading2'>Duration</h4>
                                                     <ul className='card-list'>
-                                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                             2-day program
                                                         </p>
                                                     </ul>
@@ -222,44 +216,42 @@ const Skills = () => {
                                         )}
                                     </InView>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
                 </Row>
 
 
-
-
                 <Row id='GlobalLeadershipandCrisisManagement'>
-                    <div className="mission-section py-5 text-center mt-3">
+                    <div className="mission-section py-5 text-center mt-5">
                         <h1 className='mission-heading'>Global Leadership and Crisis Management</h1>
                     </div>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-4' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', height: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                             The program brings necessary frameworks and practical skills to effectively lead and manage in a global business environment. It focuses on understanding global and local dynamics, enhancing cross-cultural collaboration, developing inclusive leadership, aligning missions and values, and building strong networks. The program also equips participants with tools and strategies for effective crisis management.
                                         </p>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        className='mt-3'
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', height: '100%' }}
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
@@ -269,20 +261,20 @@ const Skills = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-4' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', height: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
                                         <ul className='card-list'>
@@ -294,7 +286,7 @@ const Skills = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <InView threshold={0.2} triggerOnce>
                                         {({ inView, ref }) => (
                                             <Col xs={12} md={6} style={{ width: "100%" }} className='mt-3'>
@@ -303,11 +295,11 @@ const Skills = () => {
                                                     initial="hidden"
                                                     animate={inView ? "show" : "hidden"}
                                                     variants={slideInFromRight}
-                                                    style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                                    style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', height: '100%' }}
                                                 >
                                                     <h4 className='mission-heading2'>Duration</h4>
                                                     <ul className='card-list'>
-                                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                             2-day program
                                                         </p>
                                                     </ul>
@@ -316,67 +308,65 @@ const Skills = () => {
                                         )}
                                     </InView>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
                 </Row>
 
 
-
-
                 <Row id='LeadingaBusinessinaVUCAWorld'>
-                    <div className="mission-section py-5 text-center mt-3">
+                    <div className="mission-section py-5 text-center mt-5">
                         <h1 className='mission-heading'>Leading a Business in a VUCA World</h1>
                     </div>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-4' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', height: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                             This program builds knowledge and skills required to navigate and excel in volatile, uncertain, complex, and ambiguous (VUCA) business environment. Through this program, attendees will develop adaptive leadership strategies, gain insights into emerging trends and market dynamics, and foster a culture of innovation and resilience within their organizations to thrive amidst rapid change and uncertainty.
                                         </p>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        className='mt-3'
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', height: '100%' }}
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
                                             <li>Senior Leadership</li>
                                             <li>Entrepreneurs and Business Owners </li>
-                                            <li>Business Transformation Leadss</li>
+                                            <li>Business Transformation Leads</li>
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-4' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', height: '100%' }}
                                     >
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
                                         <ul className='card-list'>
@@ -388,7 +378,7 @@ const Skills = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <InView threshold={0.2} triggerOnce>
                                         {({ inView, ref }) => (
                                             <Col xs={12} md={6} style={{ width: "100%" }} className='mt-3'>
@@ -397,11 +387,11 @@ const Skills = () => {
                                                     initial="hidden"
                                                     animate={inView ? "show" : "hidden"}
                                                     variants={slideInFromRight}
-                                                    style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                                    style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px', height: '100%' }}
                                                 >
                                                     <h4 className='mission-heading2'>Duration</h4>
                                                     <ul className='card-list'>
-                                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                             2-day program
                                                         </p>
                                                     </ul>
@@ -410,15 +400,12 @@ const Skills = () => {
                                         )}
                                     </InView>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
-
                 </Row>
 
-
             </Container >
-
             <FooterSection />
         </>
     );

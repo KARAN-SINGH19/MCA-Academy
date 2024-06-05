@@ -60,37 +60,38 @@ const Stratergy = () => {
                         </div>
                     </Col>
                 </Row>
-
-                <Row>
+            </Container>
+            <Container>
+                <Row className='mt-4'>
                     <div className="mission-section py-5 text-center">
                         <h1 className='mission-heading'>Strategy & Transformation</h1>
                     </div>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-4' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                             This program is designed to equip participants with advanced strategic thinking skills and transformational leadership capabilities. Through this program, attendees will gain expertise in strategic planning aligned with organizational objectives, while also learning effective change management techniques to foster adaptability and drive organizational growth.
                                         </p>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
                                         className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
@@ -100,20 +101,20 @@ const Stratergy = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                       style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
                                         <ul className='card-list'>
@@ -125,23 +126,23 @@ const Stratergy = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                                <Col xs={12} md={6} className='mt-3'>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                       style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
                 </Row>

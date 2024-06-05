@@ -18,7 +18,7 @@ const HRAcademy = () => {
             section.scrollIntoView({ behavior: "smooth" });
         }
     };
-    
+
 
 
     const FooterSection = () => {
@@ -145,7 +145,7 @@ const HRAcademy = () => {
                         <motion.div initial="hidden" animate="show" variants={reveal("right", 0.3)}>
                             <div className="py-5">
                                 <h2 className="text-left mb-4 mission-heading" style={{ color: "#CE0932", fontWeight: 700 }}>HR Academy</h2>
-                                <p style={{ color: "#666666", fontWeight: 600, textAlign: "justify" }} className="text-justify">
+                                <p style={{ color: "#212529", fontWeight: 600, textAlign: "justify" }} className="text-justify">
                                     HR Academy offers a range of programs designed to enhance HR professionals' skills and drive organizational success. Our programs focus on strategic partnership development, data-driven decision-making, and grooming future HR leaders.
                                 </p>
                             </div>
@@ -161,30 +161,30 @@ const HRAcademy = () => {
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-4' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                             This program aims to equip HR professionals with the skills and knowledge necessary to become strategic business partners within their organizations. The program focuses on developing strategic thinking, enhancing business acumen, and fostering strong partnerships between HR and other business units to drive organizational success.
                                         </p>
                                     </motion.div>
                                 </Col>
 
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
                                         className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
@@ -195,13 +195,13 @@ const HRAcademy = () => {
                                     </motion.div>
                                 </Col>
 
-                                <Col xs={12} md={6} className='mt-3'>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
                                         <ul className='card-list'>
@@ -214,24 +214,23 @@ const HRAcademy = () => {
                                     </motion.div>
                                 </Col>
 
-                                <Col>
-
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%', marginTop: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
                 </Row>
@@ -243,29 +242,29 @@ const HRAcademy = () => {
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-4' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                             This program aims to equip HR professionals with the skills and knowledge to leverage data analytics for informed decision-making. Through this program, participants will learn how to analyze HR data, interpret key metrics, and apply insights to optimize HR strategies and drive organizational success.
                                         </p>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
                                         className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
@@ -276,13 +275,13 @@ const HRAcademy = () => {
                                     </motion.div>
                                 </Col>
 
-                                <Col xs={12} md={6} className='mt-3'>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
                                         <ul className='card-list'>
@@ -295,24 +294,23 @@ const HRAcademy = () => {
                                     </motion.div>
                                 </Col>
 
-                                <Col>
-
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%', marginTop: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
                 </Row>
@@ -325,30 +323,30 @@ const HRAcademy = () => {
 
                     <InView threshold={0.2} triggerOnce>
                         {({ inView, ref }) => (
-                            <>
-                                <Col xs={12} md={6} className='mt-3'>
+                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Col xs={12} md={6} className='mt-4' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
-                                        style={{ height: 'auto', marginBottom: '10px', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Objectives</h4>
-                                        <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                        <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                             This program aims to equip emerging HR professionals with foundational skills and knowledge to excel in their careers. The program focuses on developing core HR competencies, understanding HR best practices, and building effective communication and interpersonal skills to drive organizational success.
                                         </p>
                                     </motion.div>
                                 </Col>
 
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromLeft}
                                         className='mt-4'
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <ul className='card-list'>
                                             <h4 className='mission-heading2'>Who Should Attend?</h4> <br />
@@ -359,13 +357,13 @@ const HRAcademy = () => {
                                     </motion.div>
                                 </Col>
 
-                                <Col xs={12} md={6} className='mt-3'>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Learning Outcome</h4>
                                         <ul className='card-list'>
@@ -377,23 +375,23 @@ const HRAcademy = () => {
                                         </ul>
                                     </motion.div>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6} className='mt-3' style={{ display: 'flex' }}>
                                     <motion.div
                                         ref={ref}
                                         initial="hidden"
                                         animate={inView ? "show" : "hidden"}
                                         variants={slideInFromRight}
-                                        style={{ height: 'auto', backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', width: '100%', marginTop: '20px' }}
+                                        style={{ flex: 1, backgroundColor: "#f8f9fa", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', padding: '20px', margin: '10px' }}
                                     >
                                         <h4 className='mission-heading2'>Duration</h4>
                                         <ul className='card-list'>
-                                            <p style={{ textAlign: "justify", padding: "10px", color: "#666666", fontWeight: 600 }}>
+                                            <p style={{ textAlign: "justify", padding: "10px", color: "#212529", fontWeight: 600 }}>
                                                 2-day program
                                             </p>
                                         </ul>
                                     </motion.div>
                                 </Col>
-                            </>
+                            </div>
                         )}
                     </InView>
                 </Row>
