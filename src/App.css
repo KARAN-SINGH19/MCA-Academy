@@ -752,6 +752,7 @@ h1 {
   height: 250px;
   margin-top: 20px;
   border: 2px solid white;
+  position: relative;
 }
 
 @keyframes bounce {
@@ -764,7 +765,7 @@ h1 {
     transform: translateY(0);
   }
 
-  40% {
+  50% {
     transform: translateY(10px);
   }
 
