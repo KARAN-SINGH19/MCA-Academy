@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Navbar from '../Components/Navbar';
 import Carousal from '../Components/Carousal';
 import MissionCard from '../Components/MissionCard';
@@ -11,6 +11,9 @@ import reveal from '../Animations/Variants';
 import { useInView } from 'react-intersection-observer';
 import Slider from '../Components/Slider';
 import academy from '../Api/Academy';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const Home = () => {
   const counterRefs = useRef([]);
@@ -86,28 +89,105 @@ const Home = () => {
         animate={inView ? "show" : "hidden"}
         className="mission-section py-5 text-center bg-light"
       >
-        <h2 className="mission-heading">Functional Academy</h2>
+        <h2 className="mission-heading">Functional Academies</h2>
         <Slider data={academy} />
       </motion.div>
     );
   }
 
+  const circles = [...Array(5)].map((_, i) => {
+    const angle = (i / 5) * 2 * Math.PI;
+    const radius = 120;
+    const x = 50 + (radius * Math.cos(angle)) / 70 * 50;
+    const y = 50 + (radius * Math.sin(angle)) / 70 * 50;
+    return { x, y };
+  });
 
 
-  function PillarSection() {
+
+  const RedBarSection = () => {
+    const handleClickMore = () => {
+      console.log("Clicked on Click More");
+      // Add your logic here
+    };
+
+    return (
+      <Container fluid style={{ paddingLeft: 0, paddingRight: 0, marginLeft: 0, marginInlineStart: 0, width: '100%' }}>
+        <Row>
+          <Col>
+            <div className="image-container2">
+           
+              
+                <div className="box2" style={{ marginTop: "50px" }}>
+                  <h2 style={{ color: 'white', marginTop: '25px' }}>Our Objective</h2>
+                  <p style={{ color: 'white', padding: '20px', fontSize: '20px' }}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ratione, dolores necessitatibus atque eum consequuntur voluptate quia architecto et, beatae dolorum sed dolor voluptas laborum quasi repellendus accusantium nobis praesentium?
+                  </p>
+                </div>
+                <div className="py-5 text-center position-relative circle-container" style={{ marginTop: "180px" }}>
+
+                <div className="central-circle2" onClick={handleClickMore} style={{ zIndex: 1 }}>
+                    Click More <br />
+                  </div>
+                  <div className="arrow-container">
+                    <div className="arrow-bounce">
+                      <div role="img" aria-label="down-arrow" style={{ animation: 'bounce 1s infinite' }}>👇</div>
+                    </div>
+                  </div>
+                  <div className="surrounding-circles">
+                    {/* Assume circles and pillars are defined elsewhere */}
+                    {circles.map((circle, i) => (
+                      <div
+                        key={i}
+                        className='surrounding-circle'
+                        style={{
+                          top: `${circle.y}%`,
+                          left: `${circle.x}%`,
+                          transform: 'translate(-50%, -50%)',
+                          textAlign: 'center',
+                          padding: '5px',
+                          fontSize: '0.85rem',
+                          textDecoration: 'none',
+                          transition: 'transform 0.3s ease',
+                          cursor: "pointer"
+                        }}
+                      >
+                        {pillars[i % pillars.length].title}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+            
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    );
+  }
+
+
+  const PillarSection = () => {
     const { ref, inView } = useInView({
       triggerOnce: true,
       threshold: 0,
     });
 
+
     return (
-      <div className="mission-section py-5 text-center bg-light" ref={ref}>
-        <h2 className="mission-heading">Academy Verticals</h2>
-        {inView && <PillarCard data={pillars} />}
-      </div>
+      <Container fluid style={{ width: "100%" }}>
+        <Row>
+          <Col>
+            <div className="mission-section py-5 text-center bg-light" ref={ref}>
+              <h2 className="mission-heading">Academy Verticals</h2>
+              <RedBarSection />
+              <PillarCard data={pillars} />
+            </div>
+          </Col>
+        </Row>
+
+      </Container>
     );
   }
-
 
   function FooterSection({ children }) {
     const { ref, inView } = useInView({
@@ -127,11 +207,8 @@ const Home = () => {
     );
   }
 
-
-
   return (
     <div>
-
       <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: 1 }} transition={{ duration: 2 }}>
         <Navbar />
       </motion.div>
@@ -147,7 +224,13 @@ const Home = () => {
       {/* <CounterSection /> */}
 
       <section id="pillars">
-        <PillarSection />
+        <Container fluid>
+          <Row>
+            <Col>
+              <PillarSection />
+            </Col>
+          </Row>
+        </Container>
       </section>
 
       <SliderSection data={academy} />
@@ -155,7 +238,6 @@ const Home = () => {
       <section id="contact">
         <FooterSection />
       </section>
-
     </div>
   );
 };

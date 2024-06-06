@@ -36,7 +36,7 @@ const Navbar = () => {
                                 <RouterLink className="nav-link" to="/">Home</RouterLink>
                             </motion.li>
                             <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
-                                <RouterLink className="nav-link" to="/about">Faculty</RouterLink>
+                                <RouterLink className="nav-link" to="/about">Our Faculty</RouterLink>
                             </motion.li>
                             {
                                 location.pathname == '/' && (
