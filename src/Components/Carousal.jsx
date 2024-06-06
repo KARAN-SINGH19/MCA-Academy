@@ -26,7 +26,7 @@ const Carousal = () => {
                     className="d-block w-100"
                     src="/images/bulb.jpg"
                     alt="Placeholder slide"
-                    style={{ objectFit: 'cover', height: '100%', filter: 'blur(2px)' }}
+                    style={{ objectFit: 'cover', height: '100%', filter: 'blur(8px)' }}
                 />
                 <Carousel.Caption style={{
                     marginBottom: '110px',
@@ -55,7 +55,7 @@ const Carousal = () => {
                     className="d-block w-100"
                     src="/images/bulb2.jpg"
                     alt="Placeholder slide"
-                    style={{ objectFit: 'cover', height: '100%', filter: 'blur(2px)' }}
+                    style={{ objectFit: 'cover', height: '100%', filter: 'blur(8px)' }}
                 />
                 <Carousel.Caption style={{
                     marginBottom: '190px',
@@ -82,7 +82,7 @@ const Carousal = () => {
                     className="d-block w-100"
                     src="/images/bulb3.jpg"
                     alt="Placeholder slide"
-                    style={{ objectFit: 'cover', height: '100%', filter: 'blur(2px)' }}
+                    style={{ objectFit: 'cover', height: '100%', filter: 'blur(8px)' }}
                 />
                 <Carousel.Caption style={{
                     marginBottom: '150px',

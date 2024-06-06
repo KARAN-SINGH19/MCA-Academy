@@ -13,15 +13,14 @@ h1 {
 
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font-family: 'Montserrat', sans-serif;
 }
 
 .blurImage {
   filter: blur(15px);
 }
-
 
 .nav_ul li {
   padding: 0 0.6rem;
@@ -93,6 +92,11 @@ h1 {
 
 .mission-section {
   background-color: #f8f9fa;
+  padding: 3rem 1rem;
+}
+
+
+.mission-section2 {
   padding: 3rem 1rem;
 }
 

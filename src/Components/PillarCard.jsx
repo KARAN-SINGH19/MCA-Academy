@@ -80,7 +80,7 @@ const PillarCard = ({ data }) => {
                                             </div>
                                             <Button onClick={handleLinkClick} style={{ backgroundColor: values.color, border: "none" }} className="mt-auto align-self-center">Learn More</Button>
                                         </Card.Body>
-                                        <Card.Footer style={{ backgroundColor: values.color, color: '#fff', textAlign: 'center', height: '10vh' }}>
+                                        <Card.Footer style={{ backgroundColor: values.color, color: '#fff', textAlign: 'center', height: '7vh' }}>
                                         </Card.Footer>
                                     </Card>
                                 </InViewWrapper>

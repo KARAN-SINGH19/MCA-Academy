@@ -96,18 +96,18 @@ const Home = () => {
     );
   }
 
-
   const RedBarSection = () => {
     const values = [
-      { icon1: '/images/logo1.jpg', icon: 'fas fa-chart-line', text: 'Unlocking Authentic Leadership' },
-      { icon: 'fas fa-balance-scale', text: 'Entrepreneurial Excellence -  Skills and mindset' },
-      { icon: 'fas fa-award', text: 'Empowering Women Leaders For Success' },
-      { icon: 'fas fa-handshake', text: 'Fostering Functional Expertise' },
-      { icon: 'fas fa-users', text: 'Coaching for Professionals' },
+      { icon1: '/images/logo1-removebg-preview.png', text: 'Unlocking Authentic Leadership' },
+      { icon1: '/images/newicon2.png', text: 'Entrepreneurial Excellence - Skills and mindset' },
+      { icon1: '/images/newicon3.png', text: 'Empowering Women Leaders For Success' },
+      { icon1: '/images/newicon4.png', text: 'Fostering Functional Expertise' },
+      { icon1: '/images/newicon5.png', text: 'Coaching for Professionals' },
     ];
 
     const angleStep = Math.PI / (values.length - 1);
-    const radius = 300;
+    const radius = 310;
+    const closerRadius = 260;
 
     const scrollToSection = (sectionId) => {
       const section = document.getElementById(sectionId);
@@ -116,13 +116,10 @@ const Home = () => {
       }
     };
 
-
     return (
-      <Container fluid style={{
-        paddingLeft: 0, paddingRight: 0, overflow: 'hidden',
-      }}>
-        <Row>
-          <Col>
+      <Container fluid className='mission-section2 text-center' style={{ overflow: "hidden", padding: "0px", margin: "0px" }}>
+        <Row style={{ padding: "0px", margin: "0px" }}>
+          <Col style={{ padding: "0px",margin:"0px" }}>
             <div style={{
               textAlign: 'center',
               padding: '50px',
@@ -131,7 +128,9 @@ const Home = () => {
               backgroundImage: 'url(/images/bst.jpg)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
+              backgroundRepeat: 'no-repeat',
+              width: '100vw',
+              margin: 0
             }}>
               <div style={{
                 position: 'absolute',
@@ -150,17 +149,29 @@ const Home = () => {
                 padding: '20px',
                 borderRadius: '10px',
                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-                marginBottom: '40px'
+                marginBottom: '40px',
+                width: "70%",
+                margin: "auto"
               }}>
-                <h1 style={{ color: 'white', marginBottom: '20px' }}>Academy Verticals</h1>
-                <p style={{ color: "white", fontSize: "20px", textAlign: "justify" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus officia corporis tenetur. Earum harum repellendus praesentium eius iste enim, cupiditate doloribus hic culpa placeat? Ab quaerat aut nemo.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus officia corporis tenetur. Earum harum repellendus praesentium eius iste enim, cupiditate doloribus hic culpa placeat? Ab quaerat aut nemo et animi!
+                <h1 className='mission-heading' style={{ color: 'white', marginBottom: '20px' }}>Academy Verticals</h1>
+                <p style={{ color: "white", fontSize: "20px", textAlign: "justify" }}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus officia corporis tenetur. Earum harum repellendus praesentium eius iste enim, cupiditate doloribus hic culpa placeat? Ab quaerat aut nemo.
                 </p>
               </div>
 
               {values.map((value, index) => {
                 const angle = index * angleStep - Math.PI;
-                const x = radius * Math.cos(angle);
-                const y = radius * Math.sin(angle);
+                const isCloser = value.text === 'Entrepreneurial Excellence - Skills and mindset' ||
+                  value.text === 'Empowering Women Leaders For Success' ||
+                  value.text === 'Fostering Functional Expertise';
+                const currentRadius = isCloser ? closerRadius : radius;
+                const x = currentRadius * Math.cos(angle);
+                const y = currentRadius * Math.sin(angle);
+
+                const iconStyle = index === 2
+                  ? { width: "130px", height: "130px" }
+                  : { width: "90px", height: "80px" };
+
                 return (
                   <div
                     key={index}
@@ -168,7 +179,7 @@ const Home = () => {
                       position: 'absolute',
                       left: `calc(50% + ${x}px)`,
                       top: `calc(90% + ${y}px)`,
-                      transform: 'translate(-50%, -50%)',
+                      transform: 'translate(-50%, -60%)',
                       textAlign: 'center',
                       zIndex: 1,
                     }}
@@ -185,8 +196,7 @@ const Home = () => {
                         margin: '0 auto',
                       }}
                     >
-                      <i className={value.icon} style={{ fontSize: '50px', color: 'white' }}></i>
-                      {/* <img src={value.icon} style={{ width:"80px",height:"80px" }} alt="" /> */}
+                      <img src={value.icon1} style={iconStyle} alt="" />
                     </div>
                     <p style={{ color: 'white', maxWidth: '190px' }}>{value.text}</p>
                   </div>
@@ -198,18 +208,18 @@ const Home = () => {
                   style={{
                     background: '#FF6D00',
                     borderRadius: '50%',
-                    width: '460px',
+                    width: '420px',
                     height: '450px',
                     position: 'absolute',
                     bottom: '-75px',
                     left: '50%',
                     transform: 'translateX(-50%)',
                     zIndex: 1,
-                    top: 'calc(100% - -300px)',
+                    top: 'calc(100% - -360px)',
                   }}
                 >
                   <div>
-                    <h1 onClick={() => { scrollToSection('pillars2') }} style={{ color: "white", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "70px", cursor: "pointer", animation: "bounce 1s infinite" }}>CLICK MORE</h1>
+                    <h3 onClick={() => { scrollToSection('pillars2') }} style={{ color: "white", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "80px", cursor: "pointer" }}>Explore Now</h3>
                   </div>
                 </div>
               </div>
@@ -227,20 +237,20 @@ const Home = () => {
       threshold: 0,
     });
 
-
     return (
-      <Container fluid style={{ width: "100%" }}>
+
+      <Container fluid style={{ paddingRight: 0, paddingLeft: 0 }}>
         <Row>
           <Col>
-            <div className="" ref={ref}>
+            <div ref={ref}>
               <RedBarSection />
             </div>
           </Col>
         </Row>
-
       </Container>
+
     );
-  }
+  };
 
 
   const PillarSection2 = () => {
@@ -283,7 +293,7 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <>
       <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: 1 }} transition={{ duration: 2 }}>
         <Navbar />
       </motion.div>
@@ -321,7 +331,7 @@ const Home = () => {
       <section id="contact">
         <FooterSection />
       </section>
-    </div>
+    </>
   );
 };
 
