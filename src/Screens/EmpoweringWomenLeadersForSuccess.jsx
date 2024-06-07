@@ -86,7 +86,7 @@ const EmpoweringWomenLeadersForSuccess = () => {
                                 <Card.Img
                                     variant="top"
                                     style={{ width: "30%", height: "25%", margin: "auto", padding: "20px 0" }}
-                                    src="/images/icon3.png"
+                                    src="/images/worker.png"
                                     className="custom-card-img"
                                 />
                                 <Card.Body>
@@ -98,7 +98,7 @@ const EmpoweringWomenLeadersForSuccess = () => {
                                         </ul>
                                     </Card.Text>
                                 </Card.Body>
-                                <Card.Footer style={{ backgroundColor: '#74b72e', color: '#fff', textAlign: 'center', height: '10vh' }}>
+                                <Card.Footer style={{ backgroundColor: '#CE0932', color: '#fff', textAlign: 'center', height: '5vh' }}>
                                 </Card.Footer>
                             </Card>
                         </motion.div>

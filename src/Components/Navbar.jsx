@@ -45,18 +45,17 @@ const Navbar = () => {
                                             <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="missions" spy={true} smooth={true} offset={-100} duration={50}>Mission</ScrollLink>
                                         </motion.li>
                                         <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
-                                            <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="pillars" spy={true} smooth={true} offset={-100} duration={50}>Verticals</ScrollLink>
+                                            <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="pillars" spy={true} smooth={true} offset={-100} duration={50}>Our Offerings</ScrollLink>
                                         </motion.li>
                                         <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
-                                            <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="contact" spy={true} smooth={true} offset={-100} duration={50}>Contact Us</ScrollLink>
+                                            <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="offices" spy={true} smooth={true} offset={-100} duration={50}>Our Offices</ScrollLink>
                                         </motion.li>
                                     </>
                                 )
                             }
-                            {/* <motion.div variants={linkVariants} initial="hidden" animate="show" className="mx-3">
-                                <button type="button" className="btn1 mx-2">Login</button>
-                                <button type="button" className="btn2 mx-2">Sign Up</button>
-                            </motion.div> */}
+                            <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
+                                <RouterLink className="nav-link" to="/ContactUs">Contact Us</RouterLink>
+                            </motion.li>
                         </ul>
                     </div>
                 </div>

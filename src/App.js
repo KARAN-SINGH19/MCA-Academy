@@ -12,7 +12,7 @@ import UnlockingAuthenticLeadership from './Screens/UnlockingAuthenticLeadership
 import EmpoweringWomenLeadersForSuccess from './Screens/EmpoweringWomenLeadersForSuccess';
 import Fostering from './Screens/Fostering';
 import Coaching from './Screens/Coaching';
-
+import ContactUs from './Screens/ContactUs';
 
 // import FinancialReporting from './Screens/FinancialReporting';
 // import GrowthProgram from './Screens/GrowthProgram';
@@ -45,16 +45,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route exact path='/about' element={<About />} />
-        <Route exact path='/HRAcademy' element={<HRAcademy />} />
-        <Route exact path='/FinanceAcademy' element={<Finance />} />
-        <Route exact path='/SupplyChainAcademy' element={<SupplyChainAcademy />} />
+        <Route exact path='/HRProgram' element={<HRAcademy />} />
+        <Route exact path='/FinanceProgram' element={<Finance />} />
+        <Route exact path='/SupplyChainProgram' element={<SupplyChainAcademy />} />
         <Route exact path='/CoachingandMentoring' element={<CoachingandMentoring />} />
         <Route exact path='/UnlockingAuthenticLeadership' element={<UnlockingAuthenticLeadership />} />
         <Route exact path='/EntrepreneurialExcellenceSkillsandmindset' element={<Skills />} />
         <Route exact path='/EmpoweringWomenLeadersForSuccess' element={<EmpoweringWomenLeadersForSuccess />} />
         <Route exact path='/FosteringFunctionalExpertise' element={<Fostering />} />
         <Route exact path='/CoachingforProfessionals' element={<Coaching />} />
-
+        <Route exact path='/ContactUs' element={<ContactUs />} />
 
 
         {/* <Route exact path='/international-financial-reporting-standards' element={<FinancialReporting />} />

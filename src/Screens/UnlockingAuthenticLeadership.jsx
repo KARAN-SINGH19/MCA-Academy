@@ -84,7 +84,7 @@ const UnlockingAuthenticLeadership = () => {
                                 <Card.Img
                                     variant="top"
                                     style={{ width: "30%", height: "20%", margin: "auto", padding: "20px 0" }}
-                                    src="/images/icon1.png"
+                                    src="/images/team.png"
                                     className="custom-card-img"
                                 />
                                 <Card.Body>
@@ -98,7 +98,7 @@ const UnlockingAuthenticLeadership = () => {
                                         </ul>
                                     </Card.Text>
                                 </Card.Body>
-                                <Card.Footer style={{ backgroundColor: '#071630', color: '#fff', textAlign: 'center', height: '10vh' }}>
+                                <Card.Footer style={{ backgroundColor: '#CE0932', color: '#fff', textAlign: 'center', height: '05vh' }}>
                                 </Card.Footer>
                             </Card>
                         </motion.div>

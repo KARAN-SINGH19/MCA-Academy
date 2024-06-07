@@ -64,7 +64,7 @@ const Leading = () => {
             <Container>
                 <Row className='mt-4'> 
                     <div className="mission-section py-5 text-center">
-                        <h1 className='mission-heading'>Leading a Business in a VUCA World</h1>
+                        {/* <h1 className='mission-heading'>Leading a Business in a VUCA World</h1> */}
                     </div>
 
                     <InView threshold={0.2} triggerOnce>

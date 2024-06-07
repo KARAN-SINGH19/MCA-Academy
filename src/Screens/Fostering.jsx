@@ -69,7 +69,7 @@ const Fostering = () => {
                                         <Card.Img
                                             variant="top"
                                             style={{ width: "30%", height: "25%", margin: "auto", padding: "20px 0" }}
-                                            src="/images/icon4.png"
+                                            src="/images/light-bulb.png"
                                             className="custom-card-img"
                                         />
                                         <Card.Body>
@@ -92,7 +92,7 @@ const Fostering = () => {
                                                 </ul>
                                             </Card.Text>
                                         </Card.Body>
-                                        <Card.Footer style={{ backgroundColor: '#F4B400 ', color: '#fff', textAlign: 'center', height: '10vh' }}>
+                                        <Card.Footer style={{ backgroundColor: '#CE0932', color: '#fff', textAlign: 'center', height: '5vh' }}>
                                         </Card.Footer>
                                     </Card>
                                 </motion.div>

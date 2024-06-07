@@ -89,7 +89,7 @@ const Skills = () => {
                                 <Card.Img
                                     variant="top"
                                     style={{ width: "30%", height: "20%", margin: "auto", padding: "20px 0" }}
-                                    src="/images/icon2.png"
+                                    src="/images/skills.png"
                                     className="custom-card-img"
                                 />
                                 <Card.Body>
@@ -106,7 +106,7 @@ const Skills = () => {
                                         </ul>
                                     </Card.Text>
                                 </Card.Body>
-                                <Card.Footer style={{ backgroundColor: '#395f60 ', color: '#fff', textAlign: 'center', height: '10vh' }}>
+                                <Card.Footer style={{ backgroundColor: '#CE0932 ', color: '#fff', textAlign: 'center', height: '5vh' }}>
                                 </Card.Footer>
                             </Card>
                         </motion.div>

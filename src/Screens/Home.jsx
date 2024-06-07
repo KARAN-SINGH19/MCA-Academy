@@ -90,7 +90,7 @@ const Home = () => {
         animate={inView ? "show" : "hidden"}
         className="mission-section py-5 text-center bg-light"
       >
-        <h2 className="mission-heading">Functional Academies</h2>
+        <h2 className="mission-heading">Functional Training Programs</h2>
         <Slider data={academy} />
       </motion.div>
     );
@@ -98,28 +98,28 @@ const Home = () => {
 
   const RedBarSection = () => {
     const values = [
-      { icon1: '/images/logo1-removebg-preview.png', text: 'Unlocking Authentic Leadership' },
-      { icon1: '/images/newicon2.png', text: 'Entrepreneurial Excellence - Skills and mindset' },
-      { icon1: '/images/newicon3.png', text: 'Empowering Women Leaders For Success' },
-      { icon1: '/images/newicon4.png', text: 'Fostering Functional Expertise' },
-      { icon1: '/images/newicon5.png', text: 'Coaching for Professionals' },
+      { icon1: '/images/iconteam.png', text: 'Unlocking Authentic Leadership' },
+      { icon1: '/images/iconskill.png', text: 'Entrepreneurial Excellence - Skills and mindset' },
+      { icon1: '/images/Women.png', text: 'Empowering Women Leaders For Success' },
+      { icon1: '/images/iconlight.png', text: 'Fostering Functional Expertise' },
+      { icon1: '/images/iconcoach.png', text: 'Coaching for Professionals' },
     ];
-
+  
     const angleStep = Math.PI / (values.length - 1);
     const radius = 310;
     const closerRadius = 260;
-
+  
     const scrollToSection = (sectionId) => {
       const section = document.getElementById(sectionId);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
     };
-
+  
     return (
       <Container fluid className='mission-section2 text-center' style={{ overflow: "hidden", padding: "0px", margin: "0px" }}>
         <Row style={{ padding: "0px", margin: "0px" }}>
-          <Col style={{ padding: "0px",margin:"0px" }}>
+          <Col style={{ padding: "0px", margin: "0px" }}>
             <div style={{
               textAlign: 'center',
               padding: '50px',
@@ -141,7 +141,7 @@ const Home = () => {
                 backgroundColor: 'rgba(102, 3, 3, 0.75)',
                 zIndex: 0
               }}></div>
-
+  
               <div style={{
                 position: 'relative',
                 zIndex: 1,
@@ -154,11 +154,12 @@ const Home = () => {
                 margin: "auto"
               }}>
                 <h1 className='mission-heading' style={{ color: 'white', marginBottom: '20px' }}>Academy Verticals</h1>
-                <p style={{ color: "white", fontSize: "20px", textAlign: "justify" }}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus officia corporis tenetur. Earum harum repellendus praesentium eius iste enim, cupiditate doloribus hic culpa placeat? Ab quaerat aut nemo.
+                <p style={{ color: "white", fontSize: "20px", textAlign: "center" }}>
+                  <br />
+                Explore our academy verticals tailored to empower growth and excellence in your career journey.
                 </p>
               </div>
-
+  
               {values.map((value, index) => {
                 const angle = index * angleStep - Math.PI;
                 const isCloser = value.text === 'Entrepreneurial Excellence - Skills and mindset' ||
@@ -167,11 +168,7 @@ const Home = () => {
                 const currentRadius = isCloser ? closerRadius : radius;
                 const x = currentRadius * Math.cos(angle);
                 const y = currentRadius * Math.sin(angle);
-
-                const iconStyle = index === 2
-                  ? { width: "130px", height: "130px" }
-                  : { width: "90px", height: "80px" };
-
+  
                 return (
                   <div
                     key={index}
@@ -186,27 +183,36 @@ const Home = () => {
                   >
                     <div
                       style={{
-                        background: '#FF6D00',
+                        background: '#CE0932',
                         borderRadius: '50%',
-                        width: '120px',
-                        height: '120px',
+                        width: '120px', // Reduced size of the circle
+                        height: '120px', // Reduced size of the circle
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         margin: '0 auto',
+                        overflow: 'hidden'
                       }}
                     >
-                      <img src={value.icon1} style={iconStyle} alt="" />
+                      <img
+                        src={value.icon1}
+                        style={{
+                          width: '60%', // Reduced size of the image
+                          height: '60%', // Reduced size of the image
+                          objectFit: 'contain'
+                        }}
+                        alt=""
+                      />
                     </div>
                     <p style={{ color: 'white', maxWidth: '190px' }}>{value.text}</p>
                   </div>
                 );
               })}
-
+  
               <div style={{ position: 'absolute', display: 'inline-block', zIndex: 2 }}>
                 <div
                   style={{
-                    background: '#FF6D00',
+                    background: '#CE0932',
                     borderRadius: '50%',
                     width: '420px',
                     height: '450px',
@@ -229,7 +235,8 @@ const Home = () => {
       </Container>
     );
   };
-
+  
+  
 
   const PillarSection = () => {
     const { ref, inView } = useInView({
@@ -328,7 +335,7 @@ const Home = () => {
 
       <SliderSection data={academy} />
 
-      <section id="contact">
+      <section id="offices">
         <FooterSection />
       </section>
     </>

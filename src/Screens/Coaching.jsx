@@ -29,11 +29,12 @@ const Coaching = () => {
             </motion.div>
         );
     }
+
     return (
         <>
             <Navbar />
 
-            <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
+            <Container fluid style={{ paddingLeft: 0, paddingRight: 0, position: 'relative' }}>
                 <Row>
                     <Col>
                         <motion.img
@@ -45,6 +46,21 @@ const Coaching = () => {
                             animate={{ x: 0 }}
                             transition={{ duration: 1 }}
                         />
+                        <div style={{
+                            position: 'absolute',
+                            top: '0',
+                            left: '0',
+                            width: '100%',
+                            height: '80vh',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                            color: 'white',
+                            textAlign: 'center'
+                        }}>
+                            <h1 style={{ fontSize: '3rem' }}>Under Development...</h1>
+                        </div>
                     </Col>
                 </Row>
                 <Row className="team-row mt-4 mission-section py-5 text-center bg-light">
@@ -57,7 +73,7 @@ const Coaching = () => {
                                     animate={inView ? "show" : "hidden"}
                                     variants={reveal("up", 0)}
                                 >
-                                    <div>
+                                    {/* <div>
                                         <h2 className="mission-heading">Coaching for Professionals</h2>
                                         <p className='mt-4' style={{ textAlign: "left" }}>
                                             Empowers women leaders with skills, support, and strategies to overcome barriers, unlock their potential, and thrive in leadership roles.
@@ -67,7 +83,7 @@ const Coaching = () => {
                                             <li style={{ marginLeft: "15px", textIndent: '-25px' }}>Fortifying Corporate resilience for uncertain times</li>
                                             <li style={{ marginLeft: "15px", textIndent: '-25px' }}><strong>Harmony</strong>- Empowering for balance -  professional and personal life balance</li>
                                         </ul>
-                                    </div>
+                                    </div> */}
                                 </motion.div>
                             )}
                         </InView>

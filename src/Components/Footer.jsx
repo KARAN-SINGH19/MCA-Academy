@@ -55,7 +55,7 @@ export default function Footer() {
                                     whileHover={{ scale: 1.1 }}
                                     onClick={() => window.open('https://www.mcagulf.com', '_blank')}
                                 >
-                                    Click to visit our official website
+                             Visit our MCA Gulf Website
                                 </motion.span>
                             </div>
 

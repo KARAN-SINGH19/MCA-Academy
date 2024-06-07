@@ -64,7 +64,7 @@ const Harmony = () => {
             <Container>
                 <Row className='mt-4'>
                     <div className="mission-section py-5 text-center">
-                        <h1 className='mission-heading'>Harmony - Empowering for balance</h1>
+                        {/* <h1 className='mission-heading'>Harmony - Empowering for balance</h1> */}
                     </div>
 
                     <InView threshold={0.2} triggerOnce>

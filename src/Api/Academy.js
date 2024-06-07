@@ -1,11 +1,11 @@
 
 const academy = [
     {
-        name: "Finance Academy",
+        name: "Finance Program",
         image:"/images/blur-1853262_1280.jpg"
     },
     {
-        name: "HR Academy",
+        name: "HR Program",
         image:"/images/HR3.jpg"
     },
     // {
@@ -13,7 +13,7 @@ const academy = [
     //     image:"/images/pexels-shvets-production-7203724.jpg"
     // },
      {
-         name: "Supply Chain Academy",
+         name: "Supply Chain Program",
          image:"/images/office-1574717_1280.jpg"
      },
     {
