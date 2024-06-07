@@ -16,14 +16,14 @@ router.post('/sendEmail', async (req, res) => {
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'rehalkaran37@gmail.com', // COMPANY EMAIL
+            user: 'malahim.k@mcagulf.com', // COMPANY EMAIL
             pass: 'gsvy tkoh oysb hgpa'
         }
     });
 
     var mailOptions = {
         from: `${email}`, // USER EMAIL
-        to: 'rehalkaran37@gmail.com', // COMPANY EMAIL
+        to: 'malahim.k@mcagulf.com', // COMPANY EMAIL
         subject: `
             Connection request by ${name}.
         `,
