@@ -882,3 +882,22 @@ h1 {
 .subscribe-button:hover {
   background-color: #d0411b;
 }
+
+.partner-box {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.partner-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.partner-box p {
+  margin-top: 10px;
+  flex-grow: 1;
+}

@@ -48,7 +48,7 @@ const Navbar = () => {
                                             <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="pillars" spy={true} smooth={true} offset={-100} duration={50}>Our Offerings</ScrollLink>
                                         </motion.li>
                                         <motion.li variants={linkVariants} initial="hidden" animate="show" className="nav-item">
-                                            <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="offices" spy={true} smooth={true} offset={-100} duration={50}>Our Offices</ScrollLink>
+                                            <ScrollLink style={{ cursor: "pointer" }} className="nav-link" to="partners" spy={true} smooth={true} offset={-100} duration={50}>Our Partners</ScrollLink>
                                         </motion.li>
                                     </>
                                 )

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Navbar from '../Components/Navbar';
 import Carousal from '../Components/Carousal';
 import MissionCard from '../Components/MissionCard';
@@ -52,8 +52,7 @@ const Home = () => {
     return () => observer.disconnect();
   }, []);
 
-
-  function MissionSection({ children }) {
+  function MissionSection() {
     const { ref, inView } = useInView({
       triggerOnce: true,
       threshold: 0,
@@ -68,15 +67,15 @@ const Home = () => {
         className="mission-section py-5 text-center"
       >
         <h2 className="mission-heading">Our Mission</h2>
-        <p className="mx-auto" style={{ maxWidth: '600px', fontSize: "23PX" }}>
-          We develop leadership and functional skills across the GCC, empowering individuals and organizations with high-quality training to drive regional growth.
+        <p className="mx-auto" style={{ maxWidth: '600px', fontSize: "23px" }}>
+          We develop leadership and functional skills across the GCC, empowering individuals and organizations with high-quality training to drive regional growth.
         </p>
         <MissionCard data={missions} />
       </motion.div>
     );
   }
 
-  function SliderSection({ children }) {
+  function SliderSection() {
     const { ref, inView } = useInView({
       triggerOnce: true,
       threshold: 0,
@@ -104,18 +103,18 @@ const Home = () => {
       { icon1: '/images/iconlight.png', text: 'Fostering Functional Expertise' },
       { icon1: '/images/iconcoach.png', text: 'Coaching for Professionals' },
     ];
-  
+
     const angleStep = Math.PI / (values.length - 1);
     const radius = 310;
     const closerRadius = 260;
-  
+
     const scrollToSection = (sectionId) => {
       const section = document.getElementById(sectionId);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
     };
-  
+
     return (
       <Container fluid className='mission-section2 text-center' style={{ overflow: "hidden", padding: "0px", margin: "0px" }}>
         <Row style={{ padding: "0px", margin: "0px" }}>
@@ -141,7 +140,7 @@ const Home = () => {
                 backgroundColor: 'rgba(102, 3, 3, 0.75)',
                 zIndex: 0
               }}></div>
-  
+
               <div style={{
                 position: 'relative',
                 zIndex: 1,
@@ -156,10 +155,10 @@ const Home = () => {
                 <h1 className='mission-heading' style={{ color: 'white', marginBottom: '20px' }}>Academy Verticals</h1>
                 <p style={{ color: "white", fontSize: "20px", textAlign: "center" }}>
                   <br />
-                Explore our academy verticals tailored to empower growth and excellence in your career journey.
+                  Explore our academy verticals tailored to empower growth and excellence in your career journey.
                 </p>
               </div>
-  
+
               {values.map((value, index) => {
                 const angle = index * angleStep - Math.PI;
                 const isCloser = value.text === 'Entrepreneurial Excellence - Skills and mindset' ||
@@ -168,7 +167,7 @@ const Home = () => {
                 const currentRadius = isCloser ? closerRadius : radius;
                 const x = currentRadius * Math.cos(angle);
                 const y = currentRadius * Math.sin(angle);
-  
+
                 return (
                   <div
                     key={index}
@@ -185,8 +184,8 @@ const Home = () => {
                       style={{
                         background: '#CE0932',
                         borderRadius: '50%',
-                        width: '120px', // Reduced size of the circle
-                        height: '120px', // Reduced size of the circle
+                        width: '120px',
+                        height: '120px',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -194,21 +193,23 @@ const Home = () => {
                         overflow: 'hidden'
                       }}
                     >
-                      <img
-                        src={value.icon1}
-                        style={{
-                          width: '60%', // Reduced size of the image
-                          height: '60%', // Reduced size of the image
-                          objectFit: 'contain'
-                        }}
-                        alt=""
-                      />
+                      <a href="#" target="_blank" rel="noopener noreferrer"> {/* Add your link here */}
+                        <img
+                          src={value.icon1}
+                          style={{
+                            width: '60%', // Adjust the width as needed
+                            height: '60%', // Adjust the height as needed
+                            objectFit: 'contain'
+                          }}
+                          alt=""
+                        />
+                      </a>
                     </div>
                     <p style={{ color: 'white', maxWidth: '190px' }}>{value.text}</p>
                   </div>
                 );
               })}
-  
+
               <div style={{ position: 'absolute', display: 'inline-block', zIndex: 2 }}>
                 <div
                   style={{
@@ -235,8 +236,6 @@ const Home = () => {
       </Container>
     );
   };
-  
-  
 
   const PillarSection = () => {
     const { ref, inView } = useInView({
@@ -245,7 +244,6 @@ const Home = () => {
     });
 
     return (
-
       <Container fluid style={{ paddingRight: 0, paddingLeft: 0 }}>
         <Row>
           <Col>
@@ -255,17 +253,14 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
-
     );
   };
-
 
   const PillarSection2 = () => {
     const { ref, inView } = useInView({
       triggerOnce: true,
       threshold: 0,
     });
-
 
     return (
       <Container fluid style={{ width: "100%" }}>
@@ -276,12 +271,50 @@ const Home = () => {
             </div>
           </Col>
         </Row>
-
       </Container>
+    );
+  };
+
+  function PartnersSection() {
+    const { ref, inView } = useInView({
+      triggerOnce: true,
+      threshold: 0,
+    });
+
+    const partners = [
+      { imgSrc: '/images/nworx.png', text: 'NWORX is a B2B SaaS platform used by enterprises to improve the performance of their leaders and teams.', link: 'https://nworx.ai/' },
+      { imgSrc: '/images/pdu.png', text: 'The University offers programs to address the need for trained human resources in the domains of Science, Technology, Management and Humanities.', link: 'https://www.pdpu.ac.in/' },
+    ];
+
+    return (
+      <motion.div
+        ref={ref}
+        variants={reveal("right", 0.2)}
+        initial="hidden"
+        animate={inView ? "show" : "hidden"}
+        className="partners-section py-5 text-center"
+        style={{ padding: '0 15px' }}  // Added padding for responsive design
+      >
+        <h2 className="mission-heading" style={{ marginBottom: '40px' }}>Our Partners</h2>
+        <Container fluid className='py-5 bg-light' style={{ width: "100%" }}>
+          <Row className="justify-content-center">
+            {partners.map((partner, index) => (
+              <Col key={index} md={4} sm={6} className="mb-4 d-flex justify-content-center">
+                <div className="partner-box text-center" style={{ maxWidth: '450px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <a href={partner.link} target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
+                    <img src={partner.imgSrc} alt={partner.text} className="img-fluid mb-3" style={{ width: '100%', height: '200px', objectFit: 'contain' }} /> {/* Adjust size here */}
+                  </a>
+                  <p className="mt-2" style={{ flexGrow: 1 }}>{partner.text}</p>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </motion.div>
     );
   }
 
-  function FooterSection({ children }) {
+  function FooterSection() {
     const { ref, inView } = useInView({
       triggerOnce: true,
       threshold: 0,
@@ -322,7 +355,7 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-      <br /> <br /> <br /> <br /> <br /> <br />
+
       <section id="pillars2">
         <Container fluid>
           <Row>
@@ -334,6 +367,10 @@ const Home = () => {
       </section>
 
       <SliderSection data={academy} />
+
+      <section id="partners">
+        <PartnersSection />
+      </section>
 
       <section id="offices">
         <FooterSection />

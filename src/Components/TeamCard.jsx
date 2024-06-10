@@ -24,7 +24,7 @@ const TeamCard = ({ data }) => {
                                         </ul>
                                     </Card.Text>
                                     <div style={{ marginTop: 'auto', textAlign: 'center' }}>
-                                        <a href={values.link} className='me-4 text-reset' style={{ fontSize: "30px" }}>
+                                        <a href={values.link} target='_blank' className='me-4 text-reset' style={{ fontSize: "30px" }}>
                                             <FontAwesomeIcon icon={faLinkedin} />
                                         </a>
                                     </div>
