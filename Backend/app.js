@@ -3,18 +3,11 @@ const cors = require('cors');
 const app = express();
 const emailRoute = require("./emailRoute");
 
-// Middleware to explicitly set CORS headers
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://mca-academy-frontend.vercel.app");
-    res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
-
-// Enable CORS
+// Enable CORS with preflight support
 app.use(cors({
     origin: "https://mca-academy-frontend.vercel.app",
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "OPTIONS"],
+    allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
     credentials: false
 }));
 
@@ -24,7 +17,8 @@ app.use('/api', emailRoute);
 // Handle preflight requests
 app.options('*', cors({
     origin: "https://mca-academy-frontend.vercel.app",
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "OPTIONS"],
+    allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
     credentials: false
 }));
 

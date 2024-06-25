@@ -33,7 +33,11 @@ const ContactUs = () => {
     async function handleSubmission(event) {
         event.preventDefault();
         try {
-            const request = await axios.post('https://mca-academy-backend.vercel.app/sendEmail', data);
+            const request = await axios.post('https://mca-academy-backend.vercel.app/api/sendEmail', data, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
             if (request.data.message === 'mail sent') {
                 setSuccessMessage(true);
                 setName('');
