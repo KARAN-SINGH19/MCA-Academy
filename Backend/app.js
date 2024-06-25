@@ -7,7 +7,7 @@ app.use(cors(
     {
         methods: ["POST", "GET"],
         credentials: true,
-        origin: ["https://mca-academy-frontend.vercel.app/"]
+        origin: ["https://mca-academy-frontend.vercel.app"]
     }
 ));
 app.use(express.json());
