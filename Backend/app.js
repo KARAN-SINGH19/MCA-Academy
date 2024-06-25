@@ -3,7 +3,13 @@ const cors = require('cors');
 const app = express();
 const emailRoute = require("./emailRoute")
 
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors(
+    {
+        methods: ["POST", "GET"],
+        credentials: true,
+        origin: ["https://deploy-mern-app.vercel.app"]
+    }
+));
 app.use(express.json());
 app.use('/api', emailRoute);
 
