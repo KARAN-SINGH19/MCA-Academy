@@ -9,18 +9,16 @@ router.post('/sendEmail', async (req, res) => {
     const fullMessage = `Contact Number: ${phone}\nService: ${service}\nEmail: ${email}\n\n${msg}`;
 
     var transporter = nodemailer.createTransport({
-        host: 'smtp.office365.com',
-        port: 587,
-        secure: false,
+        service: 'gmail',
         auth: {
-            user: 'malahim.k@mcagulf.com', // COMPANY EMAIL
-            pass: 'your-outlook-email-password'
+            user: 'rehalkaran37@gmail.com',
+            pass: 'tftf xgeh isvh bodu'
         }
     });
 
     var mailOptions = {
-        from: `${email}`, // USER EMAIL
-        to: 'malahim.k@mcagulf.com', // COMPANY EMAIL
+        from: `${email}`,
+        to: 'rehalkaran37@gmail.com',
         subject: `Connection request by ${name}.`,
         text: fullMessage
     };
