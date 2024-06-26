@@ -25,7 +25,7 @@ const pillars = [
     },
     {
         title: 'Fostering Functional Expertise',
-        content1: "Finance Program",
+        content1: "Finance Programs",
         content2: "HR Program",
         content3: "Supply Chain Program",
         // content4: "Project Management Program",
