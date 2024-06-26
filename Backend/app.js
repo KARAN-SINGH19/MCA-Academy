@@ -7,7 +7,7 @@ const corsOptions = {
     origin: 'https://mca-academy-frontend.vercel.app',
     methods: ['POST', 'GET', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: false // Set to true if your frontend sends credentials (cookies, etc.)
+    credentials: false
 };
 
 app.use(cors(corsOptions));
