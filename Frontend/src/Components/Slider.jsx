@@ -52,10 +52,10 @@ const Slider = ({ deviceType, data }) => {
                     <div key={index} className="carousel-item-wrapper">
                         <Card className="academy-card flex-row">
                             <div className="image-overlay"></div>
-                            <Card.Img variant="left" src={academyItem.image} style={{ width: "40%" }} className="card-image-horizontal" />
+                            <Card.Img variant="left" src={academyItem.image} className="card-image-horizontal" />
                             <Card.Body className="card-body-horizontal">
-                                <Card.Title style={{ textAlign: "center", color: "#CE0932",fontSize:"29px" }} className="card-title">{academyItem.name}</Card.Title>
-                                <Card.Text style={{ textAlign: "center", color: '#212529', fontSize: "22px" }} className="card-text">
+                                <Card.Title className="slider-title">{academyItem.name}</Card.Title>
+                                <Card.Text className="slider-text">
                                     Learn more about {academyItem.name} and enhance your skills with our specialized programs.
                                 </Card.Text>
                                 <Link to={`/${academyItem.name.replace(/\s+/g, '')}`} onClick={handleLinkClick}>

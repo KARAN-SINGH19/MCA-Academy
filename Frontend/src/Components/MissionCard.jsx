@@ -10,10 +10,10 @@ const MissionCard = ({ data }) => {
     <Container>
       <Row className="justify-content-center">
         {data.map((values, index) => (
-          <Col key={index} sm={12} md={6} lg={4} xl={4}>
-            <Card className="h-100 allCards" style={{ cursor: "default", boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', border: 'none', borderRadius: '10px' }}>
+          <Col key={index} sm={12} md={6} lg={4} xl={4} className="mb-4">
+            <Card className="h-100 allCards" style={{ cursor: "default", boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', border: 'none', borderRadius: '10px', margin: '10px' }}>
               <div className="card-image">
-                <Card.Img variant="top" src={values.image} style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px', height: "40vh" }} />
+                <Card.Img variant="top" src={values.image} className='missionCardImg' />
               </div>
               <Card.Body style={{ backgroundColor: 'white' }}>
                 <Card.Title style={{ color: "#CE0932", fontWeight: "700" }} className="text-center">{values.title}</Card.Title>

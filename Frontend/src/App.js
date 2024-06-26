@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
 import './App.css';
 import Home from './Screens/Home';
 import About from './Screens/About';
@@ -40,13 +41,16 @@ import Executive from './Screens/Executive';
 
 
 function App() {
+  useEffect(() => {
+    document.body.style.zoom = '90%';
+  }, []);
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route exact path='/about' element={<About />} />
         <Route exact path='/HRProgram' element={<HRAcademy />} />
-        <Route exact path='/FinancePrograms' element={<Finance />} />
+        <Route exact path='/FinanceProgram' element={<Finance />} />
         <Route exact path='/SupplyChainProgram' element={<SupplyChainAcademy />} />
         <Route exact path='/CoachingandMentoring' element={<CoachingandMentoring />} />
         <Route exact path='/UnlockingAuthenticLeadership' element={<UnlockingAuthenticLeadership />} />

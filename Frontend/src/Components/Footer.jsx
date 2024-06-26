@@ -34,7 +34,7 @@ export default function Footer() {
                 <MDBContainer className='text-center text-md-start mt-4'>
                     <MDBRow className='mt-3'>
 
-                        <MDBCol md="3" lg="3" xl="4" className='mb-4'>
+                        <MDBCol md="4" lg="3" xl="4" className='mb-4'>
                             <motion.img
                                 className="logo-default"
                                 src="https://www.mcagulf.com/wp-content/uploads/2024/05/MCA-New-Logo-252px.png"
