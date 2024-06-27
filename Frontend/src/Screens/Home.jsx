@@ -95,144 +95,158 @@ const Home = () => {
     );
   }
 
+  // const RedBarSection = () => {
+  //   const values = [
+  //     { icon1: '/images/iconteam.png', text: 'Unlocking Authentic Leadership' },
+  //     { icon1: '/images/iconskill.png', text: 'Entrepreneurial Excellence - Skills and mindset' },
+  //     { icon1: '/images/Women.png', text: 'Empowering Women Leaders For Success' },
+  //     { icon1: '/images/iconlight.png', text: 'Fostering Functional Expertise' },
+  //     { icon1: '/images/iconcoach.png', text: 'Coaching for Professionals' },
+  //   ];
+
+  //   const angleStep = Math.PI / (values.length - 1);
+  //   const radius = 30;
+  //   const closerRadius = 25;
+
+  //   const scrollToSection = (sectionId) => {
+  //     const section = document.getElementById(sectionId);
+  //     if (section) {
+  //       section.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   };
+
+  //   return (
+  //     <div className='mission-section2 text-center' style={{ overflow: "hidden", padding: "0px", margin: "0px" }}>
+  //       <div style={{
+  //         textAlign: 'center',
+  //         padding: '50px',
+  //         position: 'relative',
+  //         height: "115vh",
+  //         backgroundImage: 'url(/images/bst.jpg)',
+  //         backgroundSize: 'cover',
+  //         backgroundPosition: 'center',
+  //         backgroundRepeat: 'no-repeat',
+  //         width: '100%',
+  //         margin: 0
+  //       }}>
+  //         <div style={{
+  //           position: 'absolute',
+  //           top: 0,
+  //           left: 0,
+  //           width: '100%',
+  //           height: '100%',
+  //           backgroundColor: 'rgba(102, 3, 3, 0.75)',
+  //           zIndex: 0
+  //         }}></div>
+
+  //         <div style={{
+  //           position: 'relative',
+  //           zIndex: 1,
+  //           backgroundColor: 'rgba(0, 0, 0, 0.3)',
+  //           padding: '20px',
+  //           borderRadius: '10px',
+  //           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+  //           marginBottom: '40px',
+  //           width: "70%",
+  //           margin: "auto"
+  //         }}>
+  //           <h1  style={{ color: 'white', marginBottom: '20px' }}>Academy Verticals</h1>
+  //           <p style={{ color: "white", fontSize: "1.25rem", textAlign: "center" }}>
+  //             <br />
+  //             Explore our academy verticals tailored to empower growth and excellence in your career journey.
+  //           </p>
+  //         </div>
+
+  //         {values.map((value, index) => {
+  //           const angle = index * angleStep - Math.PI;
+  //           const isCloser = value.text === 'Entrepreneurial Excellence - Skills and mindset' ||
+  //             value.text === 'Empowering Women Leaders For Success' ||
+  //             value.text === 'Fostering Functional Expertise';
+  //           const currentRadius = isCloser ? closerRadius : radius;
+  //           const x = currentRadius * Math.cos(angle);
+  //           const y = currentRadius * Math.sin(angle);
+
+  //           return (
+  //             <div
+  //               key={index}
+  //               style={{
+  //                 position: 'absolute',
+  //                 left: `calc(50% + ${x}vw)`,
+  //                 top: `calc(90% + ${y}vh)`,
+  //                 transform: 'translate(-50%, -78%)',
+  //                 textAlign: 'center',
+  //                 zIndex: 1,
+  //               }}
+  //             >
+  //               <div
+  //                 style={{
+  //                   background: '#CE0932',
+  //                   borderRadius: '50%',
+  //                   width: '8vw',
+  //                   height: '8vw',
+  //                   display: 'flex',
+  //                   alignItems: 'center',
+  //                   justifyContent: 'center',
+  //                   margin: '0 auto',
+  //                   overflow: 'hidden'
+  //                 }}
+  //               >
+  //                 <a> {/* Add your link here */}
+  //                   <img
+  //                     src={value.icon1}
+  //                     style={{
+  //                       width: '60%',
+  //                       height: '60%',
+  //                       objectFit: 'contain'
+  //                     }}
+  //                     alt=""
+  //                   />
+  //                 </a>
+  //               </div>
+  //               <p style={{ color: 'white', maxWidth: '15vw', fontSize: '1rem' }}>{value.text}</p>
+  //             </div>
+  //           );
+  //         })}
+
+  //         <div style={{ position: 'relative', display: 'inline-block', zIndex: 2 }}>
+  //           <div
+  //             style={{
+  //               background: '#CE0932',
+  //               borderRadius: '50%',
+  //               width: '30vw',
+  //               height: '30vw',
+  //               position: 'absolute',
+  //               bottom: '-20%',
+  //               left: '50%',
+  //               transform: 'translateX(-50%)',
+  //               zIndex: 1,
+  //               top: 'calc(100% - -22vw)',
+  //             }}
+  //           >
+  //             <div>
+  //               <h3 onClick={() => { scrollToSection('pillars2') }} style={{ color: "white", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "20%", cursor: "pointer" }}>Explore Now</h3>
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // };
+
+
   const RedBarSection = () => {
-    const values = [
-      { icon1: '/images/iconteam.png', text: 'Unlocking Authentic Leadership' },
-      { icon1: '/images/iconskill.png', text: 'Entrepreneurial Excellence - Skills and mindset' },
-      { icon1: '/images/Women.png', text: 'Empowering Women Leaders For Success' },
-      { icon1: '/images/iconlight.png', text: 'Fostering Functional Expertise' },
-      { icon1: '/images/iconcoach.png', text: 'Coaching for Professionals' },
-    ];
-
-    const angleStep = Math.PI / (values.length - 1);
-    const radius = 30;
-    const closerRadius = 25;
-
     const scrollToSection = (sectionId) => {
       const section = document.getElementById(sectionId);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
     };
-
     return (
-      <div className='mission-section2 text-center' style={{ overflow: "hidden", padding: "0px", margin: "0px" }}>
-        <div style={{
-          textAlign: 'center',
-          padding: '50px',
-          position: 'relative',
-          height: "115vh",
-          backgroundImage: 'url(/images/bst.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          width: '100%',
-          margin: 0
-        }}>
-          <div style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(102, 3, 3, 0.75)',
-            zIndex: 0
-          }}></div>
-
-          <div style={{
-            position: 'relative',
-            zIndex: 1,
-            backgroundColor: 'rgba(0, 0, 0, 0.3)',
-            padding: '20px',
-            borderRadius: '10px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-            marginBottom: '40px',
-            width: "70%",
-            margin: "auto"
-          }}>
-            <h1 className='mission-heading' style={{ color: 'white', marginBottom: '20px' }}>Academy Verticals</h1>
-            <p style={{ color: "white", fontSize: "1.25rem", textAlign: "center" }}>
-              <br />
-              Explore our academy verticals tailored to empower growth and excellence in your career journey.
-            </p>
-          </div>
-
-          {values.map((value, index) => {
-            const angle = index * angleStep - Math.PI;
-            const isCloser = value.text === 'Entrepreneurial Excellence - Skills and mindset' ||
-              value.text === 'Empowering Women Leaders For Success' ||
-              value.text === 'Fostering Functional Expertise';
-            const currentRadius = isCloser ? closerRadius : radius;
-            const x = currentRadius * Math.cos(angle);
-            const y = currentRadius * Math.sin(angle);
-
-            return (
-              <div
-                key={index}
-                style={{
-                  position: 'absolute',
-                  left: `calc(50% + ${x}vw)`,
-                  top: `calc(90% + ${y}vh)`,
-                  transform: 'translate(-50%, -78%)',
-                  textAlign: 'center',
-                  zIndex: 1,
-                }}
-              >
-                <div
-                  style={{
-                    background: '#CE0932',
-                    borderRadius: '50%',
-                    width: '8vw',
-                    height: '8vw',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto',
-                    overflow: 'hidden'
-                  }}
-                >
-                  <a> {/* Add your link here */}
-                    <img
-                      src={value.icon1}
-                      style={{
-                        width: '60%',
-                        height: '60%',
-                        objectFit: 'contain'
-                      }}
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <p style={{ color: 'white', maxWidth: '15vw', fontSize: '1rem' }}>{value.text}</p>
-              </div>
-            );
-          })}
-
-          <div style={{ position: 'relative', display: 'inline-block', zIndex: 2 }}>
-            <div
-              style={{
-                background: '#CE0932',
-                borderRadius: '50%',
-                width: '30vw',
-                height: '30vw',
-                position: 'absolute',
-                bottom: '-20%',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                zIndex: 1,
-                top: 'calc(100% - -22vw)',
-              }}
-            >
-              <div>
-                <h3 onClick={() => { scrollToSection('pillars2') }} style={{ color: "white", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "20%", cursor: "pointer" }}>Explore Now</h3>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className='mission-section2 text-center' style={{ width: '100%', overflow: "hidden", padding: "0px", margin: "0px" }}>
+        <img src="/images/sun.png" alt="" style={{ width: '100%' }} onClick={() => scrollToSection('pillars2')} />
       </div>
     );
   };
-
 
   const PillarSection = () => {
     const { ref, inView } = useInView({
@@ -242,7 +256,7 @@ const Home = () => {
 
     return (
       <Container fluid style={{ paddingRight: 0, paddingLeft: 0 }}>
-        <Row>
+        <Row noGutters>
           <Col>
             <div ref={ref}>
               <RedBarSection />
@@ -343,9 +357,9 @@ const Home = () => {
         <MissionSection />
       </section>
 
-      <section id="pillars">
-        <Container fluid>
-          <Row>
+      <section id="pillars" style={{ width: '100%', padding: 0, margin: 0 }}>
+        <Container fluid style={{ padding: 0, margin: 0 }}>
+          <Row noGutters>
             <Col>
               <PillarSection />
             </Col>

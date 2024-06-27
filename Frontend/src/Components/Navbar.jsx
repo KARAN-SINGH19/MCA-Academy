@@ -1,15 +1,19 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
-import { useLocation } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { motion } from 'framer-motion';
 
 function BasicExample() {
     const location = useLocation();
+
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
     const linkVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -32,25 +36,26 @@ function BasicExample() {
                         <motion.div variants={linkVariants} initial="hidden" animate="show">
                             <RouterLink className="nav-link" to="/">Home</RouterLink>
                         </motion.div>
-                        <motion.div variants={linkVariants} initial="hidden" animate="show">
-                            <RouterLink className="nav-link" to="/about">Our Faculty</RouterLink>
-                        </motion.div>
+
                         {location.pathname === '/' && (
                             <>
                                 <motion.div variants={linkVariants} initial="hidden" animate="show">
-                                    <ScrollLink className="nav-link" to="missions" spy={true} smooth={true} offset={-100} duration={500}>
-                                        Mission
-                                    </ScrollLink>
+                                    <RouterLink onClick={() => scrollToSection('missions')} className="nav-link" >Missions</RouterLink>
                                 </motion.div>
                                 <motion.div variants={linkVariants} initial="hidden" animate="show">
-                                    <ScrollLink className="nav-link" to="pillars" spy={true} smooth={true} offset={-100} duration={500}>
-                                        Our Offerings
-                                    </ScrollLink>
+                                    <RouterLink onClick={() => scrollToSection('pillars')} className="nav-link" >Our Offerings</RouterLink>
                                 </motion.div>
                                 <motion.div variants={linkVariants} initial="hidden" animate="show">
-                                    <ScrollLink className="nav-link" to="partners" spy={true} smooth={true} offset={-100} duration={500}>
+                                    <RouterLink className="nav-link" to="/about">Our Faculty</RouterLink>
+                                </motion.div>
+                                <motion.div variants={linkVariants} initial="hidden" animate="show">
+                                    <RouterLink
+                                        className="nav-link"
+                                        onClick={() => scrollToSection('partners')}
+                                        style={{ cursor: 'pointer' }}
+                                    >
                                         Our Partners
-                                    </ScrollLink>
+                                    </RouterLink >
                                 </motion.div>
                             </>
                         )}

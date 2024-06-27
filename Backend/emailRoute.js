@@ -14,7 +14,7 @@ router.post('/sendEmail', async (req, res) => {
             user: 'rehalkaran37@gmail.com',
             pass: 'tftf xgeh isvh bodu'
         }
-    });
+    }); 
 
     var mailOptions = {
         from: `${email}`,
