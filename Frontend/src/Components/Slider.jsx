@@ -31,7 +31,7 @@ const Slider = ({ deviceType, data }) => {
     };
 
     return (
-        <div className="slider-container">
+        <div className={`slider-container ${data.length === 2 ? 'center-items' : ''}`}>
             <Carousel
                 swipeable
                 draggable

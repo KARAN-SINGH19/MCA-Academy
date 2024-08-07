@@ -14,6 +14,7 @@ import EmpoweringWomenLeadersForSuccess from './Screens/EmpoweringWomenLeadersFo
 import Fostering from './Screens/Fostering';
 import Coaching from './Screens/Coaching';
 import ContactUs from './Screens/ContactUs';
+import xyz from './Screens/xyz';
 
 // import FinancialReporting from './Screens/FinancialReporting';
 // import GrowthProgram from './Screens/GrowthProgram';
@@ -83,6 +84,8 @@ function App() {
         <Route exact path='/EmergingLeaderDevelopment' element={<Emerging />} />
         <Route exact path='/DevelopmentCenters' element={<Development />} />
         <Route exact path='/ExecutiveCoaching' element={<Executive />} />
+
+        <Route exact path='/xyz' element={<xyz />} />
 
         {/* <Route exact path='/hr-business-partnering-development-program' element={<HRBusiness />} />
         <Route exact path='/hr-analytics-for-data-driven-decision-making' element={<HRAnalytics />} />

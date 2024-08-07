@@ -75,7 +75,7 @@ const Home = () => {
     );
   }
 
-  function SliderSection() {
+  function SliderSection() { 
     const { ref, inView } = useInView({
       triggerOnce: true,
       threshold: 0,
