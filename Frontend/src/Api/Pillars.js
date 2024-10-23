@@ -32,13 +32,23 @@ const pillars = [
         image: "/images/light-bulb.png",
         color: "#CE0932"
     },
+    // {
+    //     title: "Coaching for Professionals",
+    //     content1: "Chartered Financial Analyst (CFA)",
+    //     content2: "Certified Management Accountant (CMA)",
+    //     content3: "Certified Internal Auditor (CIA)",
+    //     // content4: "International Financial Reporting Standards (IFRS)",
+    //     image: "/images/coach.png",
+    //     color: "#CE0932"
+    // }
     {
-        title: "Coaching for Professionals",
-        content1: "Chartered Financial Analyst (CFA)",
-        content2: "Certified Management Accountant (CMA)",
-        content3: "Certified Internal Auditor (CIA)",
-        // content4: "International Financial Reporting Standards (IFRS)",
-        image: "/images/coach.png",
+        title: 'Driving ESG & Sustainability',
+        content1: "Introduction to ESG",
+        content2: "Enviromental Factors",
+        content3: "Social Responsibilty",
+        content4: "Goverance",
+        content5: "Sustainability Reporting and Metrics",
+        image: "/images/pillar5img.png",
         color: "#CE0932"
     }
 ]

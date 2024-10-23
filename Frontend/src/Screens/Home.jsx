@@ -248,24 +248,24 @@ const Home = () => {
     );
   };
 
-  const PillarSection = () => {
-    const { ref, inView } = useInView({
-      triggerOnce: true,
-      threshold: 0,
-    });
+  // const PillarSection = () => {
+  //   const { ref, inView } = useInView({
+  //     triggerOnce: true,
+  //     threshold: 0,
+  //   });
 
-    return (
-      <Container fluid style={{ paddingRight: 0, paddingLeft: 0 }}>
-        <Row noGutters>
-          <Col>
-            <div ref={ref}>
-              <RedBarSection />
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    );
-  };
+  //   return (
+  //     <Container fluid style={{ paddingRight: 0, paddingLeft: 0 }}>
+  //       <Row noGutters>
+  //         <Col>
+  //           <div ref={ref}>
+  //             <RedBarSection />
+  //           </div>
+  //         </Col>
+  //       </Row>
+  //     </Container>
+  //   );
+  // };
 
   const PillarSection2 = () => {
     const { ref, inView } = useInView({
@@ -357,7 +357,7 @@ const Home = () => {
         <MissionSection />
       </section>
 
-      <section id="pillars" style={{ width: '100%', padding: 0, margin: 0 }}>
+      {/* <section id="pillars" style={{ width: '100%', padding: 0, margin: 0 }}>
         <Container fluid style={{ padding: 0, margin: 0 }}>
           <Row noGutters>
             <Col>
@@ -365,7 +365,7 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       <section id="pillars2">
         <Container fluid>

@@ -75,6 +75,9 @@ const PillarCard = ({ data }) => {
                                                         {values.content4 && (
                                                             <li onClick={handleLinkClick2} style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-26px' }}>{values.content4}</li>
                                                         )}
+                                                        {values.content5 && (
+                                                            <li onClick={handleLinkClick2} style={{ cursor: "pointer", marginLeft: "15px", textIndent: '-26px' }}>{values.content5}</li>
+                                                        )}
                                                     </ul>
                                                 </Card.Text>
                                             </div>
