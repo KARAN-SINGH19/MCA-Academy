@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react'; 
+import { Link } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 import Carousal from '../Components/Carousal';
 import MissionCard from '../Components/MissionCard';
@@ -53,10 +54,7 @@ const Home = () => {
   }, []);
 
   function MissionSection() {
-    const { ref, inView } = useInView({
-      triggerOnce: true,
-      threshold: 0,
-    });
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0 });
 
     return (
       <motion.div
@@ -76,10 +74,7 @@ const Home = () => {
   }
 
   function SliderSection() {
-    const { ref, inView } = useInView({
-      triggerOnce: true,
-      threshold: 0,
-    });
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0 });
 
     return (
       <motion.div
@@ -95,20 +90,32 @@ const Home = () => {
     );
   }
 
+  const PillarSection = () => {
+    const { ref } = useInView({ triggerOnce: true, threshold: 0 });
+
+    return (
+      <Container fluid style={{ paddingRight: 0, paddingLeft: 0 }}>
+        <Row noGutters>
+          <Col>
+            <div ref={ref}>
+              <div className='mission-section2 text-center' style={{ width: '100%', overflow: "hidden", padding: "0px", margin: "0px", cursor: 'pointer' }}>
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    );
+  };
+
   const PillarSection2 = () => {
-    const { ref, inView } = useInView({
-      triggerOnce: true,
-      threshold: 0,
-    });
+    const { ref } = useInView({ triggerOnce: true, threshold: 0 });
 
     return (
       <Container fluid style={{ width: "100%" }}>
         <Row>
           <Col>
             <div className="mission-heading3-container" ref={ref}>
-              <h2 className="mission-heading3">
-                Our Verticals
-              </h2>
+              <h2 className="mission-heading3">Our Verticals</h2>
             </div>
             <PillarCard data={pillars} />
           </Col>
@@ -118,35 +125,37 @@ const Home = () => {
   };
 
   function PartnersSection() {
-    const { ref, inView } = useInView({
-      triggerOnce: true,
-      threshold: 0,
-    });
-
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  
     const partners = [
-      { imgSrc: '/images/nworx.png', text: 'NWORX is a B2B SaaS platform used by enterprises to improve the performance of their leaders and teams.', link: 'https://nworx.ai/' },
-      { imgSrc: '/images/pdu.png', text: 'The University offers programs to address the need for trained human resources in the domains of Science, Technology, Management and Humanities.', link: 'https://www.pdpu.ac.in/' },
-      { imgSrc: '/images/isblogo.jpg', text: 'To develops global leaders through top-ranked programs, blending advanced research with real-world expertise.', link: 'https://execed.isb.edu/en.html' },
+      { imgSrc: "/images/nvox2.PNG", text: "Enhance leadership skills to meet business results by leveraging AI technology", link: "/nworx" },
+      { imgSrc: "/images/pdeu.PNG", text: "To build intellectual capital and human resources in the fast-developing and competitive energy industry", link: null },
+      { imgSrc: "/images/isblogo.jpg", text: "Transformational learning journeys designed to equip executives across business areas", link: "/isb" },
+      { imgSrc: "/images/download.png", text: "Transforming Coaching & Mentoring by integrating our cutting-edge platform with organizational needs", link: "/weace" },
+      { imgSrc: "/images/MYSOBlue.png", text: "Specialize in combining bespoke content with our micro-courses to meet the specific needs of your organization and employees.", link: "/myso" },
     ];
-
+  
     return (
       <motion.div
         ref={ref}
-        variants={reveal("right", 0.2)}
-        initial="hidden"
-        animate={inView ? "show" : "hidden"}
+        initial={{ opacity: 0, x: 50 }}
+        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+        transition={{ duration: 0.5 }}
         className="partners-section py-5 text-center"
-        style={{ padding: '0 15px' }}  // Added padding for responsive design
       >
-        <h2 className="mission-heading" style={{ marginBottom: '40px' }}>Our Partners</h2>
-        <Container fluid className='py-5 bg-light' style={{ width: "100%" }}>
+        <h2 className="mission-heading" style={{ marginBottom: "40px" }}>Our Partners</h2>
+        <Container fluid className="py-5 bg-light" style={{ width: "100%" }}>
           <Row className="justify-content-center">
             {partners.map((partner, index) => (
               <Col key={index} md={4} sm={6} className="mb-4 d-flex justify-content-center">
-                <div className="partner-box text-center" style={{ maxWidth: '450px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <a href={partner.link} target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
-                    <img src={partner.imgSrc} alt={partner.text} className="img-fluid mb-3" style={{ width: '100%', height: '200px', objectFit: 'contain' }} /> {/* Adjust size here */}
-                  </a>
+                <div className="partner-box text-center" style={{ maxWidth: "450px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                  {partner.link ? (
+                    <Link to={partner.link} style={{ display: "block" }}>
+                      <img src={partner.imgSrc} alt={partner.text} className="img-fluid mb-3" style={{ width: "90%", height: "100px", objectFit: "contain", cursor: "pointer" }} />
+                    </Link>
+                  ) : (
+                    <img src={partner.imgSrc} alt={partner.text} className="img-fluid mb-3" style={{ width: "90%", height: "100px", objectFit: "contain" }} />
+                  )}
                   <p className="mt-2" style={{ flexGrow: 1 }}>{partner.text}</p>
                 </div>
               </Col>
@@ -158,18 +167,8 @@ const Home = () => {
   }
 
   function FooterSection() {
-    const { ref, inView } = useInView({
-      triggerOnce: true,
-      threshold: 0,
-    });
-
     return (
-      <motion.div
-        ref={ref}
-        variants={reveal("left", 0.2)}
-        initial="hidden"
-        animate={inView ? "show" : "hidden"}
-      >
+      <motion.div variants={reveal("left", 0.2)} initial="hidden" animate="show">
         <Footer />
       </motion.div>
     );
@@ -177,47 +176,14 @@ const Home = () => {
 
   return (
     <>
-      <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: 1 }} transition={{ duration: 2 }}>
-        <Navbar />
-      </motion.div>
-
-      <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: 1 }} transition={{ duration: 2 }}>
-        <Carousal />
-      </motion.div>
-
-      <section id="missions">
-        <MissionSection />
-      </section>
-
-      {/* <section id="pillars" style={{ width: '100%', padding: 0, margin: 0 }}>
-        <Container fluid style={{ padding: 0, margin: 0 }}>
-          <Row noGutters>
-            <Col>
-              <PillarSection />
-            </Col>
-          </Row>
-        </Container>
-      </section> */}
-
-      <section id="pillars2">
-        <Container fluid>
-          <Row>
-            <Col>
-              <PillarSection2 />
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      <SliderSection data={academy} />
-
-      <section id="partners">
-        <PartnersSection />
-      </section>
-
-      <section id="offices">
-        <FooterSection />
-      </section>
+      <Navbar />
+      <Carousal />
+      <section id="missions"><MissionSection /></section>
+      <section id="pillars"><PillarSection /></section>
+      <section id="pillars2"><PillarSection2 /></section>
+      <SliderSection />
+      <section id="partners"><PartnersSection /></section>
+      <section id="offices"><FooterSection /></section>
     </>
   );
 };
