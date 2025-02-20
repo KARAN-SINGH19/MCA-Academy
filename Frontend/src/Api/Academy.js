@@ -8,10 +8,10 @@ const academy = [
         name: "HR Program",
         image: "/images/HR3.jpg"
     },
-    // {
-    //     name: "Project Management Academy",
-    //     image:"/images/pexels-shvets-production-7203724.jpg"
-    // },
+    {
+        name: "Project Management Academy",
+        image: "/images/pexels-shvets-production-7203724.jpg"
+    },
     //  {
     //      name: "Supply Chain Program",
     //      image:"/images/office-1574717_1280.jpg"
