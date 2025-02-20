@@ -18,6 +18,7 @@ import NewScreen from './Screens/NewScreen';
 import NewScreen2 from './Screens/NewScreen2';
 import NewScreen3 from './Screens/NewScreen3';
 import NewScreen4 from './Screens/NewScreen4';
+import NewScreen5 from './Screens/NewScreen5';
 import xyz from './Screens/xyz';
 
 // import FinancialReporting from './Screens/FinancialReporting';
@@ -95,7 +96,7 @@ function App() {
         <Route exact path='/nworx' element={<NewScreen2 />} />
         <Route exact path='/myso' element={<NewScreen3 />} />
         <Route exact path='/weace' element={<NewScreen4 />} />
-
+        <Route exact path='/pdu' element={<NewScreen5 />} />
 
 
         {/* <Route exact path='/hr-business-partnering-development-program' element={<HRBusiness />} />
