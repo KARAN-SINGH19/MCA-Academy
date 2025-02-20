@@ -126,7 +126,7 @@ const Home = () => {
     const partners = [
       { imgSrc: '/images/nworx.png', text: 'NWORX is a B2B SaaS platform used by enterprises to improve the performance of their leaders and teams.', link: 'https://nworx.ai/' },
       { imgSrc: '/images/pdu.png', text: 'The University offers programs to address the need for trained human resources in the domains of Science, Technology, Management and Humanities.', link: 'https://www.pdpu.ac.in/' },
-      { imgSrc: '/images/isblogo.jpeg', text: 'To develops global leaders through top-ranked programs, blending advanced research with real-world expertise.', link: 'https://execed.isb.edu/en.html' },
+      { imgSrc: '/images/isblogo.jpg', text: 'To develops global leaders through top-ranked programs, blending advanced research with real-world expertise.', link: 'https://execed.isb.edu/en.html' },
     ];
 
     return (
